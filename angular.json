@@ -11,7 +11,8 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "skipTests": true
+          "skipTests": true,
+          "path": "src/app/components"
         },
         "@schematics/angular:class": {
           "skipTests": true
