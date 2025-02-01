@@ -1,0 +1,6 @@
+{
+  "name": "Bash",
+  "iconPath": "icons/bash.svg",
+  "description": "Description de Bash",
+  "url": "https://www.gnu.org/software/bash/"
+}

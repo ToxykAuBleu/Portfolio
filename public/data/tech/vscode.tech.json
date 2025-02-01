@@ -1,0 +1,6 @@
+{
+  "name": "Visual Studio Code",
+  "iconPath": "icons/vscode.svg",
+  "description": "Description de Visual Studio Code",
+  "url": "https://code.visualstudio.com"
+}

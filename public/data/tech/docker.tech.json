@@ -1,0 +1,6 @@
+{
+  "name": "Docker",
+  "iconPath": "icons/docker.svg",
+  "description": "Description de Docker",
+  "url": "https://www.docker.com"
+}

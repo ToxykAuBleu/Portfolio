@@ -1,6 +1,6 @@
 {
   "name": "Angular",
-  "icon": "angular.svg",
+  "iconPath": "icons/angular.svg",
   "description": "Description de Angular",
   "url": "https://angular.dev"
 }

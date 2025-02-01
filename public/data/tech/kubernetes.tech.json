@@ -1,0 +1,6 @@
+{
+  "name": "Kubernetes",
+  "iconPath": "icons/kubernetes.svg",
+  "description": "Description de Kubernetes",
+  "url": "https://kubernetes.io"
+}

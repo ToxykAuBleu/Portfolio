@@ -1,0 +1,6 @@
+{
+  "name": "PowerShell",
+  "iconPath": "icons/powershell.svg",
+  "description": "Description de PowerShell",
+  "url": "https://docs.microsoft.com/en-us/powershell/"
+}
