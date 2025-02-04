@@ -1,0 +1,8 @@
+@use 'tailwindcss';
+
+.selected-tech {
+    @apply scale-120;
+}
+.not-selected-tech {
+    @apply grayscale brightness-20;
+}

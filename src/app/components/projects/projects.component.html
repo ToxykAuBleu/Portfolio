@@ -1,13 +1,33 @@
 <div>
   <h1>Projets</h1>
   <h3>Technologies/outils</h3>
-  <div class="flex flex-wrap">
-    <div *ngFor="let tech of technologies" class="m-1">
-      <img
-        [src]="tech.iconPath"
-        [alt]="tech.name"
-        class="h-12 w-12 transition hover:scale-125"
-      />
+  <div>
+    <button
+      class="button"
+      (click)="deselectAll()"
+      [class]="selectedTechnologies.length == 0 ? 'disabled' : ''"
+    >
+      Déselectionner
+    </button>
+    <div class="flex flex-wrap">
+      <div
+        *ngFor="let tech of technologies"
+        class="m-1.5"
+        (click)="toggleTech(tech)"
+      >
+        <img
+          [src]="tech.iconPath"
+          [alt]="tech.name"
+          class="h-12 w-12 transition hover:scale-125"
+          [class]="
+            selectedTechnologies.length > 0
+              ? isSelected(tech)
+                ? 'selected-tech'
+                : 'not-selected-tech'
+              : ''
+          "
+        />
+      </div>
     </div>
   </div>
 

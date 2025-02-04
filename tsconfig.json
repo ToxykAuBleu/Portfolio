@@ -21,6 +21,7 @@
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["app/components/*"],
+      "@directives/*": ["app/directives/*"],
       "@services/*": ["app/services/*"],
       "@models/*": ["app/models/*"],
       "@data/*": ["../public/data/*"]
