@@ -1,0 +1,27 @@
+@use "tailwindcss";
+
+body {
+    @apply bg-gradient-to-r from-[#07c8f9] via-[#0a85ed] to-[#0d41e1];
+    @apply mt-16 mx-4 md:mx-16 lg:mx-32 xl:mx-64 2xl:mx-96;
+}
+
+h1, h2, h3, h4 {
+    @apply mb-4;
+}
+
+h1 {
+    @apply text-4xl font-bold text-white;
+}
+h2 {
+    @apply text-3xl font-bold text-white;
+}
+h3 {
+    @apply text-2xl font-bold text-white;
+}
+h4 {
+    @apply text-xl font-bold text-white;
+}
+
+p {
+    @apply text-lg text-white;
+}

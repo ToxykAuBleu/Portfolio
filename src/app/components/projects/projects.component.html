@@ -2,8 +2,12 @@
   <h1>Projets</h1>
   <h3>Technologies/outils</h3>
   <div class="flex flex-wrap">
-    <div *ngFor="let tech of technologies" class="m-0.5">
-      <img [src]="tech.iconPath" [alt]="tech.name" class="h-12 w-12" />
+    <div *ngFor="let tech of technologies" class="m-1">
+      <img
+        [src]="tech.iconPath"
+        [alt]="tech.name"
+        class="h-12 w-12 transition hover:scale-125"
+      />
     </div>
   </div>
 
