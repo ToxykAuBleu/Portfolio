@@ -5,13 +5,19 @@
       "name": "portfolio",
       "dependencies": {
         "@angular/animations": "^19.1.0",
+        "@angular/cdk": "19.1.2",
         "@angular/common": "^19.1.0",
         "@angular/compiler": "^19.1.0",
         "@angular/core": "^19.1.0",
         "@angular/forms": "^19.1.0",
+        "@angular/material": "19.1.2",
         "@angular/platform-browser": "^19.1.0",
         "@angular/platform-browser-dynamic": "^19.1.0",
         "@angular/router": "^19.1.0",
+        "@fortawesome/angular-fontawesome": "1.0.0",
+        "@fortawesome/free-brands-svg-icons": "^6.7.1",
+        "@fortawesome/free-regular-svg-icons": "^6.7.1",
+        "@fortawesome/free-solid-svg-icons": "^6.7.1",
         "@tailwindcss/postcss": "^4.0.1",
         "postcss": "^8.5.1",
         "rxjs": "~7.8.0",
@@ -53,6 +59,8 @@
 
     "@angular/build": ["@angular/build@19.1.5", "", { "dependencies": { "@ampproject/remapping": "2.3.0", "@angular-devkit/architect": "0.1901.5", "@angular-devkit/core": "19.1.5", "@babel/core": "7.26.0", "@babel/helper-annotate-as-pure": "7.25.9", "@babel/helper-split-export-declaration": "7.24.7", "@babel/plugin-syntax-import-attributes": "7.26.0", "@inquirer/confirm": "5.1.1", "@vitejs/plugin-basic-ssl": "1.2.0", "beasties": "0.2.0", "browserslist": "^4.23.0", "esbuild": "0.24.2", "fast-glob": "3.3.3", "https-proxy-agent": "7.0.6", "istanbul-lib-instrument": "6.0.3", "listr2": "8.2.5", "magic-string": "0.30.17", "mrmime": "2.0.0", "parse5-html-rewriting-stream": "7.0.0", "picomatch": "4.0.2", "piscina": "4.8.0", "rollup": "4.30.1", "sass": "1.83.1", "semver": "7.6.3", "vite": "6.0.11", "watchpack": "2.4.2" }, "optionalDependencies": { "lmdb": "3.2.2" }, "peerDependencies": { "@angular/compiler": "^19.0.0", "@angular/compiler-cli": "^19.0.0", "@angular/localize": "^19.0.0", "@angular/platform-server": "^19.0.0", "@angular/service-worker": "^19.0.0", "@angular/ssr": "^19.1.5", "less": "^4.2.0", "ng-packagr": "^19.0.0", "postcss": "^8.4.0", "tailwindcss": "^2.0.0 || ^3.0.0 || ^4.0.0", "typescript": ">=5.5 <5.8" }, "optionalPeers": ["@angular/localize", "@angular/platform-server", "@angular/service-worker", "@angular/ssr", "less", "ng-packagr", "postcss", "tailwindcss"] }, "sha512-byoHcv0/s6WGWap59s43N/eC+4NsviuTnGoj+iR0ayubk8snn6jdkZLbFDfnTuQlTiu4ok8/XcksjzeMkgGyyw=="],
 
+    "@angular/cdk": ["@angular/cdk@19.1.2", "", { "dependencies": { "tslib": "^2.3.0" }, "optionalDependencies": { "parse5": "^7.1.2" }, "peerDependencies": { "@angular/common": "^19.0.0 || ^20.0.0", "@angular/core": "^19.0.0 || ^20.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-rzrZ4BkGNIZWSdw0OsuSB/H9UB5ppPvmBq+uRHdYmZoYjo5wu1pmePxAIZDIBR8xdaNy9rZ4ecS6IebDkgYPrg=="],
+
     "@angular/cli": ["@angular/cli@19.1.5", "", { "dependencies": { "@angular-devkit/architect": "0.1901.5", "@angular-devkit/core": "19.1.5", "@angular-devkit/schematics": "19.1.5", "@inquirer/prompts": "7.2.1", "@listr2/prompt-adapter-inquirer": "2.0.18", "@schematics/angular": "19.1.5", "@yarnpkg/lockfile": "1.1.0", "ini": "5.0.0", "jsonc-parser": "3.3.1", "listr2": "8.2.5", "npm-package-arg": "12.0.1", "npm-pick-manifest": "10.0.0", "pacote": "20.0.0", "resolve": "1.22.10", "semver": "7.6.3", "symbol-observable": "4.0.0", "yargs": "17.7.2" }, "bin": { "ng": "bin/ng.js" } }, "sha512-bedjH3jUcrLgN3GOTTuvjbPcY3Lm0YcYBVY35S1ugI88UK6nbtttiRdgK++Qk2Q8wbg6zuaBAr4ACbfPMsnRaA=="],
 
     "@angular/common": ["@angular/common@19.1.4", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/core": "19.1.4", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-E4MCl13VIotOxmzKQ/UGciPeaRXQgH7ymesEjYVGcT8jmC+qz5dEcoN7L5Jvq9aUsmLBt9MFp/B5QqKCIXMqYA=="],
@@ -64,6 +72,8 @@
     "@angular/core": ["@angular/core@19.1.4", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "rxjs": "^6.5.3 || ^7.4.0", "zone.js": "~0.15.0" } }, "sha512-r3T81lM9evmuW36HA3VAxIJ61M8kirGR8yHoln9fXSnYG8UeJ7JlWEbVRHmVHKOB48VK0bS/VxqN+w9TOq3bZg=="],
 
     "@angular/forms": ["@angular/forms@19.1.4", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/common": "19.1.4", "@angular/core": "19.1.4", "@angular/platform-browser": "19.1.4", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-dcf4G+vXrfvy5NAP+C4A2rBeaZuwKs/TeWjZDpkRUPQMwTvDJcSNH+pqOeVsYUGNY2BkY1uPjzmgZh4F5NMQ9A=="],
+
+    "@angular/material": ["@angular/material@19.1.2", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "^19.0.0 || ^20.0.0", "@angular/cdk": "19.1.2", "@angular/common": "^19.0.0 || ^20.0.0", "@angular/core": "^19.0.0 || ^20.0.0", "@angular/forms": "^19.0.0 || ^20.0.0", "@angular/platform-browser": "^19.0.0 || ^20.0.0", "rxjs": "^6.5.3 || ^7.4.0" } }, "sha512-MdczdTmvsXLtEFV9nTgFs9mPM1FSAz4L1kByJCdIgHtOu62e9t2XcSUqOPJTlDrA5wWafZvPWh2woJfJr4iwjw=="],
 
     "@angular/platform-browser": ["@angular/platform-browser@19.1.4", "", { "dependencies": { "tslib": "^2.3.0" }, "peerDependencies": { "@angular/animations": "19.1.4", "@angular/common": "19.1.4", "@angular/core": "19.1.4" }, "optionalPeers": ["@angular/animations"] }, "sha512-IoVIvemj7ni6GLDCvwtZhTgMQjPyG+xPW7rASN2RVl9T3uS1fJUpXrh5JzBcCikIj20O2KV9mqt7p4iIXy9jbQ=="],
 
@@ -304,6 +314,18 @@
     "@esbuild/win32-ia32": ["@esbuild/win32-ia32@0.24.2", "", { "os": "win32", "cpu": "ia32" }, "sha512-q+iGUwfs8tncmFC9pcnD5IvRHAzmbwQ3GPS5/ceCyHdjXubwQWI12MKWSNSMYLJMq23/IUCvJMS76PDqXe1fxA=="],
 
     "@esbuild/win32-x64": ["@esbuild/win32-x64@0.24.2", "", { "os": "win32", "cpu": "x64" }, "sha512-7VTgWzgMGvup6aSqDPLiW5zHaxYJGTO4OokMjIlrCtf+VpEL+cXKtCvg723iguPYI5oaUNdS+/V7OU2gvXVWEg=="],
+
+    "@fortawesome/angular-fontawesome": ["@fortawesome/angular-fontawesome@1.0.0", "", { "dependencies": { "@fortawesome/fontawesome-svg-core": "^6.7.1", "tslib": "^2.8.1" }, "peerDependencies": { "@angular/core": "^19.0.0" } }, "sha512-EC2fYuXIuw2ld1kzJi+zysWus6OeGGfLQtbh0hW9zyyq5aBo8ZJkcJKBsVQ8E6Mg7nHyTWaXn+sdcXTPDWz+UQ=="],
+
+    "@fortawesome/fontawesome-common-types": ["@fortawesome/fontawesome-common-types@6.7.2", "", {}, "sha512-Zs+YeHUC5fkt7Mg1l6XTniei3k4bwG/yo3iFUtZWd/pMx9g3fdvkSK9E0FOC+++phXOka78uJcYb8JaFkW52Xg=="],
+
+    "@fortawesome/fontawesome-svg-core": ["@fortawesome/fontawesome-svg-core@6.7.2", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "6.7.2" } }, "sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA=="],
+
+    "@fortawesome/free-brands-svg-icons": ["@fortawesome/free-brands-svg-icons@6.7.2", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "6.7.2" } }, "sha512-zu0evbcRTgjKfrr77/2XX+bU+kuGfjm0LbajJHVIgBWNIDzrhpRxiCPNT8DW5AdmSsq7Mcf9D1bH0aSeSUSM+Q=="],
+
+    "@fortawesome/free-regular-svg-icons": ["@fortawesome/free-regular-svg-icons@6.7.2", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "6.7.2" } }, "sha512-7Z/ur0gvCMW8G93dXIQOkQqHo2M5HLhYrRVC0//fakJXxcF1VmMPsxnG6Ee8qEylA8b8Q3peQXWMNZ62lYF28g=="],
+
+    "@fortawesome/free-solid-svg-icons": ["@fortawesome/free-solid-svg-icons@6.7.2", "", { "dependencies": { "@fortawesome/fontawesome-common-types": "6.7.2" } }, "sha512-GsBrnOzU8uj0LECDfD5zomZJIjrPhIlWU82AHwa2s40FKH+kcxQaBvBo3Z4TxyZHIyX8XTDxsyA33/Vx9eFuQA=="],
 
     "@inquirer/checkbox": ["@inquirer/checkbox@4.0.7", "", { "dependencies": { "@inquirer/core": "^10.1.5", "@inquirer/figures": "^1.0.10", "@inquirer/type": "^3.0.3", "ansi-escapes": "^4.3.2", "yoctocolors-cjs": "^2.1.2" }, "peerDependencies": { "@types/node": ">=18" } }, "sha512-lyoF4uYdBBTnqeB1gjPdYkiQ++fz/iYKaP9DON1ZGlldkvAEJsjaOBRdbl5UW1pOSslBRd701jxhAG0MlhHd2w=="],
 

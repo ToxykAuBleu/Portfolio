@@ -2,16 +2,19 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Technology } from '@models/technology.model';
 import { TechnologyService } from '@services/technology.service';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule],
+  imports: [CommonModule, MatTooltipModule, FontAwesomeModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
   technologies: Technology[] = [];
   selectedTechnologies: Technology[] = [];
+  hoveredTechnology: Technology | null = null;
 
   constructor(private technologyService: TechnologyService) {}
 
@@ -35,5 +38,9 @@ export class ProjectsComponent implements OnInit {
 
   deselectAll(): void {
     this.selectedTechnologies = [];
+  }
+
+  setHoveredTechnology(technology: Technology | null): void {
+    this.hoveredTechnology = technology;
   }
 }
