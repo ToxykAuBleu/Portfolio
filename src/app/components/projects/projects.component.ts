@@ -4,10 +4,20 @@ import { Technology } from '@models/technology.model';
 import { TechnologyService } from '@services/technology.service';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProjectService } from '@services/project.service';
+import { Project } from '@models/project.model';
+import { IconTechComponent } from '@components/ui/icon-tech/icon-tech.component';
+import { ProjectComponent } from '@components/project/project.component';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule, MatTooltipModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    IconTechComponent,
+    MatTooltipModule,
+    FontAwesomeModule,
+    ProjectComponent,
+  ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -16,10 +26,17 @@ export class ProjectsComponent implements OnInit {
   selectedTechnologies: Technology[] = [];
   hoveredTechnology: Technology | null = null;
 
-  constructor(private technologyService: TechnologyService) {}
+  projects: Project[] = [];
+
+  constructor(
+    private technologyService: TechnologyService,
+    private projectService: ProjectService
+  ) {}
 
   ngOnInit(): void {
     this.technologies = this.technologyService.getTechnologies();
+    this.projects = this.projectService.getProjects();
+    console.log(this.projects);
   }
 
   toggleTech(technology: Technology): void {

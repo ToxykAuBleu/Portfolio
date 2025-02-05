@@ -1,0 +1,58 @@
+<div
+  class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+>
+  <img class="rounded-t-lg" [src]="project.PreviewImage" alt="" />
+  <div class="p-5">
+    <!-- Nom du projet -->
+    <h5
+      class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+    >
+      {{ project.Name }}
+    </h5>
+    <!-- Date du projet -->
+    <div class="flex flex-row gap-4">
+      <fa-icon icon="clock" class="text-white"></fa-icon>
+      <div>
+        <span
+          class="text-gray-700 dark:text-gray-400"
+          matTooltip="Date de début du projet"
+          matTooltipPosition="above"
+          >{{ project.StartingDate | date : "dd/MM/yyyy" }}</span
+        >
+        <span
+          *ngIf="project.EndingDate"
+          class="text-gray-700 dark:text-gray-400"
+          matTooltip="Date de fin du projet"
+          matTooltipPosition="above"
+        >
+          - {{ project.EndingDate | date : "dd/MM/yyyy" }}</span
+        >
+      </div>
+    </div>
+    <!-- Technologies utilisées -->
+    <div class="flex flex-row gap-4">
+      <fa-icon
+        icon="toolbox"
+        class="text-white self-center"
+        matTooltip="Outils/technologies utilisés"
+        matTooltipPosition="left"
+      ></fa-icon>
+      <ng-container *ngFor="let technology of project.Technologies">
+        <app-icon-tech [tech]="technology" size="md"></app-icon-tech>
+      </ng-container>
+    </div>
+
+    <div class="my-4">
+      <mat-divider></mat-divider>
+    </div>
+
+    <!-- Petite description du projet -->
+    <p
+      class="mb-3 font-normal text-justify text-gray-700 dark:text-gray-400"
+      [innerHTML]="shortDescription"
+    ></p>
+
+    <!-- Actions -->
+    <button class="button">Plus de détails</button>
+  </div>
+</div>

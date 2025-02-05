@@ -5,7 +5,7 @@ import {
   FaIconLibrary,
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
-import { faClose } from '@fortawesome/free-solid-svg-icons';
+import { faClock, faClose, faToolbox } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-root',
@@ -19,5 +19,7 @@ export class AppComponent {
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faClose);
+    library.addIcons(faClock);
+    library.addIcons(faToolbox);
   }
 }

@@ -1,62 +1,68 @@
-<div>
-  <h1>Projets</h1>
-  <h3>Technologies/outils</h3>
+<h1>Projets</h1>
+<div class="flex flex-col gap-8">
   <div>
-    <button
-      class="button"
-      (click)="deselectAll()"
-      [class]="selectedTechnologies.length == 0 ? 'disabled' : ''"
-    >
-      Déselectionner
-    </button>
+    <h3>Technologies/outils</h3>
     <div>
-      <!-- Liste des technologies -->
-      <div class="flex flex-wrap">
-        <div
-          *ngFor="let tech of technologies"
-          class="m-1.5"
-          (click)="toggleTech(tech)"
-          (mouseenter)="setHoveredTechnology(tech)"
-        >
-          <img
-            [src]="tech.iconPath"
-            [alt]="tech.name"
-            class="h-12 w-12 transition hover:scale-125"
-            [class]="
-              selectedTechnologies.length > 0
-                ? isSelected(tech)
-                  ? 'selected-tech'
-                  : 'not-selected-tech'
-                : ''
-            "
-            [matTooltip]="tech.name"
-            matTooltipPosition="above"
-          />
+      <button
+        class="button"
+        (click)="deselectAll()"
+        [class]="selectedTechnologies.length == 0 ? 'disabled' : ''"
+      >
+        Déselectionner
+      </button>
+      <div>
+        <!-- Liste des technologies -->
+        <div class="flex flex-wrap">
+          <div
+            *ngFor="let tech of technologies"
+            class="m-1.5"
+            (click)="toggleTech(tech)"
+            (mouseenter)="setHoveredTechnology(tech)"
+          >
+            <app-icon-tech
+              [tech]="tech"
+              [class]="
+                selectedTechnologies.length > 0
+                  ? isSelected(tech)
+                    ? 'selected-tech'
+                    : 'not-selected-tech'
+                  : ''
+              "
+            ></app-icon-tech>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Description de la technologie -->
-    <div
-      *ngIf="hoveredTechnology"
-      class="bg-gray-800 p-4 mt-4 rounded-lg shadow-lg"
-    >
-      <div class="flex flex-row justify-between">
-        <h3>{{ hoveredTechnology.name }}</h3>
-        <fa-icon
-          icon="close"
-          class="text-white cursor-pointer self-center mb-4"
-          (click)="setHoveredTechnology(null)"
-        ></fa-icon>
-      </div>
-      <p>{{ hoveredTechnology.description }}</p>
-      <a
-        class="text-white hover:underline"
-        [href]="hoveredTechnology.url"
-        target="_blank"
-        >En savoir plus</a
+      <!-- Description de la technologie -->
+      <div
+        *ngIf="hoveredTechnology"
+        class="bg-gray-800 p-4 mt-4 rounded-lg shadow-lg"
       >
+        <div class="flex flex-row justify-between">
+          <h3>{{ hoveredTechnology.name }}</h3>
+          <fa-icon
+            icon="close"
+            class="text-white cursor-pointer self-center mb-4"
+            (click)="setHoveredTechnology(null)"
+          ></fa-icon>
+        </div>
+        <p>{{ hoveredTechnology.description }}</p>
+        <a
+          class="text-white hover:underline"
+          [href]="hoveredTechnology.url"
+          target="_blank"
+          >En savoir plus</a
+        >
+      </div>
     </div>
   </div>
 
-  <h3>Résultats</h3>
+  <div>
+    <h3>Résultats</h3>
+    <div
+      *ngFor="let project of projects"
+      class="grid grid-cols-1 md:grid-cols-2 gap-4"
+    >
+      <app-project [project]="project"></app-project>
+    </div>
+  </div>
 </div>
