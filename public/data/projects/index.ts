@@ -1,3 +1,3 @@
 import Pixees from './pixees.project.json';
 
-export const Projects: any[] = [Pixees];
+export const Projects: any[] = [Pixees, Pixees, Pixees, Pixees];

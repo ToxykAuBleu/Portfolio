@@ -38,7 +38,22 @@
         matTooltipPosition="left"
       ></fa-icon>
       <ng-container *ngFor="let technology of project.Technologies">
-        <app-icon-tech [tech]="technology" size="md"></app-icon-tech>
+        <div *ngIf="technology.name !== '...'; then icon; else others"></div>
+
+        <ng-template #icon>
+          <app-icon-tech [tech]="technology" size="md"></app-icon-tech>
+        </ng-template>
+
+        <ng-template #others>
+          <div
+            class="text-white flex flex-none items-center justify-center"
+            [matTooltip]="
+              project.Technologies.length - 8 + ' autre(s) technologie(s)...'
+            "
+          >
+            +{{ project.Technologies.length - 8 }}
+          </div>
+        </ng-template>
       </ng-container>
     </div>
 

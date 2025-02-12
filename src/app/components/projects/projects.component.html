@@ -58,11 +58,10 @@
 
   <div>
     <h3>Résultats</h3>
-    <div
-      *ngFor="let project of projects"
-      class="grid grid-cols-1 md:grid-cols-2 gap-4"
-    >
-      <app-project [project]="project"></app-project>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <ng-container *ngFor="let project of projects">
+        <app-project [project]="project"></app-project>
+      </ng-container>
     </div>
   </div>
 </div>
