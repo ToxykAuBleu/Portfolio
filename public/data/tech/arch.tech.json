@@ -2,5 +2,6 @@
   "name": "Arch Linux",
   "iconPath": "icons/arch.svg",
   "description": "Description de Arch Linux",
-  "url": "https://archlinux.org"
+  "url": "https://archlinux.org",
+  "isTool": true
 }

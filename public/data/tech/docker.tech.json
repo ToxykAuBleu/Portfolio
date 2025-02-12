@@ -2,5 +2,6 @@
   "name": "Docker",
   "iconPath": "icons/docker.svg",
   "description": "Description de Docker",
-  "url": "https://www.docker.com"
+  "url": "https://www.docker.com",
+  "isTool": true
 }

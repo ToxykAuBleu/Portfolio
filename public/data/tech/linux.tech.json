@@ -2,5 +2,6 @@
   "name": "Linux",
   "iconPath": "icons/linux.svg",
   "description": "Description de Linux",
-  "url": "https://www.kernel.org"
+  "url": "https://www.kernel.org",
+  "isTool": true
 }

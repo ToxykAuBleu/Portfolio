@@ -16,11 +16,22 @@ export class Technology {
    * URL pour plus de détails sur la technologie.
    */
   url: string;
+  /**
+   * Est-ce que la technologie est un langage de programmation ou un outil ?
+   */
+  isTool?: boolean = false;
 
-  constructor(name: string, icon: string, description: string, url: string) {
+  constructor(
+    name: string,
+    icon: string,
+    description: string,
+    url: string,
+    isTool: boolean = false
+  ) {
     this.name = name;
     this.iconPath = icon;
     this.description = description;
     this.url = url;
+    this.isTool = isTool;
   }
 }

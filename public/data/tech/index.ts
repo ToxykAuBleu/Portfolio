@@ -36,7 +36,7 @@ import Unity from './unity.tech.json';
 import VisualStudio from './visualstudio.tech.json';
 import VisualStudioCode from './vscode.tech.json';
 
-export const Technologies: Technology[] = [
+let techs: Technology[] = [
   Angular,
   Arch,
   Bash,
@@ -73,3 +73,11 @@ export const Technologies: Technology[] = [
   VisualStudio,
   VisualStudioCode,
 ];
+
+// Quelques manipulations...
+techs = techs.map((tech) => {
+  tech.isTool = tech.isTool || false;
+  return tech;
+});
+
+export const Technologies: Technology[] = techs;

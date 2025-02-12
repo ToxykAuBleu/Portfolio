@@ -2,5 +2,6 @@
   "name": "Notion",
   "iconPath": "icons/notion.svg",
   "description": "Description de Notion",
-  "url": "https://www.notion.so"
+  "url": "https://www.notion.so",
+  "isTool": true
 }

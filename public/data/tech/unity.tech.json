@@ -2,5 +2,6 @@
   "name": "Unity",
   "iconPath": "icons/unity.svg",
   "description": "Description de Unity",
-  "url": "https://unity.com"
+  "url": "https://unity.com",
+  "isTool": true
 }

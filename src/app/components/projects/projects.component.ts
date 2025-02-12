@@ -8,6 +8,8 @@ import { ProjectService } from '@services/project.service';
 import { Project } from '@models/project.model';
 import { IconTechComponent } from '@components/ui/icon-tech/icon-tech.component';
 import { ProjectComponent } from '@components/project/project.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
   selector: 'app-projects',
@@ -17,6 +19,8 @@ import { ProjectComponent } from '@components/project/project.component';
     MatTooltipModule,
     FontAwesomeModule,
     ProjectComponent,
+    MatExpansionModule,
+    MatDividerModule,
   ],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',

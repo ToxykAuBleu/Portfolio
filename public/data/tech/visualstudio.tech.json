@@ -2,5 +2,6 @@
   "name": "Visual Studio",
   "iconPath": "icons/visualstudio.svg",
   "description": "Description de Visual Studio",
-  "url": "https://visualstudio.microsoft.com"
+  "url": "https://visualstudio.microsoft.com",
+  "isTool": true
 }

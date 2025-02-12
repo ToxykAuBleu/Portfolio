@@ -9,6 +9,8 @@ import {
   faClock,
   faClose,
   faEllipsis,
+  faFilterCircleXmark,
+  faList,
   faToolbox,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -27,5 +29,7 @@ export class AppComponent {
     library.addIcons(faClock);
     library.addIcons(faToolbox);
     library.addIcons(faEllipsis);
+    library.addIcons(faList);
+    library.addIcons(faFilterCircleXmark);
   }
 }

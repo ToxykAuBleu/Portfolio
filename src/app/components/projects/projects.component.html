@@ -1,37 +1,111 @@
 <h1>Projets</h1>
 <div class="flex flex-col gap-8">
-  <div>
-    <h3>Technologies/outils</h3>
-    <div>
-      <button
-        class="button"
-        (click)="deselectAll()"
-        [class]="selectedTechnologies.length == 0 ? 'disabled' : ''"
-      >
-        Déselectionner
-      </button>
-      <div>
+  <p class="text-justify">
+    Sur cette page, vous trouverez une liste de projets dans lesquels j'ai pu y
+    contribuer. Sur chaque projet, vous pouvez voir la date de début et/ou de
+    fin, une liste des technologies et outils utilisés, et enfin une courte
+    description du projet.
+  </p>
+  <div class="technologies-container">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <p class="text-2xl">
+          <fa-icon icon="list" class="mr-4"></fa-icon>Liste des technologies et
+          outils utilisés
+        </p>
+      </mat-expansion-panel-header>
+
+      <div class="my-4">
+        <p class="text-justify">
+          Vous pouvez sélectionner les technologies et outils que vous souhaitez
+          voir dans les projets ci-dessous.
+        </p>
+        <ul class="list-disc ml-4">
+          <li>
+            Les projets affichés seront ceux qui utilisent au moins une des
+            technologies ou outils sélectionnés.
+          </li>
+          <li>
+            Survolez une technologie ou un outil pour en savoir plus sur
+            celui-ci.
+          </li>
+        </ul>
+      </div>
+
+      <mat-divider class="pb-4"></mat-divider>
+
+      <!-- FIXME: factoriser dans un seul composant. -->
+      <div class="flex flex-row">
         <!-- Liste des technologies -->
-        <div class="flex flex-wrap">
-          <div
-            *ngFor="let tech of technologies"
-            class="m-1.5"
-            (click)="toggleTech(tech)"
-            (mouseenter)="setHoveredTechnology(tech)"
-          >
-            <app-icon-tech
-              [tech]="tech"
-              [class]="
-                selectedTechnologies.length > 0
-                  ? isSelected(tech)
-                    ? 'selected-tech'
-                    : 'not-selected-tech'
-                  : ''
-              "
-            ></app-icon-tech>
+        <div class="w-3/5">
+          <h4>Technologies</h4>
+          <div class="flex flex-wrap">
+            <ng-container *ngFor="let tech of technologies">
+              <div
+                *ngIf="tech.isTool === false"
+                class="m-1.5"
+                (click)="toggleTech(tech)"
+                (touchstart)="setHoveredTechnology(tech)"
+                (mouseenter)="setHoveredTechnology(tech)"
+              >
+                <app-icon-tech
+                  [tech]="tech"
+                  [class]="
+                    selectedTechnologies.length > 0
+                      ? isSelected(tech)
+                        ? 'selected-tech'
+                        : 'not-selected-tech'
+                      : ''
+                  "
+                ></app-icon-tech>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+
+        <div class="w-4"></div>
+
+        <!-- Liste des outils -->
+        <div class="w-2/5">
+          <h4>Outils</h4>
+          <div class="flex flex-wrap">
+            <ng-container *ngFor="let tech of technologies">
+              <div
+                *ngIf="tech.isTool === true"
+                class="m-1.5"
+                (click)="toggleTech(tech)"
+                (touchstart)="setHoveredTechnology(tech)"
+                (mouseenter)="setHoveredTechnology(tech)"
+              >
+                <app-icon-tech
+                  [tech]="tech"
+                  [class]="
+                    selectedTechnologies.length > 0
+                      ? isSelected(tech)
+                        ? 'selected-tech'
+                        : 'not-selected-tech'
+                      : ''
+                  "
+                ></app-icon-tech>
+              </div>
+            </ng-container>
           </div>
         </div>
       </div>
+
+      <div class="flex flex-row justify-center">
+        <button
+          class="button"
+          (click)="deselectAll()"
+          [class]="selectedTechnologies.length == 0 ? 'disabled' : ''"
+          [disabled]="selectedTechnologies.length == 0"
+          [hidden]="selectedTechnologies.length == 0"
+        >
+          <fa-icon icon="filter-circle-xmark" class="mr-2"></fa-icon>
+          Déselectionner
+        </button>
+      </div>
+
       <!-- Description de la technologie -->
       <div
         *ngIf="hoveredTechnology"
@@ -53,7 +127,7 @@
           >En savoir plus</a
         >
       </div>
-    </div>
+    </mat-expansion-panel>
   </div>
 
   <div>

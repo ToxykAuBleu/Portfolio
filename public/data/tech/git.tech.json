@@ -2,5 +2,6 @@
   "name": "Git",
   "iconPath": "icons/git.svg",
   "description": "Description de Git",
-  "url": "https://git-scm.com"
+  "url": "https://git-scm.com",
+  "isTool": true
 }
