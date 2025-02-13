@@ -37,7 +37,7 @@
         matTooltip="Outils/technologies utilisés"
         matTooltipPosition="left"
       ></fa-icon>
-      <ng-container *ngFor="let technology of project.Technologies">
+      <ng-container *ngFor="let technology of slicedTechs">
         <div *ngIf="technology.name !== '...'; then icon; else others"></div>
 
         <ng-template #icon>
@@ -48,10 +48,13 @@
           <div
             class="text-white flex flex-none items-center justify-center"
             [matTooltip]="
-              project.Technologies.length - 8 + ' autre(s) technologie(s)...'
+              numberOfOtherTechs +
+              (numberOfOtherTechs > 1
+                ? ' autres technologies...'
+                : ' autre technologie...')
             "
           >
-            +{{ project.Technologies.length - 8 }}
+            +{{ numberOfOtherTechs }}
           </div>
         </ng-template>
       </ng-container>

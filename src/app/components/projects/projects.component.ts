@@ -31,6 +31,7 @@ export class ProjectsComponent implements OnInit {
   hoveredTechnology: Technology | null = null;
 
   projects: Project[] = [];
+  displayedProjects: Project[] = [];
 
   constructor(
     private technologyService: TechnologyService,
@@ -40,6 +41,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.technologies = this.technologyService.getTechnologies();
     this.projects = this.projectService.getProjects();
+    this.displayedProjects = this.projects;
     console.log(this.projects);
   }
 
@@ -51,6 +53,7 @@ export class ProjectsComponent implements OnInit {
     } else {
       this.selectedTechnologies.push(technology);
     }
+    this.filterProjects();
   }
 
   isSelected(technology: Technology): boolean {
@@ -59,9 +62,22 @@ export class ProjectsComponent implements OnInit {
 
   deselectAll(): void {
     this.selectedTechnologies = [];
+    this.filterProjects();
   }
 
   setHoveredTechnology(technology: Technology | null): void {
     this.hoveredTechnology = technology;
+  }
+
+  filterProjects(): void {
+    if (this.selectedTechnologies.length === 0) {
+      this.displayedProjects = this.projects;
+    } else {
+      this.displayedProjects = this.projects.filter((project) =>
+        project.Technologies.some((tech) =>
+          this.selectedTechnologies.includes(tech)
+        )
+      );
+    }
   }
 }

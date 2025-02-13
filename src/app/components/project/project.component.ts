@@ -21,16 +21,22 @@ import { Technology } from '@models/technology.model';
 })
 export class ProjectComponent implements OnInit {
   @Input() project!: Project;
+  slicedTechs: Technology[] = [];
+
+  readonly maxTechs = 9;
 
   get shortDescription(): string {
     return this.project.Description.split('.').slice(0, 1) + '.';
   }
 
+  get numberOfOtherTechs(): number {
+    return this.project.Technologies.length - (this.maxTechs - 1);
+  }
+
   ngOnInit() {
-    if (this.project.Technologies.length >= 9) {
-      const tempTechs = this.project.Technologies.slice(0, 8);
-      tempTechs.push(new Technology('...', '', '', ''));
-      this.project = this.project.setTechnologies(tempTechs);
+    this.slicedTechs = this.project.Technologies.slice(0, this.maxTechs - 1);
+    if (this.project.Technologies.length >= this.maxTechs) {
+      this.slicedTechs.push(new Technology('...', '', '', ''));
     }
   }
 }

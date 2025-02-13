@@ -26,11 +26,13 @@ export class Project {
    */
   private technologies: Technology[];
 
-  constructor() {
-    this.name = '';
-    this.description = '';
-    this.startingDate = new Date();
-    this.technologies = [];
+  constructor(project?: Project) {
+    this.name = project?.name || '';
+    this.description = project?.description || '';
+    this.previewImage = project?.previewImage;
+    this.startingDate = project?.startingDate || new Date();
+    this.endingDate = project?.endingDate;
+    this.technologies = project?.technologies || [];
   }
 
   get Name(): string {

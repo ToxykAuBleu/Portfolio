@@ -131,9 +131,16 @@
   </div>
 
   <div>
-    <h3>Résultats</h3>
+    <h3>
+      {{
+        selectedTechnologies.length === 0
+          ? "Liste des projets"
+          : displayedProjects.length +
+            " projets correspondant à votre recherche"
+      }}
+    </h3>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <ng-container *ngFor="let project of projects">
+      <ng-container *ngFor="let project of displayedProjects">
         <app-project [project]="project"></app-project>
       </ng-container>
     </div>
