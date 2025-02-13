@@ -35,9 +35,9 @@
       <mat-divider class="pb-4"></mat-divider>
 
       <!-- FIXME: factoriser dans un seul composant. -->
-      <div class="flex flex-row">
+      <div class="flex flex-col md:flex-row">
         <!-- Liste des technologies -->
-        <div class="w-3/5">
+        <div class="md:w-3/5">
           <h4>Technologies</h4>
           <div class="flex flex-wrap">
             <ng-container *ngFor="let tech of technologies">
@@ -63,10 +63,10 @@
           </div>
         </div>
 
-        <div class="w-4"></div>
+        <div class="w-4 h-4"></div>
 
         <!-- Liste des outils -->
-        <div class="w-2/5">
+        <div class="md:w-2/5">
           <h4>Outils</h4>
           <div class="flex flex-wrap">
             <ng-container *ngFor="let tech of technologies">

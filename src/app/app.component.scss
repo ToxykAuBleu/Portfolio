@@ -2,7 +2,7 @@
 
 body {
   @apply bg-gradient-to-r from-[#4751ff] via-[#5a71d8] to-[#305dd9];
-  @apply mt-16 mx-4 md:mx-16 lg:mx-32 xl:mx-64 2xl:mx-96;
+  @apply my-16 mx-8 md:mx-16 lg:mx-32 xl:mx-48 2xl:mx-64;
 }
 
 h1,
@@ -36,4 +36,42 @@ ul {
   &.disabled {
     @apply bg-gray-400 cursor-not-allowed;
   }
+}
+
+/*
+*
+* The MIT License
+* Copyright (c) 2024 nulld3x
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*
+*/
+body {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+}
+
+body::before {
+  --size: 2.75rem;
+  --line: color-mix(in oklch, canvasText, transparent 70%);
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+        90deg,
+        var(--line) 0.0625rem,
+        transparent 0.0625rem var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 0.0625rem, transparent 0.0625rem var(--size))
+      50% 50% / var(--size) var(--size);
+  mask: linear-gradient(-30deg, transparent 30%, #f0f0f0);
+  top: 0;
+  transform-style: flat;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
 }
