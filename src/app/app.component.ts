@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 import {
   FaIconLibrary,
   FontAwesomeModule,
@@ -13,10 +14,11 @@ import {
   faList,
   faToolbox,
 } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderComponent, FontAwesomeModule],
+  imports: [RouterOutlet, HeaderComponent, FontAwesomeModule, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   encapsulation: ViewEncapsulation.None,
@@ -31,5 +33,6 @@ export class AppComponent {
     library.addIcons(faEllipsis);
     library.addIcons(faList);
     library.addIcons(faFilterCircleXmark);
+    library.addIcons(faGithub);
   }
 }
