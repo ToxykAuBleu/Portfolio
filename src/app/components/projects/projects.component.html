@@ -139,7 +139,7 @@
             " projets correspondant à votre recherche"
       }}
     </h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
       <ng-container *ngFor="let project of displayedProjects">
         <app-project [project]="project"></app-project>
       </ng-container>
