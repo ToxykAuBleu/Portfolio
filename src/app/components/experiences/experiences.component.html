@@ -1,1 +1,108 @@
-<p>experiences works!</p>
+<h1>Experiences</h1>
+<div class="flex flex-col gap-8">
+  <p class="text-justify">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+    Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies
+    sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a,
+    semper congue, euismod non, mi.
+  </p>
+  <div>
+    <h3>Liste des expériences</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4">
+      <ng-container *ngFor="let experience of experiences">
+        <ng-container
+          [ngTemplateOutlet]="experienceTemplate"
+          [ngTemplateOutletContext]="{ $implicit: experience }"
+        ></ng-container>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- Experience card -->
+<ng-template #experienceTemplate let-experience>
+  <div class="bg-gray-800 p-4 rounded-lg">
+    <div class="flex flex-row justify-between">
+      <h4>{{ experience.title }}</h4>
+    </div>
+    <!-- Localisation -->
+    <div class="flex flex-row gap-4">
+      <!-- Online -->
+      <ng-container *ngIf="experience.isOnline()">
+        <fa-icon
+          icon="globe"
+          class="text-white"
+          matTooltip="Expérience en ligne"
+          matTooltipPosition="left"
+        ></fa-icon>
+        <span class="text-gray-700 dark:text-gray-400"
+          ><a [href]="experience.location">En ligne</a></span
+        >
+      </ng-container>
+      <!-- Not online -->
+      <ng-container *ngIf="!experience.isOnline()">
+        <fa-icon
+          icon="map-location-dot"
+          class="text-white"
+          matTooltip="Emplacement géographique où s'est réalisé l'expérience"
+          matTooltipPosition="left"
+        ></fa-icon>
+        <span class="text-gray-700 dark:text-gray-400">{{
+          experience.location
+        }}</span>
+      </ng-container>
+    </div>
+    <!-- Dates -->
+    <div class="flex flex-row gap-4">
+      <!-- Ponctual experience -->
+      <ng-container *ngIf="!experience.StartingDate">
+        <fa-icon icon="flag-checkered" class="text-white"></fa-icon>
+        <div>
+          <span
+            class="text-gray-700 dark:text-gray-400"
+            matTooltip="Obtenu et/ou terminé le"
+            matTooltipPosition="above"
+            >{{
+              experience.EndingDate.Value | date : experience.EndingDate.Format
+            }}</span
+          >
+        </div>
+      </ng-container>
+
+      <!-- Period experience -->
+      <ng-container *ngIf="experience.StartingDate">
+        <fa-icon icon="clock" class="text-white"></fa-icon>
+        <div>
+          <span
+            class="text-gray-700 dark:text-gray-400"
+            matTooltip="Date de début de l'expérience"
+            matTooltipPosition="above"
+            >{{
+              (experience.IsCurrent ? "Depuis " : "") +
+                (experience.StartingDate.Value
+                  | date : experience.StartingDate.Format)
+            }}</span
+          >
+          <span
+            *ngIf="!experience.IsCurrent"
+            class="text-gray-700 dark:text-gray-400"
+            matTooltip="Date de fin de l'expérience"
+            matTooltipPosition="above"
+          >
+            -
+            {{
+              experience.EndingDate.Value | date : experience.EndingDate.Format
+            }}</span
+          >
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="my-4">
+      <mat-divider></mat-divider>
+    </div>
+
+    <!-- Description -->
+    <p [innerHTML]="experience.description"></p>
+  </div>
+</ng-template>

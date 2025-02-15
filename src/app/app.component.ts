@@ -11,7 +11,10 @@ import {
   faClose,
   faEllipsis,
   faFilterCircleXmark,
+  faFlagCheckered,
+  faGlobe,
   faList,
+  faMapLocationDot,
   faToolbox,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -34,5 +37,8 @@ export class AppComponent {
     library.addIcons(faList);
     library.addIcons(faFilterCircleXmark);
     library.addIcons(faGithub);
+    library.addIcons(faMapLocationDot);
+    library.addIcons(faGlobe);
+    library.addIcons(faFlagCheckered);
   }
 }

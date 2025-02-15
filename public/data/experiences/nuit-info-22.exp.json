@@ -1,0 +1,17 @@
+{
+  "name": "NuitInfo22",
+  "title": "Compétition nationale « La Nuit de l’Info » 2022",
+  "description": "• Compétition entre étudiants de l’hexagone, 18 heures non-stop.<br>• Objectif : réaliser une application web sur une thématique imposée.",
+  "location": "IUT de Bayonne et du Pays basque, Bayonne",
+  "previewImage": null,
+  "startingDate": {
+    "Value": "2022-12-01 16:30:00",
+    "Format": "EEE dd MMM à HH:mm"
+  },
+  "endingDate": {
+    "Value": "2022-12-02 8:00:00",
+    "Format": "EEE dd MMM à HH:mm"
+  },
+  "isCurrent": false,
+  "isCourse": false
+}

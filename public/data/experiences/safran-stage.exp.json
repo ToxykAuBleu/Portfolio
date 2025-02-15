@@ -1,0 +1,17 @@
+{
+  "name": "Safran-stage",
+  "title": "Stage « développeur informatique »",
+  "description": "• Missions : transformer en application web une partie d’une application locale, corriger les bugs, réaliser les tests de l’outil informatique existant.",
+  "location": "Safran Helicopters Engine, Tarnos",
+  "previewImage": null,
+  "startingDate": {
+    "Value": "2024-04-08",
+    "Format": "dd LLLL yyyy"
+  },
+  "endingDate": {
+    "Value": "2024-06-14",
+    "Format": "dd LLLL yyyy"
+  },
+  "isCurrent": false,
+  "isCourse": false
+}
