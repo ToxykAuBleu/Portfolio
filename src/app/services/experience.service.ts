@@ -20,9 +20,9 @@ export class ExperienceService {
           .setStartDate(
             exp.startingDate
               ? typeof exp.startingDate === 'string'
-                ? new CustomDate(exp.startingDate)
+                ? new CustomDate(new Date(exp.startingDate))
                 : new CustomDate(
-                    exp.startingDate.Value,
+                    new Date(exp.startingDate.Value),
                     exp.startingDate.Format
                   )
               : undefined
@@ -30,8 +30,11 @@ export class ExperienceService {
           .setEndDate(
             exp.endingDate
               ? typeof exp.endingDate === 'string'
-                ? new CustomDate(exp.endingDate)
-                : new CustomDate(exp.endingDate.Value, exp.endingDate.Format)
+                ? new CustomDate(new Date(exp.endingDate))
+                : new CustomDate(
+                    new Date(exp.endingDate.Value),
+                    exp.endingDate.Format
+                  )
               : undefined
           )
           .setIsCurrent(exp.isCurrent)
