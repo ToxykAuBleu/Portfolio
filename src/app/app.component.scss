@@ -1,7 +1,7 @@
 @use "tailwindcss";
 
 body {
-  @apply bg-gradient-to-r from-[#4751ff] via-[#5a71d8] to-[#305dd9];
+  @apply bg-gradient-to-r from-[#0009AD] via-[#1F3183] to-[#163077];
   @apply my-16 mx-8 md:mx-16 lg:mx-32 xl:mx-48 2xl:mx-64;
 }
 
@@ -58,7 +58,7 @@ ul {
 
 body::before {
   --size: 2.75rem;
-  --line: color-mix(in oklch, canvasText, transparent 70%);
+  --line: color-mix(in oklch, white, transparent 70%);
   content: "";
   width: 100vw;
   height: 100vh;
