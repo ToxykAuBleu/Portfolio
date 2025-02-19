@@ -23,22 +23,14 @@ export class ExperiencesComponent implements OnInit {
   constructor(private experiencesService: ExperienceService) {}
 
   ngOnInit(): void {
-    const experiences = this.experiencesService.getAllExperiences();
+    this.experiences = this.experiencesService.getAllExperiences();
     // Sort experiences by starting date.
-    experiences.sort(
+    this.experiences.sort(
       (a, b) =>
         (b.StartingDate?.Value.getTime() || 0) -
         (a.StartingDate?.Value.getTime() || 0)
     );
 
-    // Add empty experiences to fill the grid.
-    for (let i = 0; i < experiences.length; i++) {
-      this.experiences.push(experiences[i]);
-      if (i % 2 === 0) {
-        this.experiences.push(new Experience());
-        this.experiences.push(new Experience());
-      }
-    }
     console.log(this.experiences);
   }
 }

@@ -16,6 +16,7 @@ import {
   faList,
   faMapLocationDot,
   faToolbox,
+  faUpRightFromSquare,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -40,5 +41,6 @@ export class AppComponent {
     library.addIcons(faMapLocationDot);
     library.addIcons(faGlobe);
     library.addIcons(faFlagCheckered);
+    library.addIcons(faUpRightFromSquare);
   }
 }
