@@ -1,14 +1,95 @@
 <div class="flex flex-col">
   <!-- Hero Section -->
-  <div class="h-screen">
+  <div class="h-screen header-gap">
     <div
-      class="flex flex-col md:flex-row justify-center items-center h-full header-gap gap-6 md:gap-24"
+      class="h-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24"
     >
       <img src="profile-picture.png" class="rounded-full" />
       <div class="flex flex-col justify-center items-center">
         <h1>&#64;ToxykAuBleu</h1>
-        <h3>alias Mathieu FOISSAC</h3>
+        <h4>alias Mathieu FOISSAC</h4>
+        <h3>Full-stack developer !</h3>
       </div>
     </div>
   </div>
+
+  <!-- Soft-skills -->
+  <div class="h-screen">
+    <div class="h-full flex flex-col justify-center items-center gap-6">
+      <h1 class="text-3xl">Mes qualités</h1>
+      <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          class="flex flex-col items-center justify-center p-4 border-4 border-indigo-400 rounded-lg bg-indigo-800/60 transition md:hover:scale-115 hover:bg-indigo-600/60"
+          *ngFor="let item of aboutItems"
+        >
+          <div class="flex flex-row gap-6">
+            <fa-icon
+              [icon]="item.icon"
+              class="flex text-white"
+              size="2x"
+            ></fa-icon>
+            <h3 class="flex">{{ item.title }}</h3>
+          </div>
+          <p class="text-center">
+            {{ item.content }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIXME: revoir l'affichage des projets
+  Project Section
+  <div class="h-screen">
+    <div class="h-full flex flex-col justify-center items-center gap-6">
+      <h2>Projets</h2>
+      <div class="flex flex-row w-full">
+        Visualisation de quelques projets
+        <div class="grid grid-cols-2 w-1/2">
+          <app-project [project]="getProject('Pixees')!" class="absolute scale-75 rotate-x-50 -rotate-z-45"></app-project>
+          <div class="flex-none"></div>
+          <app-project
+            [project]="getProject('Pixees')!"
+            class="relative top-5 scale-90 -rotate-z-37"
+          ></app-project>
+          <app-project
+            [project]="getProject('Pixees')!"
+            class="relative bottom-7 right-7 scale-90 -rotate-z-37"
+          ></app-project>
+        </div>
+        Description
+        <div class="flex w-1/2">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget
+            nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
+            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
+            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
+            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
+            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
+            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
+            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
+            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
+            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
+            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
+            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
+            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
+            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
+            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
+            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
+            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
+            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
+            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
+            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
+            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
+            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
+            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
+            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
+            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
+            ultricies. Null
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+   -->
 </div>

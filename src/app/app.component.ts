@@ -9,14 +9,19 @@ import {
 import {
   faClock,
   faClose,
+  faEarListen,
   faEllipsis,
   faFilterCircleXmark,
   faFlagCheckered,
+  faGears,
   faGlobe,
+  faHandshakeAngle,
   faList,
   faMapLocationDot,
+  faPeopleGroup,
   faToolbox,
   faUpRightFromSquare,
+  faUserClock,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -42,5 +47,10 @@ export class AppComponent {
     library.addIcons(faGlobe);
     library.addIcons(faFlagCheckered);
     library.addIcons(faUpRightFromSquare);
+    library.addIcons(faUserClock);
+    library.addIcons(faGears);
+    library.addIcons(faPeopleGroup);
+    library.addIcons(faEarListen);
+    library.addIcons(faHandshakeAngle);
   }
 }

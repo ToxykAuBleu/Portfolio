@@ -33,4 +33,8 @@ export class ProjectService {
   getProjects(): Project[] {
     return this.parsedProjects;
   }
+
+  getProject(name: string): Project | undefined {
+    return this.parsedProjects.find((project) => project.Name === name);
+  }
 }
