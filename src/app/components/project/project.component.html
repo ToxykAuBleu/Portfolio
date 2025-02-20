@@ -37,27 +37,32 @@
         matTooltip="Outils/technologies utilisés"
         matTooltipPosition="left"
       ></fa-icon>
-      <ng-container *ngFor="let technology of slicedTechs">
-        <div *ngIf="technology.name !== '...'; then icon; else others"></div>
+      <div
+        class="flex flex-row flex-wrap w-full gap-4 justify-between"
+        #techContainer
+      >
+        <ng-container *ngFor="let technology of slicedTechs">
+          <div *ngIf="technology.name !== '...'; then icon; else others"></div>
 
-        <ng-template #icon>
-          <app-icon-tech [tech]="technology" size="md"></app-icon-tech>
-        </ng-template>
+          <ng-template #icon>
+            <app-icon-tech [tech]="technology" size="md"></app-icon-tech>
+          </ng-template>
 
-        <ng-template #others>
-          <div
-            class="text-white flex flex-none items-center justify-center"
-            [matTooltip]="
-              numberOfOtherTechs +
-              (numberOfOtherTechs > 1
-                ? ' autres technologies...'
-                : ' autre technologie...')
-            "
-          >
-            +{{ numberOfOtherTechs }}
-          </div>
-        </ng-template>
-      </ng-container>
+          <ng-template #others>
+            <div
+              class="flex text-white items-center justify-center"
+              [matTooltip]="
+                overflowCount +
+                (overflowCount > 1
+                  ? ' autres technologies...'
+                  : ' autre technologie...')
+              "
+            >
+              +{{ overflowCount }}
+            </div>
+          </ng-template>
+        </ng-container>
+      </div>
     </div>
 
     <div class="my-4">
