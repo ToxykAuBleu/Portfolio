@@ -2,9 +2,13 @@ import { Technology } from './technology.model';
 
 export class Project {
   /**
-   * Nom du projet.
+   * Nom du projet, pour la retrouver dans la liste.
    */
   private name: string;
+  /**
+   * Titre du projet.
+   */
+  private title: string;
   /**
    * Description du projet. Peut contenir du HTML.
    */
@@ -28,6 +32,7 @@ export class Project {
 
   constructor(project?: Project) {
     this.name = project?.name || '';
+    this.title = project?.title || '';
     this.description = project?.description || '';
     this.previewImage = project?.previewImage;
     this.startingDate = project?.startingDate || new Date();
@@ -40,6 +45,14 @@ export class Project {
   }
   setName(name: string): Project {
     this.name = name;
+    return this;
+  }
+
+  get Title(): string {
+    return this.title;
+  }
+  setTitle(title: string): Project {
+    this.title = title;
     return this;
   }
 

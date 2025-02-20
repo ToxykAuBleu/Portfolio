@@ -18,6 +18,7 @@ export class ProjectService {
       this.parsedProjects.push(
         new Project()
           .setName(project.name)
+          .setTitle(project.title ? project.title : project.name)
           .setPreviewImage(project.previewImage)
           .setDescription(project.description)
           .setStartDate(new Date(project.startingDate))
