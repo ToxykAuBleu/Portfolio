@@ -46,6 +46,13 @@ ul {
   }
 }
 
+.pill-current {
+  @apply bg-emerald-600 text-white px-2 rounded-full mr-2;
+  &::after {
+    content: "En cours";
+  }
+}
+
 /*
 *
 * The MIT License

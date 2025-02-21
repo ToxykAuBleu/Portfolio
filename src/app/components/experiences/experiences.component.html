@@ -57,11 +57,7 @@
   <div class="p-4 my-16 bg-black/20 rounded-lg shadow-lg">
     <div class="flex flex-row">
       <h4>
-        <span
-          *ngIf="experience.IsCurrent"
-          class="bg-emerald-600 text-white px-2 rounded-full mr-2"
-          >En cours</span
-        >
+        <span *ngIf="experience.IsCurrent" class="pill-current"></span>
         {{ experience.Title }}
       </h4>
     </div>
