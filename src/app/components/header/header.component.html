@@ -1,20 +1,21 @@
+<!-- TODO: make it responsive -->
 <header
-  class="fixed inset-x-0 top-0 z-50 w-full px-4 py-6 text-white font-semibold"
+  class="flex flex-row fixed responsive-side inset-x-0 top-2 z-50 px-4 py-6 text-white items-center rounded-full backdrop-blur-md"
 >
-  <nav>
-    <ul class="flex justify-center space-x-16">
-      <li>
-        <a href="/" class="hover:text-gray-300">Accueil</a>
-      </li>
-      <li>
-        <a href="/projects" class="hover:text-gray-300">Projets</a>
-      </li>
-      <li>
-        <a href="/experiences" class="hover:text-gray-300">Expériences</a>
-      </li>
-      <li>
-        <a href="/about" class="hover:text-gray-300">A propos</a>
-      </li>
-    </ul>
-  </nav>
+  <p class="flex absolute text-2xl! font-bold">&#64;ToxykAuBleu</p>
+
+  <ul class="relative flex w-full justify-center space-x-16">
+    <li>
+      <a href="/" class="item-navbar">Accueil</a>
+    </li>
+    <li>
+      <a href="/projects" class="item-navbar">Projets</a>
+    </li>
+    <li>
+      <a href="/experiences" class="item-navbar">Expériences</a>
+    </li>
+    <li>
+      <a href="/about" class="item-navbar">A propos</a>
+    </li>
+  </ul>
 </header>

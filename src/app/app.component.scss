@@ -2,11 +2,15 @@
 
 body {
   @apply bg-gradient-to-r from-[#0009AD] via-[#1F3183] to-[#163077];
-  @apply mt-16 mx-8 md:mx-16 lg:mx-32 xl:mx-48 2xl:mx-64;
+  @apply mt-24;
+  @extend .responsive-side;
 }
 
+.responsive-side {
+  @apply mx-8 md:mx-16 lg:mx-32 xl:mx-48 2xl:mx-64;
+}
 .header-gap {
-  @apply -mt-16;
+  @apply -mt-24;
 }
 
 h1,
