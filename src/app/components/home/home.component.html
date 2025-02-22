@@ -38,6 +38,28 @@
     </div>
   </div>
 
+  <!-- Computer skills -->
+  <div class="h-screen bg-white/10">
+    <div class="h-full flex flex-col justify-center items-center gap-6">
+      <h1 class="text-3xl">Mes compétences</h1>
+      <!-- List of skills -->
+      <div class="flex flex-row h-3/5 overflow-hidden w-full">
+        <div class="flex flex-wrap relative w-3/5 overflow-hidden">
+          <div class="flex flex-row flex-wrap gap-6">
+            <div *ngFor="let tech of technologies" class="scrolling-first">
+              <app-icon-tech [tech]="tech" size="xl"></app-icon-tech>
+            </div>
+            <div *ngFor="let tech of technologies" class="scrolling-second">
+              <app-icon-tech [tech]="tech" size="xl"></app-icon-tech>
+            </div>
+          </div>
+        </div>
+        <!-- Description -->
+        <div class="flex w-2/5"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- FIXME: revoir l'affichage des projets
   Project Section
   <div class="h-screen">

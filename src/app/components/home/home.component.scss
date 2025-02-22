@@ -1,0 +1,23 @@
+.scrolling-first {
+  animation: scrollTech-first 10s linear infinite;
+}
+.scrolling-second {
+  animation: scrollTech-second 10s linear infinite;
+}
+
+@keyframes scrollTech-first {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes scrollTech-second {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

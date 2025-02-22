@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { IconTechComponent } from '@components/ui/icon-tech/icon-tech.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Project } from '@models/project.model';
+import { Technology } from '@models/technology.model';
 import { ProjectService } from '@services/project.service';
+import { TechnologyService } from '@services/technology.service';
 
 interface AboutItem {
   title: string;
@@ -12,11 +15,11 @@ interface AboutItem {
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, IconTechComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   aboutItems: AboutItem[] = [
     {
       title: 'Autonomie',
@@ -49,8 +52,17 @@ export class HomeComponent {
       content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
     },
   ];
+  technologies: Technology[] = [];
 
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private projectService: ProjectService,
+    private technologyService: TechnologyService
+  ) {}
+
+  ngOnInit(): void {
+    this.technologies = this.technologyService.getTechnologies();
+    // this.technologies.push(...this.technologyService.getTechnologies());
+  }
 
   getProject(name: string): Project | undefined {
     return this.projectService.getProject(name);
