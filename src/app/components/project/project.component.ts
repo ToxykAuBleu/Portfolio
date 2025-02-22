@@ -71,13 +71,14 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     this.overflowCount = 0;
 
     for (let i = 0; i < numChildren; i++) {
-      totalWidth += children[1].offsetWidth + 12;
+      totalWidth += children[1].offsetWidth + 13;
       if (totalWidth > container.offsetWidth) {
         this.overflowCount = numChildren - i;
         break;
       }
     }
 
+    console.log(this.overflowCount, totalWidth, container.offsetWidth);
     this.slicedTechs = this.project.Technologies.slice(
       0,
       this.project.Technologies.length - this.overflowCount
