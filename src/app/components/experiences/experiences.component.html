@@ -9,9 +9,18 @@
   <div>
     <h3>Liste des expériences</h3>
     <div class="grid grid-cols-2 relative">
+      <!-- Arrow -->
       <div
-        class="absolute inset-y-0 left-[calc(50%-6px)] w-2 bg-gray-300 rounded-full"
+        class="absolute inset-x-0 -top-3 flex justify-center items-center z-50"
+      >
+        <fa-icon icon="chevron-up" class="text-gray-300" size="3x"></fa-icon>
+      </div>
+
+      <!-- Line -->
+      <div
+        class="absolute inset-y-0 left-[calc(50%-4px)] w-2 bg-gray-300 rounded-full"
       ></div>
+      <!-- Experiences -->
       <ng-container *ngFor="let experience of experiences; let i = index">
         <!-- Left: preview | Right: experience -->
         <ng-container *ngIf="i % 2 === 0">
@@ -37,6 +46,11 @@
           ></ng-container>
         </ng-container>
       </ng-container>
+
+      <!-- Starting point -->
+      <div class="absolute inset-x-0 bottom-0 flex justify-center items-center">
+        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
+      </div>
     </div>
   </div>
 </div>
