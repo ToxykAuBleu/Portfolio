@@ -1,5 +1,5 @@
 <div
-  class="bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700"
+  class="bg-white/80 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800/80 dark:border-gray-700"
 >
   <img class="rounded-t-lg" [src]="project.PreviewImage" alt="" />
   <div class="p-5">
@@ -12,7 +12,7 @@
     </h5>
     <!-- Date du projet -->
     <div class="flex flex-row gap-4">
-      <fa-icon icon="clock" class="text-white"></fa-icon>
+      <fa-icon icon="clock" class="text-black dark:text-white"></fa-icon>
       <div>
         <span
           class="text-gray-700 dark:text-gray-400"
@@ -34,12 +34,12 @@
     <div class="flex flex-row gap-4">
       <fa-icon
         icon="toolbox"
-        class="text-white self-center"
+        class="text-black dark:text-white self-center"
         matTooltip="Outils/technologies utilisés"
         matTooltipPosition="left"
       ></fa-icon>
       <div
-        class="flex flex-row flex-wrap w-full gap-4 justify-between"
+        [ngClass]="{'flex flex-row flex-wrap w-full gap-4': true, 'justify-evenly': (overflowCount > 0 ? true : false)}"
         #techContainer
       >
         <ng-container *ngFor="let technology of slicedTechs">
@@ -51,7 +51,7 @@
 
           <ng-template #others>
             <div
-              class="flex text-white items-center justify-center"
+              class="flex text-black dark:text-white items-center justify-center"
               [matTooltip]="
                 overflowCount +
                 (overflowCount > 1
@@ -72,7 +72,7 @@
 
     <!-- Petite description du projet -->
     <p
-      class="mb-3 font-normal text-justify text-gray-700 dark:text-gray-400"
+      class="mb-3 font-normal text-justify text-gray-700! dark:text-gray-400!"
       [innerHTML]="shortDescription"
     ></p>
 
