@@ -1,15 +1,20 @@
 <!-- TODO: make it responsive -->
+<!-- TODO: make pseudo responsive enough -->
 <header
-  class="z-100 flex flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full backdrop-blur-md"
->
-  <p
-    class="z-102 flex absolute text-2xl! font-bold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text hover:text-transparent! transition-all"
-  >
-    &#64;ToxykAuBleu
-  </p>
+  class="z-100 flex md:flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full backdrop-blur-md">
+  <!-- Profile picture/pseudonyme -->
+  <div class="z-102 flex absolute items-center gap-4">
+    <img src="profile-picture.png" class="rounded-full max-[500px]:hidden w-16" />
+    <p
+      class="max-[1060px]:hidden min-[1100px]:text-2xl! font-bold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text hover:text-transparent! transition-all">
+      &#64;ToxykAuBleu
+    </p>
+  </div>
 
-  <div class="z-101 relative hidden md:flex w-full flex-col md:flex-row">
-    <ul class="w-full flex justify-center md:space-x-8 lg:space-x-16">
+  <!-- FIXME: merge into one big div -->
+  <!-- Bigger than md -->
+  <div class="z-101 relative hidden md:flex w-full flex-row md:gap-8 lg:gap-12 items-center justify-end">
+    <ul class="flex md:space-x-8 lg:space-x-12">
       <li>
         <a href="/" class="item-navbar">Accueil</a>
       </li>
@@ -24,13 +29,40 @@
       </li>
     </ul>
     <!-- Right buttons -->
+    <div class="flex">
+      <ng-container [ngTemplateOutlet]="cv"></ng-container>
+    </div>
+  </div>
+
+  <!-- Smaller than md -->
+  <div class="z-101 relative flex md:hidden w-full items-center justify-center">
+    <ul class="flex space-x-6 sm:space-x-12">
+      <li class="">
+        <a href="/"><fa-icon icon="home-user"></fa-icon></a>
+      </li>
+      <li class="">
+        <a href="/projects"><fa-icon icon="folder-open"></fa-icon></a>
+      </li>
+      <li class="">
+        <a href="/experiences"><fa-icon icon="vial"></fa-icon></a>
+      </li>
+      <li class="">
+        <a href="/about"><fa-icon icon="question-circle"></fa-icon></a>
+      </li>
+    </ul>
+
+    <!-- Right buttons -->
     <div class="absolute right-0">
-      <a href="/cv" target="_blank">
-        <button class="button">
-          <fa-icon icon="download" class="text-white mr-2"></fa-icon>
-          CV
-        </button>
-      </a>
+      <ng-container [ngTemplateOutlet]="cv"></ng-container>
     </div>
   </div>
 </header>
+
+<ng-template #cv>
+  <a href="/cv" target="_blank">
+    <button class="button">
+      <fa-icon icon="download" class="text-white mr-2"></fa-icon>
+      CV
+    </button>
+  </a>
+</ng-template>

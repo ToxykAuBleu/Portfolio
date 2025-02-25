@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/angular-fontawesome';
 import {
   faChevronUp,
+  faCircleQuestion,
   faClock,
   faClose,
   faDownload,
@@ -15,15 +16,18 @@ import {
   faEllipsis,
   faFilterCircleXmark,
   faFlagCheckered,
+  faFolderOpen,
   faGears,
   faGlobe,
   faHandshakeAngle,
+  faHouseUser,
   faList,
   faMapLocationDot,
   faPeopleGroup,
   faToolbox,
   faUpRightFromSquare,
   faUserClock,
+  faVial,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
@@ -56,5 +60,9 @@ export class AppComponent {
     library.addIcons(faHandshakeAngle);
     library.addIcons(faChevronUp);
     library.addIcons(faDownload);
+    library.addIcons(faHouseUser);
+    library.addIcons(faVial);
+    library.addIcons(faFolderOpen);
+    library.addIcons(faCircleQuestion);
   }
 }
