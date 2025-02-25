@@ -10,6 +10,7 @@ import {
   faChevronUp,
   faClock,
   faClose,
+  faDownload,
   faEarListen,
   faEllipsis,
   faFilterCircleXmark,
@@ -54,5 +55,6 @@ export class AppComponent {
     library.addIcons(faEarListen);
     library.addIcons(faHandshakeAngle);
     library.addIcons(faChevronUp);
+    library.addIcons(faDownload);
   }
 }
