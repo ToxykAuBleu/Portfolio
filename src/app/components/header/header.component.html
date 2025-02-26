@@ -1,22 +1,66 @@
-<!-- TODO: make it responsive -->
 <header
-  class="z-100 flex flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full backdrop-blur-md">
-  <p
-    class="z-102 flex absolute text-2xl! font-bold bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text hover:text-transparent! transition-all">
-    &#64;ToxykAuBleu</p>
+  class="@container z-100 flex md:flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full backdrop-blur-md"
+>
+  <!-- FIXME: upgrade it -->
+  <!-- Profile picture/pseudonyme -->
+  <div class="z-102 flex absolute items-center gap-4">
+    <img
+      src="profile-picture.png"
+      class="rounded-full hover:animate-spin max-[500px]:hidden w-16"
+    />
+    <p
+      class="@max-[770px]:hidden @min-[810px]:text-2xl! font-bold custom-color"
+    >
+      &#64;ToxykAuBleu
+    </p>
+  </div>
 
-  <ul class="z-101 relative flex w-full justify-center space-x-16">
-    <li>
-      <a routerLink="/" class="item-navbar">Accueil</a>
-    </li>
-    <li>
-      <a routerLink="/projects" class="item-navbar">Projets</a>
-    </li>
-    <li>
-      <a routerLink="/experiences" class="item-navbar">Expériences</a>
-    </li>
-    <li>
-      <a routerLink="/about" class="item-navbar">A propos</a>
-    </li>
-  </ul>
+  <!-- Navigation -->
+  <div
+    class="z-101 relative flex w-full items-center max-[500px]:justify-start min-[500px]:justify-center md:justify-end gap-4 md:gap-8 lg:gap-12"
+  >
+    <div class="flex space-x-6 sm:space-x-12 md:space-x-8 lg:space-x-12">
+      <a routerLink="/" class="item-navbar">
+        <fa-icon
+          icon="home-user"
+          class="md:hidden min-2xl:mr-2 min-2xl:inline"
+        ></fa-icon>
+        <span class="hidden md:inline">Accueil</span>
+      </a>
+      <a routerLink="/projects" class="item-navbar">
+        <fa-icon
+          icon="folder-open"
+          class="md:hidden min-2xl:mr-2 min-2xl:inline"
+        ></fa-icon>
+        <span class="hidden md:inline">Projects</span>
+      </a>
+      <a routerLink="/experiences" class="item-navbar">
+        <fa-icon
+          icon="vial"
+          class="md:hidden min-2xl:mr-2 min-2xl:inline"
+        ></fa-icon>
+        <span class="hidden md:inline">Expériences</span>
+      </a>
+      <a routerLink="/about" class="item-navbar">
+        <fa-icon
+          icon="question-circle"
+          class="md:hidden min-2xl:mr-2 min-2xl:inline"
+        ></fa-icon>
+        <span class="hidden md:inline">A propos</span>
+      </a>
+    </div>
+    <!-- Right buttons -->
+    <div class="max-md:absolute max-md:right-0 md:flex">
+      <ng-container [ngTemplateOutlet]="cv"></ng-container>
+    </div>
+  </div>
 </header>
+
+<ng-template #cv>
+  <a href="/cv.pdf" target="_blank">
+    <button class="button">
+      <fa-icon icon="download" class="text-white mr-2"></fa-icon>
+      CV
+    </button>
+  </a>
+</ng-template>
