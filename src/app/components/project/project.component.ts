@@ -15,6 +15,7 @@ import { IconTechComponent } from '../ui/icon-tech/icon-tech.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { Technology } from '@models/technology.model';
 import { debounceTime, fromEvent, Subscription } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-project',
@@ -31,6 +32,7 @@ import { debounceTime, fromEvent, Subscription } from 'rxjs';
 export class ProjectComponent implements OnInit, AfterViewInit {
   @ViewChild('techContainer') techContainer!: ElementRef;
   @Input() project!: Project;
+  @Input() opened: boolean = false;
   slicedTechs: Technology[] = [];
   overflowCount = 0;
   resizeSubscription!: Subscription;
@@ -39,9 +41,20 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     return this.project.Description.split('.').slice(0, 1) + '.';
   }
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
+    // Fetching data from resolver.
+    const projectData = this.route.snapshot.data['project'];
+    if (projectData) {
+      this.opened = true;
+      this.project = projectData;
+    }
+
     this.slicedTechs = this.project.Technologies;
 
     // Subscribe to window resize events to check if the technologies overflow the container.
@@ -51,6 +64,7 @@ export class ProjectComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
+    window.scrollTo(0, 0);
     this.checkOverflow();
   }
 
@@ -87,5 +101,13 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       this.slicedTechs.push(new Technology('...', '', '', ''));
     }
     this.cdr.detectChanges();
+  }
+
+  openProject() {
+    this.router.navigate(['projects', this.project.Name]);
+  }
+
+  closeProject() {
+    this.router.navigateByUrl('projects');
   }
 }
