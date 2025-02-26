@@ -3,3 +3,7 @@
 .item-navbar {
   @apply hover:font-bold hover:border-b-4 transition-all;
 }
+
+.custom-color {
+  @apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text hover:text-transparent! transition-all;
+}
