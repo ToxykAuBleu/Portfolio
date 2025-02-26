@@ -10,26 +10,27 @@
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <p class="text-2xl">
-          <fa-icon icon="list" class="mr-4"></fa-icon>Liste des technologies et
-          outils utilisés
+          <fa-icon icon="list" class="mr-4"></fa-icon>Technologies et outils
+          utilisés
         </p>
       </mat-expansion-panel-header>
 
-      <div class="my-4">
-        <p class="text-justify">
-          Vous pouvez sélectionner les technologies et outils que vous souhaitez
-          voir dans les projets ci-dessous.
+      <div class="my-4 text-justify grid grid-cols-[min-content_1fr]">
+        <fa-icon
+          icon="object-group"
+          class="text-white justify-self-center"
+        ></fa-icon>
+        <p class="ml-2">
+          Sélectionner les technologies et outils que vous souhaitez voir dans
+          les projets ci-dessous.
         </p>
-        <ul class="list-disc ml-4">
-          <li>
-            Les projets affichés seront ceux qui utilisent au moins une des
-            technologies ou outils sélectionnés.
-          </li>
-          <li>
-            Survolez une technologie ou un outil pour en savoir plus sur
-            celui-ci.
-          </li>
-        </ul>
+        <fa-icon
+          icon="arrow-pointer"
+          class="text-white justify-self-center"
+        ></fa-icon>
+        <p class="ml-2">
+          Survolez une technologie ou un outil pour en savoir plus sur celui-ci.
+        </p>
       </div>
 
       <mat-divider class="pb-4"></mat-divider>

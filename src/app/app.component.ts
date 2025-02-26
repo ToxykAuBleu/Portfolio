@@ -7,6 +7,7 @@ import {
   FontAwesomeModule,
 } from '@fortawesome/angular-fontawesome';
 import {
+  faArrowPointer,
   faChevronUp,
   faClock,
   faClose,
@@ -19,6 +20,7 @@ import {
   faHandshakeAngle,
   faList,
   faMapLocationDot,
+  faObjectGroup,
   faPeopleGroup,
   faToolbox,
   faUpRightFromSquare,
@@ -54,5 +56,7 @@ export class AppComponent {
     library.addIcons(faEarListen);
     library.addIcons(faHandshakeAngle);
     library.addIcons(faChevronUp);
+    library.addIcons(faObjectGroup);
+    library.addIcons(faArrowPointer);
   }
 }
