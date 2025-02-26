@@ -2,7 +2,7 @@
 
 body {
   @apply bg-gradient-to-r from-[#0009AD] via-[#1F3183] to-[#163077];
-  @apply mt-24;
+  @apply mt-28;
   @extend .responsive-side;
 }
 
@@ -10,7 +10,7 @@ body {
   @apply mx-8 md:mx-16 lg:mx-32 xl:mx-48 2xl:mx-64;
 }
 .header-gap {
-  @apply -mt-24;
+  @apply -mt-28;
 }
 
 h1,
