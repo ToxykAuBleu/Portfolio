@@ -1,15 +1,15 @@
 <header
-  class="@container z-100 flex md:flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full backdrop-blur-md"
+  class="@container z-100 flex md:flex-row fixed responsive-side select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full bg-black/20 backdrop-blur-sm"
 >
   <!-- FIXME: upgrade it -->
   <!-- Profile picture/pseudonyme -->
   <div class="z-102 flex absolute items-center gap-4">
     <img
       src="profile-picture.png"
-      class="rounded-full hover:animate-spin max-[500px]:hidden w-16"
+      class="rounded-full hover:animate-spin max-[425px]:hidden w-12 md:w-16 transition-opacity"
     />
     <p
-      class="@max-[770px]:hidden @min-[810px]:text-2xl! font-bold custom-color"
+      class="@max-[770px]:hidden @min-[810px]:text-2xl! font-bold custom-color transition-opacity"
     >
       &#64;ToxykAuBleu
     </p>
@@ -17,7 +17,7 @@
 
   <!-- Navigation -->
   <div
-    class="z-101 relative flex w-full items-center max-[500px]:justify-start min-[500px]:justify-center md:justify-end gap-4 md:gap-8 lg:gap-12"
+    class="z-101 relative flex w-full items-center max-[425px]:justify-start min-[425px]:justify-center md:justify-end gap-4 md:gap-8 lg:gap-12"
   >
     <div class="flex space-x-6 sm:space-x-12 md:space-x-8 lg:space-x-12">
       <a routerLink="/" class="item-navbar">
