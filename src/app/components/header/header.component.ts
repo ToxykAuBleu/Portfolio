@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { EventType, Router, RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
@@ -9,4 +9,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {}
+export class HeaderComponent implements OnInit {
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+    // Scrolls to the top when navigating to a new page.
+    this.router.events.subscribe((event) => {
+      if (event.type === EventType.NavigationStart) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
+}
