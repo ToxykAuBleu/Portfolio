@@ -5,6 +5,7 @@ import {
   Component,
   ElementRef,
   Input,
+  OnDestroy,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -28,7 +29,7 @@ import { debounceTime, fromEvent, Subscription } from 'rxjs';
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',
 })
-export class ProjectComponent implements OnInit, AfterViewInit {
+export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild('techContainer') techContainer!: ElementRef;
   @Input() project!: Project;
   slicedTechs: Technology[] = [];
@@ -48,6 +49,10 @@ export class ProjectComponent implements OnInit, AfterViewInit {
     this.resizeSubscription = fromEvent(window, 'resize')
       .pipe(debounceTime(50))
       .subscribe(() => this.checkOverflow());
+  }
+
+  ngOnDestroy(): void {
+    this.resizeSubscription.unsubscribe();
   }
 
   ngAfterViewInit() {
@@ -78,10 +83,9 @@ export class ProjectComponent implements OnInit, AfterViewInit {
       }
     }
 
-    console.log(this.overflowCount, totalWidth, container.offsetWidth);
     this.slicedTechs = this.project.Technologies.slice(
       0,
-      this.project.Technologies.length - this.overflowCount
+      Math.max(1, this.project.Technologies.length - this.overflowCount)
     );
     if (this.overflowCount > 0) {
       this.slicedTechs.push(new Technology('...', '', '', ''));
