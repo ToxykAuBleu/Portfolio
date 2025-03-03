@@ -1,4 +1,4 @@
-<div class="flex flex-col">
+<div class="flex flex-col gap-12">
   <!-- Hero Section -->
   <div
     class="flex min-h-screen h-full header-gap flex-col md:flex-row justify-center items-center gap-6 md:gap-24"
@@ -36,58 +36,34 @@
     </div>
   </div>
 
-  <!-- FIXME: revoir l'affichage des projets
-  Project Section
-  <div class="h-screen">
-    <div class="h-full flex flex-col justify-center items-center gap-6">
-      <h2>Projets</h2>
-      <div class="flex flex-row w-full">
-        Visualisation de quelques projets
-        <div class="grid grid-cols-2 w-1/2">
-          <app-project [project]="getProject('Pixees')!" class="absolute scale-75 rotate-x-50 -rotate-z-45"></app-project>
-          <div class="flex-none"></div>
-          <app-project
-            [project]="getProject('Pixees')!"
-            class="relative top-5 scale-90 -rotate-z-37"
-          ></app-project>
-          <app-project
-            [project]="getProject('Pixees')!"
-            class="relative bottom-7 right-7 scale-90 -rotate-z-37"
-          ></app-project>
-        </div>
-        Description
-        <div class="flex w-1/2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget
-            nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Null
+  <!--  Project Section -->
+  <div
+    class="flex min-h-screen h-full flex-col justify-center items-center gap-6"
+  >
+    <h1 class="underline">Mes récents projets</h1>
+    <div class="flex flex-col lg:flex-row w-full items-center gap-8 lg:gap-4">
+      <div class="flex lg:w-1/3 order-first">
+        <div class="flex flex-col gap-4">
+          <p class="text-justify text-2xl! mx-4">
+            Sur mon portfolio, tu trouveras une liste détaillée de tous les
+            projets sur lesquels j'ai travaillé.
           </p>
+          <a routerLink="/projects" class="flex flex-row justify-center">
+            <button class="button text-xl!">
+              <fa-icon icon="folder-open" class="mr-2"></fa-icon>
+              Parcourir tous les projets
+            </button>
+          </a>
         </div>
       </div>
+      <app-project
+        [project]="getProject('Algoforge')!"
+        class="lg:w-1/3"
+      ></app-project>
+      <app-project
+        [project]="getProject('Pixees')!"
+        class="lg:w-1/3"
+      ></app-project>
     </div>
   </div>
-   -->
 </div>

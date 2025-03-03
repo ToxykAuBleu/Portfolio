@@ -1,5 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { ProjectComponent } from '@components/project/project.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Project } from '@models/project.model';
 import { ProjectService } from '@services/project.service';
@@ -12,7 +14,12 @@ interface AboutItem {
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    RouterModule,
+    ProjectComponent,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
