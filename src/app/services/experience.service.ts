@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { CustomDate, Experience } from '@models/experience.model';
-import { Experiences } from '@data/experiences';
+import { Injectable } from "@angular/core";
+import { CustomDate, Experience } from "@models/experience.model";
+import { Experiences } from "@data/experiences";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ExperienceService {
   private parsedExperience: Experience[] = [];
@@ -19,26 +19,26 @@ export class ExperienceService {
           .setDescription(exp.description)
           .setStartDate(
             exp.startingDate
-              ? typeof exp.startingDate === 'string'
+              ? typeof exp.startingDate === "string"
                 ? new CustomDate(new Date(exp.startingDate))
                 : new CustomDate(
                     new Date(exp.startingDate.Value),
-                    exp.startingDate.Format
+                    exp.startingDate.Format,
                   )
-              : undefined
+              : undefined,
           )
           .setEndDate(
             exp.endingDate
-              ? typeof exp.endingDate === 'string'
+              ? typeof exp.endingDate === "string"
                 ? new CustomDate(new Date(exp.endingDate))
                 : new CustomDate(
                     new Date(exp.endingDate.Value),
-                    exp.endingDate.Format
+                    exp.endingDate.Format,
                   )
-              : undefined
+              : undefined,
           )
           .setIsCurrent(exp.isCurrent)
-          .setIsCourse(exp.isCourse)
+          .setIsCourse(exp.isCourse),
       );
     });
   }

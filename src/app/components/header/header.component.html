@@ -1,16 +1,16 @@
 <header
-  class="@container z-100 flex md:flex-row sm:fixed responsive-header select-none inset-x-0 top-2 px-4 py-6 text-white items-center rounded-full bg-black/20 backdrop-blur-sm"
+  class="responsive-header @container inset-x-0 top-2 z-100 flex items-center rounded-full bg-black/20 px-4 py-6 text-white backdrop-blur-sm select-none sm:fixed md:flex-row"
 >
   <!-- FIXME: upgrade it -->
   <!-- Profile picture/pseudonyme -->
-  <div class="z-102 flex absolute items-center gap-4">
+  <div class="absolute z-102 flex items-center gap-4">
     <app-image-loader
       image="profile-picture.png"
       imageClass="rounded-full hover:animate-spin max-[425px]:hidden w-12 md:w-16 transition-opacity"
       loaderClass="flex rounded-full!"
     ></app-image-loader>
     <p
-      class="@max-[770px]:hidden @min-[810px]:text-2xl! font-bold custom-color transition-opacity"
+      class="custom-color font-bold transition-opacity @max-[770px]:hidden @min-[810px]:text-2xl!"
     >
       &#64;ToxykAuBleu
     </p>
@@ -18,7 +18,7 @@
 
   <!-- Navigation -->
   <div
-    class="z-101 relative flex w-full items-center max-[425px]:justify-start min-[425px]:justify-center md:justify-end gap-4 md:gap-8 lg:gap-12"
+    class="relative z-101 flex w-full items-center gap-4 max-[425px]:justify-start min-[425px]:justify-center md:justify-end md:gap-8 lg:gap-12"
   >
     <div class="flex space-x-6 sm:space-x-12 md:space-x-8 lg:space-x-12">
       <a routerLink="/" class="item-navbar">
@@ -60,7 +60,7 @@
 <ng-template #cv>
   <a href="/cv.pdf" target="_blank">
     <button class="button">
-      <fa-icon icon="download" class="text-white mr-2"></fa-icon>
+      <fa-icon icon="download" class="mr-2 text-white"></fa-icon>
       CV
     </button>
   </a>

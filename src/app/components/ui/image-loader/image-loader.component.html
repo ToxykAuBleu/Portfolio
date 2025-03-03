@@ -8,8 +8,8 @@
     [src]="image"
     [alt]="alt"
     [ngStyle]="{
-    visibility: isLoading ? 'hidden' : '',
-  }"
+      visibility: isLoading ? 'hidden' : '',
+    }"
     [className]="imageClass"
     (load)="hideLoader()"
     (error)="hideLoader()"

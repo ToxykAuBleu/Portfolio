@@ -1,11 +1,11 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '@components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { Component, ViewEncapsulation } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { HeaderComponent } from "@components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
 import {
   FaIconLibrary,
   FontAwesomeModule,
-} from '@fortawesome/angular-fontawesome';
+} from "@fortawesome/angular-fontawesome";
 import {
   faArrowPointer,
   faChevronUp,
@@ -30,18 +30,18 @@ import {
   faUpRightFromSquare,
   faUserClock,
   faVial,
-} from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [RouterOutlet, HeaderComponent, FontAwesomeModule, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.scss",
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = "Portfolio";
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faClose);

@@ -1,7 +1,7 @@
 @use "tailwindcss";
 
 .dynamic-arrow {
-  @apply inset-x-0 -top-3 max-md:-left-7 md:justify-center md:items-center;
+  @apply inset-x-0 -top-3 max-md:-left-7 md:items-center md:justify-center;
 }
 
 .dynamic-line {
@@ -9,5 +9,5 @@
 }
 
 .dynamic-starting-point {
-  @apply inset-x-0 bottom-0 max-md:-left-4 md:justify-center md:items-center;
+  @apply inset-x-0 bottom-0 max-md:-left-4 md:items-center md:justify-center;
 }

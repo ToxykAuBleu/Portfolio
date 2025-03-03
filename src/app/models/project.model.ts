@@ -1,4 +1,4 @@
-import { Technology } from './technology.model';
+import { Technology } from "./technology.model";
 
 export class Project {
   /**
@@ -31,9 +31,9 @@ export class Project {
   private technologies: Technology[];
 
   constructor(project?: Project) {
-    this.name = project?.name || '';
-    this.title = project?.title || '';
-    this.description = project?.description || '';
+    this.name = project?.name || "";
+    this.title = project?.title || "";
+    this.description = project?.description || "";
     this.previewImage = project?.previewImage;
     this.startingDate = project?.startingDate || new Date();
     this.endingDate = project?.endingDate;

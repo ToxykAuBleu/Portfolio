@@ -1,5 +1,5 @@
 <div
-  class="bg-white/80 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800/80 dark:border-gray-700"
+  class="rounded-lg border border-gray-200 bg-white/80 shadow-sm dark:border-gray-700 dark:bg-gray-800/80"
 >
   <app-image-loader
     *ngIf="project.PreviewImage"
@@ -24,7 +24,7 @@
           class="text-gray-700 dark:text-gray-400"
           matTooltip="Date de début du projet"
           matTooltipPosition="above"
-          >{{ project.StartingDate | date : "dd/MM/yyyy" }}</span
+          >{{ project.StartingDate | date: "dd/MM/yyyy" }}</span
         >
         <span
           *ngIf="project.EndingDate"
@@ -32,7 +32,7 @@
           matTooltip="Date de fin du projet"
           matTooltipPosition="above"
         >
-          - {{ project.EndingDate | date : "dd/MM/yyyy" }}</span
+          - {{ project.EndingDate | date: "dd/MM/yyyy" }}</span
         >
       </div>
     </div>
@@ -40,14 +40,14 @@
     <div class="flex flex-row gap-4">
       <fa-icon
         icon="toolbox"
-        class="text-black dark:text-white self-center"
+        class="self-center text-black dark:text-white"
         matTooltip="Outils/technologies utilisés"
         matTooltipPosition="left"
       ></fa-icon>
       <div
         [ngClass]="{
-          'flex flex-row flex-wrap w-full gap-4': true,
-          'justify-evenly': overflowCount > 0 ? true : false
+          'flex w-full flex-row flex-wrap gap-4': true,
+          'justify-evenly': overflowCount > 0 ? true : false,
         }"
         #techContainer
       >
@@ -60,7 +60,7 @@
 
           <ng-template #others>
             <div
-              class="flex text-black dark:text-white items-center justify-center"
+              class="flex items-center justify-center text-black dark:text-white"
               [matTooltip]="
                 overflowCount +
                 (overflowCount > 1
@@ -81,7 +81,7 @@
 
     <!-- Petite description du projet -->
     <p
-      class="mb-3 font-normal text-justify text-gray-700! dark:text-gray-400!"
+      class="mb-3 text-justify font-normal text-gray-700! dark:text-gray-400!"
       [innerHTML]="shortDescription"
     ></p>
 

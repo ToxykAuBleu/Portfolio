@@ -1,13 +1,13 @@
 @use "tailwindcss";
 
 .lg {
-  @apply w-12 h-12;
+  @apply h-12 w-12;
 }
 
 .md {
-  @apply w-9 h-9;
+  @apply h-9 w-9;
 }
 
 .sm {
-  @apply w-6 h-6;
+  @apply h-6 w-6;
 }

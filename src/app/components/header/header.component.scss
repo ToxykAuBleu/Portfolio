@@ -1,9 +1,9 @@
 @use "tailwindcss";
 
 .item-navbar {
-  @apply hover:font-bold hover:border-b-4 transition-all;
+  @apply transition-all hover:border-b-4 hover:font-bold;
 }
 
 .custom-color {
-  @apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text hover:text-transparent! transition-all;
+  @apply bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text transition-all hover:text-transparent!;
 }

@@ -8,14 +8,14 @@
   </p>
   <div>
     <h3>Liste des expériences</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 relative md:gap-8">
+    <div class="relative grid grid-cols-1 md:grid-cols-2 md:gap-8">
       <!-- Arrow -->
-      <div class="absolute flex dynamic-arrow z-50">
+      <div class="dynamic-arrow absolute z-50 flex">
         <fa-icon icon="chevron-up" class="text-gray-300" size="3x"></fa-icon>
       </div>
 
       <!-- Line -->
-      <div class="absolute dynamic-line w-2 bg-gray-300 rounded-full"></div>
+      <div class="dynamic-line absolute w-2 rounded-full bg-gray-300"></div>
       <!-- Experiences -->
       <ng-container *ngFor="let experience of experiences; let i = index">
         <!-- Left: preview | Right: experience -->
@@ -28,7 +28,7 @@
             [ngTemplateOutlet]="experienceTemplate"
             [ngTemplateOutletContext]="{
               $implicit: experience,
-              position: isMdOrLower ? 'center' : 'right'
+              position: isMdOrLower ? 'center' : 'right',
             }"
           ></ng-container>
         </ng-container>
@@ -39,7 +39,7 @@
             [ngTemplateOutlet]="experienceTemplate"
             [ngTemplateOutletContext]="{
               $implicit: experience,
-              position: isMdOrLower ? 'center' : 'left'
+              position: isMdOrLower ? 'center' : 'left',
             }"
           ></ng-container>
           <ng-container
@@ -58,15 +58,15 @@
             [ngTemplateOutlet]="experienceTemplate"
             [ngTemplateOutletContext]="{
               $implicit: experience,
-              position: 'center'
+              position: 'center',
             }"
           ></ng-container>
         </ng-container>
       </ng-container>
 
       <!-- Starting point -->
-      <div class="absolute flex dynamic-starting-point">
-        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
+      <div class="dynamic-starting-point absolute flex">
+        <div class="h-6 w-6 rounded-full bg-gray-300"></div>
       </div>
     </div>
   </div>
@@ -74,28 +74,28 @@
 
 <!-- Preview card -->
 <ng-template #experiencePreview let-experience>
-  <div class="flex w-full justify-center items-center">
+  <div class="flex w-full items-center justify-center">
     <img
       [src]="experience.PreviewImage"
       [alt]="experience.Title"
-      class="scale-75 object-cover rounded-lg border-12 border-gray-300/20"
+      class="scale-75 rounded-lg border-12 border-gray-300/20 object-cover"
     />
   </div>
 </ng-template>
 
 <!-- Experience card -->
 <ng-template #experienceTemplate let-experience let-position="position">
-  <div class="p-4 mb-16 md:my-16 bg-black/20 rounded-lg shadow-lg relative">
+  <div class="relative mb-16 rounded-lg bg-black/20 p-4 shadow-lg md:my-16">
     <!-- Center point -->
     <div
       [ngClass]="{
-        'absolute content-center inset-y-0': true,
+        'absolute inset-y-0 content-center': true,
         '-left-7': position === 'right',
         '-right-7': position === 'left',
-        '-left-4': position === 'center'
+        '-left-4': position === 'center',
       }"
     >
-      <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
+      <div class="h-6 w-6 rounded-full bg-gray-300"></div>
     </div>
 
     <!-- Title -->
@@ -139,7 +139,7 @@
             matTooltip="Obtenu et/ou terminé le"
             matTooltipPosition="above"
             >{{
-              experience.EndingDate.Value | date : experience.EndingDate.Format
+              experience.EndingDate.Value | date: experience.EndingDate.Format
             }}</span
           >
         </div>
@@ -156,7 +156,7 @@
             >{{
               (experience.IsCurrent ? "Depuis " : "") +
                 (experience.StartingDate.Value
-                  | date : experience.StartingDate.Format)
+                  | date: experience.StartingDate.Format)
             }}</span
           >
           <span
@@ -167,7 +167,7 @@
           >
             -
             {{
-              experience.EndingDate.Value | date : experience.EndingDate.Format
+              experience.EndingDate.Value | date: experience.EndingDate.Format
             }}</span
           >
         </div>
