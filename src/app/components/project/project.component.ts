@@ -16,6 +16,7 @@ import { IconTechComponent } from '../ui/icon-tech/icon-tech.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { Technology } from '@models/technology.model';
 import { debounceTime, fromEvent, Subscription } from 'rxjs';
+import { ImageLoaderComponent } from '@components/ui/image-loader/image-loader.component';
 
 @Component({
   selector: 'app-project',
@@ -25,6 +26,7 @@ import { debounceTime, fromEvent, Subscription } from 'rxjs';
     MatTooltipModule,
     IconTechComponent,
     MatDividerModule,
+    ImageLoaderComponent
   ],
   templateUrl: './project.component.html',
   styleUrl: './project.component.scss',

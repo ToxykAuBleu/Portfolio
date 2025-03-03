@@ -1,7 +1,7 @@
-<img
-  [src]="tech.iconPath"
+<app-image-loader
+  [image]="tech.iconPath"
   [alt]="tech.name"
-  class="transition hover:scale-125 {{ size }}"
+  imageClass="transition hover:scale-125 {{ size }}"
   [matTooltip]="tech.name"
   matTooltipPosition="above"
-/>
+></app-image-loader>
