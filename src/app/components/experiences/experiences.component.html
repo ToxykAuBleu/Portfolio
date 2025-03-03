@@ -75,11 +75,12 @@
 <!-- Preview card -->
 <ng-template #experiencePreview let-experience>
   <div class="flex w-full items-center justify-center">
-    <img
-      [src]="experience.PreviewImage"
+    <app-image-loader
+      [image]="experience.PreviewImage"
       [alt]="experience.Title"
-      class="scale-75 rounded-lg border-12 border-gray-300/20 object-cover"
-    />
+      imageClass="scale-75 rounded-lg border-12 border-gray-300/20 object-cover"
+      loaderClass="scale-75"
+    ></app-image-loader>
   </div>
 </ng-template>
 

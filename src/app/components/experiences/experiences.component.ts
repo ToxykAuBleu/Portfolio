@@ -6,6 +6,7 @@ import { BreakpointObserver } from "@angular/cdk/layout";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { Experience } from "@models/experience.model";
 import { ExperienceService } from "@services/experience.service";
+import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
 
 @Component({
   selector: "app-experiences",
@@ -14,6 +15,7 @@ import { ExperienceService } from "@services/experience.service";
     FontAwesomeModule,
     MatTooltipModule,
     MatDividerModule,
+    ImageLoaderComponent,
   ],
   templateUrl: "./experiences.component.html",
   styleUrl: "./experiences.component.scss",
