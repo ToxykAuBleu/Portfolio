@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProjectComponent } from '@components/project/project.component';
+import { ImageLoaderComponent } from '@components/ui/image-loader/image-loader.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Project } from '@models/project.model';
 import { ProjectService } from '@services/project.service';
@@ -19,6 +20,7 @@ interface AboutItem {
     FontAwesomeModule,
     RouterModule,
     ProjectComponent,
+    ImageLoaderComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',

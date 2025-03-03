@@ -4,10 +4,11 @@
   <!-- FIXME: upgrade it -->
   <!-- Profile picture/pseudonyme -->
   <div class="z-102 flex absolute items-center gap-4">
-    <img
-      src="profile-picture.png"
-      class="rounded-full hover:animate-spin max-[425px]:hidden w-12 md:w-16 transition-opacity"
-    />
+    <app-image-loader
+      image="profile-picture.png"
+      imageClass="rounded-full hover:animate-spin max-[425px]:hidden w-12 md:w-16 transition-opacity"
+      loaderClass="flex rounded-full!"
+    ></app-image-loader>
     <p
       class="@max-[770px]:hidden @min-[810px]:text-2xl! font-bold custom-color transition-opacity"
     >
