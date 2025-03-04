@@ -1,4 +1,3 @@
-<!-- TODO: make it responsive -->
 <h1>Experiences</h1>
 <div class="flex flex-col gap-8">
   <p class="text-justify">
@@ -9,48 +8,65 @@
   </p>
   <div>
     <h3>Liste des expériences</h3>
-    <div class="grid grid-cols-2 relative">
+    <div class="relative grid grid-cols-1 md:grid-cols-2 md:gap-8">
       <!-- Arrow -->
-      <div
-        class="absolute inset-x-0 -top-3 flex justify-center items-center z-50"
-      >
+      <div class="dynamic-arrow absolute z-50 flex">
         <fa-icon icon="chevron-up" class="text-gray-300" size="3x"></fa-icon>
       </div>
 
       <!-- Line -->
-      <div
-        class="absolute inset-y-0 left-[calc(50%-4px)] w-2 bg-gray-300 rounded-full"
-      ></div>
+      <div class="dynamic-line absolute w-2 rounded-full bg-gray-300"></div>
       <!-- Experiences -->
       <ng-container *ngFor="let experience of experiences; let i = index">
         <!-- Left: preview | Right: experience -->
-        <ng-container *ngIf="i % 2 === 0">
+        <ng-container *ngIf="!isMdOrLower && i % 2 === 0">
           <ng-container
             [ngTemplateOutlet]="experiencePreview"
             [ngTemplateOutletContext]="{ $implicit: experience }"
           ></ng-container>
           <ng-container
             [ngTemplateOutlet]="experienceTemplate"
-            [ngTemplateOutletContext]="{ $implicit: experience }"
+            [ngTemplateOutletContext]="{
+              $implicit: experience,
+              position: isMdOrLower ? 'center' : 'right',
+            }"
           ></ng-container>
         </ng-container>
 
         <!-- Left: experience | Right: preview -->
-        <ng-container *ngIf="i % 2 === 1">
+        <ng-container *ngIf="!isMdOrLower && i % 2 === 1">
           <ng-container
             [ngTemplateOutlet]="experienceTemplate"
-            [ngTemplateOutletContext]="{ $implicit: experience }"
+            [ngTemplateOutletContext]="{
+              $implicit: experience,
+              position: isMdOrLower ? 'center' : 'left',
+            }"
           ></ng-container>
           <ng-container
             [ngTemplateOutlet]="experiencePreview"
             [ngTemplateOutletContext]="{ $implicit: experience }"
+          ></ng-container>
+        </ng-container>
+
+        <!-- Centered experience and preview for small screens -->
+        <ng-container *ngIf="isMdOrLower">
+          <ng-container
+            [ngTemplateOutlet]="experiencePreview"
+            [ngTemplateOutletContext]="{ $implicit: experience }"
+          ></ng-container>
+          <ng-container
+            [ngTemplateOutlet]="experienceTemplate"
+            [ngTemplateOutletContext]="{
+              $implicit: experience,
+              position: 'center',
+            }"
           ></ng-container>
         </ng-container>
       </ng-container>
 
       <!-- Starting point -->
-      <div class="absolute inset-x-0 bottom-0 flex justify-center items-center">
-        <div class="w-6 h-6 bg-gray-300 rounded-full"></div>
+      <div class="dynamic-starting-point absolute flex">
+        <div class="h-6 w-6 rounded-full bg-gray-300"></div>
       </div>
     </div>
   </div>
@@ -58,18 +74,32 @@
 
 <!-- Preview card -->
 <ng-template #experiencePreview let-experience>
-  <div class="flex w-full justify-center items-center">
-    <img
-      [src]="experience.PreviewImage"
+  <div class="flex w-full items-center justify-center">
+    <app-image-loader
+      [image]="experience.PreviewImage"
       [alt]="experience.Title"
-      class="scale-75 object-cover rounded-lg border-12 border-gray-300/20"
-    />
+      imageClass="scale-75 rounded-lg border-12 border-gray-300/20 object-cover"
+      loaderClass="scale-75"
+    ></app-image-loader>
   </div>
 </ng-template>
 
 <!-- Experience card -->
-<ng-template #experienceTemplate let-experience>
-  <div class="p-4 my-16 bg-black/20 rounded-lg shadow-lg">
+<ng-template #experienceTemplate let-experience let-position="position">
+  <div class="relative mb-16 rounded-lg bg-black/20 p-4 shadow-lg md:my-16">
+    <!-- Center point -->
+    <div
+      [ngClass]="{
+        'absolute inset-y-0 content-center': true,
+        '-left-7': position === 'right',
+        '-right-7': position === 'left',
+        '-left-4': position === 'center',
+      }"
+    >
+      <div class="h-6 w-6 rounded-full bg-gray-300"></div>
+    </div>
+
+    <!-- Title -->
     <div class="flex flex-row">
       <h4>
         <span *ngIf="experience.IsCurrent" class="pill-current"></span>
@@ -110,7 +140,7 @@
             matTooltip="Obtenu et/ou terminé le"
             matTooltipPosition="above"
             >{{
-              experience.EndingDate.Value | date : experience.EndingDate.Format
+              experience.EndingDate.Value | date: experience.EndingDate.Format
             }}</span
           >
         </div>
@@ -127,7 +157,7 @@
             >{{
               (experience.IsCurrent ? "Depuis " : "") +
                 (experience.StartingDate.Value
-                  | date : experience.StartingDate.Format)
+                  | date: experience.StartingDate.Format)
             }}</span
           >
           <span
@@ -138,7 +168,7 @@
           >
             -
             {{
-              experience.EndingDate.Value | date : experience.EndingDate.Format
+              experience.EndingDate.Value | date: experience.EndingDate.Format
             }}</span
           >
         </div>

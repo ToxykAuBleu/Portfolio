@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
-import { Projects } from '@data/projects';
-import { Project } from '@models/project.model';
-import { TechnologyService } from './technology.service';
+import { Injectable } from "@angular/core";
+import { Projects } from "@data/projects";
+import { Project } from "@models/project.model";
+import { TechnologyService } from "./technology.service";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class ProjectService {
   private parsedProjects: Project[] = [];
@@ -23,9 +23,9 @@ export class ProjectService {
           .setDescription(project.description)
           .setStartDate(new Date(project.startingDate))
           .setEndDate(
-            project.endingDate ? new Date(project.endingDate) : undefined
+            project.endingDate ? new Date(project.endingDate) : undefined,
           )
-          .setTechnologies(techs)
+          .setTechnologies(techs),
       );
     });
   }

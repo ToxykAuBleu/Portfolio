@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
-import { Technology } from '../models/technology.model';
-import { Technologies } from '@data/tech/index';
+import { Technology } from "../models/technology.model";
+import { Technologies } from "@data/tech/index";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class TechnologyService {
   constructor() {}

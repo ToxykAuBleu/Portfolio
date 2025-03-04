@@ -1,7 +1,13 @@
 <div
-  class="bg-white/80 border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800/80 dark:border-gray-700"
+  class="rounded-lg border border-gray-200 bg-white/80 shadow-sm dark:border-gray-700 dark:bg-gray-800/80"
 >
-  <img class="rounded-t-lg" [src]="project.PreviewImage" alt="" />
+  <app-image-loader
+    *ngIf="project.PreviewImage"
+    [image]="project.PreviewImage"
+    imageClass="rounded-t-lg"
+    loaderHeight="18rem"
+    alt=""
+  ></app-image-loader>
   <div class="p-5">
     <ng-container [ngTemplateOutlet]="content"></ng-container>
     <ng-container *ngIf="!opened">

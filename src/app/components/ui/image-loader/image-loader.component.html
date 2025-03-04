@@ -1,0 +1,17 @@
+<div class="relative">
+  <div
+    *ngIf="isLoading"
+    class="absolute bg-white/20 rounded-lg animate-pulse {{ loaderClass }}"
+    [ngStyle]="{ height: loaderHeight, width: loaderWidth }"
+  ></div>
+  <img
+    [src]="image"
+    [alt]="alt"
+    [ngStyle]="{
+      visibility: isLoading ? 'hidden' : '',
+    }"
+    [className]="imageClass"
+    (load)="hideLoader()"
+    (error)="hideLoader()"
+  />
+</div>

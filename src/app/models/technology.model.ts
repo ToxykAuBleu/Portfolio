@@ -26,7 +26,7 @@ export class Technology {
     icon: string,
     description: string,
     url: string,
-    isTool: boolean = false
+    isTool: boolean = false,
   ) {
     this.name = name;
     this.iconPath = icon;

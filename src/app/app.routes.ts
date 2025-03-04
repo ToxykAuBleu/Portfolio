@@ -9,11 +9,11 @@ import { ProjectResolver } from '@components/project/project.resolver';
 
 export const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: HomeComponent,
   },
   {
-    path: 'projects',
+    path: "projects",
     component: ProjectsComponent,
   },
   {
@@ -28,11 +28,11 @@ export const routes: Routes = [
     component: ExperiencesComponent,
   },
   {
-    path: 'about',
+    path: "about",
     component: AboutComponent,
   },
   {
-    path: '**',
+    path: "**",
     component: NotFoundComponent,
   },
 ];
