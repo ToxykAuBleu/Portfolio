@@ -1,6 +1,6 @@
 {
   "name": "Discord.js",
   "iconPath": "icons/discordjs.svg",
-  "description": "Description de Discord.js",
+  "description": "Discord.js est une bibliothèque JavaScript puissante qui permet de créer des bots et d'interagir avec l'API Discord de manière simple et efficace.",
   "url": "https://discord.js.org"
 }

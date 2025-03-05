@@ -1,6 +1,6 @@
 {
   "name": "Express",
   "iconPath": "icons/express.svg",
-  "description": "Description de Express",
+  "description": "Express est un framework web minimaliste pour Node.js, utilisé pour créer des applications web et des API robustes.",
   "url": "https://expressjs.com"
 }

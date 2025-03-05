@@ -1,6 +1,6 @@
 {
   "name": "HTML",
   "iconPath": "icons/html.svg",
-  "description": "Description de HTML",
+  "description": "HTML est le langage standard utilisé pour créer et structurer les pages web.",
   "url": "https://developer.mozilla.org/en-US/docs/Web/HTML"
 }

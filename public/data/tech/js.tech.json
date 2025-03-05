@@ -1,6 +1,6 @@
 {
   "name": "JavaScript",
   "iconPath": "icons/js.svg",
-  "description": "Description de JavaScript",
+  "description": "JavaScript est un langage de programmation essentiel pour le développement web, permettant de créer des pages interactives et dynamiques.",
   "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
 }

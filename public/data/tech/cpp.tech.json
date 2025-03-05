@@ -1,6 +1,6 @@
 {
   "name": "C++",
   "iconPath": "icons/cpp.svg",
-  "description": "Description de C++",
+  "description": "C++ est un langage de programmation puissant et polyvalent, souvent utilisé pour le développement de logiciels système, de jeux vidéo et d'applications haute performance.",
   "url": "https://isocpp.org"
 }

@@ -1,6 +1,6 @@
 {
   "name": "Tailwind CSS",
   "iconPath": "icons/tailwindcss.svg",
-  "description": "Description de Tailwind CSS",
+  "description": "Un framework CSS utilitaire qui permet de créer rapidement des interfaces utilisateur personnalisées avec des classes utilitaires.",
   "url": "https://tailwindcss.com"
 }
