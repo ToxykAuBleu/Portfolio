@@ -1,10 +1,9 @@
-<!-- TODO: responsive -->
-<!-- TODO: descirption portfolio -->
+<!-- FIXME: responsive -->
 <!-- TODO: aligner les icones avec une grid, voir projects -->
 <footer class="flex flex-col mt-16 bg-slate-900/50 px-8 pb-4 pt-8 gap-4 text-white">
   <div class="flex flex-col md:flex-row gap-4">
     <!-- Portfolio description -->
-    <div class="md:w-3/5 flex flex-col">
+    <div class="md:w-10/15 shrink flex flex-col">
       <div class="flex flex-row gap-4 items-center">
         <app-image-loader
           image="profile-picture.png"
@@ -17,55 +16,57 @@
           &#64;ToxykAuBleu
         </p>
       </div>
-      <div class="flex">
-        <p class="text-justify">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste illo rem quae animi unde dicta fugiat blanditiis quo nihil. Deserunt debitis obcaecati aliquid iure laboriosam nemo, repudiandae itaque dolorem maiores.
-        </p>
+      <p class="flex shrink text-justify">
+        Dans mon portfolio, tu en apprendras davantage sur ma personne, les projets sur lesquels
+        je ou j'ai participé, mes expériences personnelles et professionnelles. N'hésite pas à regarder
+        mes autres réseaux, que ce soit pour me contacter ou pour tout simplement observer 😉
+      </p>
+    </div>
+    <div class="flex md:w-5/15 grow flex-col min-[480px]:flex-row">
+      <!-- Shortcuts to pages -->
+      <div class="min-[480px]:w-1/2 grow flex flex-col items-center gap-4">
+        <p class="font-bold text-2xl! mt-2.5">Liens utiles</p>
+        <ul class="flex flex-col">
+          <a routerLink="/">
+            <fa-icon icon="home-user" class="mr-2"></fa-icon>
+            <span>Accueil</span>
+          </a>
+          <a routerLink="/projects">
+            <fa-icon icon="folder-open" class="mr-2"></fa-icon>
+            <span>Projects</span>
+          </a>
+          <a routerLink="/experiences">
+            <fa-icon icon="vial" class="mr-2"></fa-icon>
+            <span>Expériences</span>
+          </a>
+          <a routerLink="/about">
+            <fa-icon icon="question-circle" class="mr-2"></fa-icon>
+            <span>A propos</span>
+          </a>
+        </ul>
       </div>
-    </div>
-    <!-- Shortcuts to pages -->
-    <div class="md:w-1/5 flex flex-col items-center gap-4">
-      <p class="font-bold text-2xl! mt-2.5">Liens utiles</p>
-      <ul class="flex flex-col">
-        <a routerLink="/">
-          <fa-icon icon="home-user" class="mr-2"></fa-icon>
-          <span>Accueil</span>
-        </a>
-        <a routerLink="/projects">
-          <fa-icon icon="folder-open" class="mr-2"></fa-icon>
-          <span>Projects</span>
-        </a>
-        <a routerLink="/experiences">
-          <fa-icon icon="vial" class="mr-2"></fa-icon>
-          <span>Expériences</span>
-        </a>
-        <a routerLink="/about">
-          <fa-icon icon="question-circle" class="mr-2"></fa-icon>
-          <span>A propos</span>
-        </a>
-      </ul>
-    </div>
-    <!-- Social links -->
-    <div class="md:w-1/5 flex flex-col items-center gap-4">
-      <p class="font-bold text-2xl! mt-2.5">Mes réseaux</p>
-      <ul class="flex flex-col">
-        <a href="https://linkedin.com/in/mathieu-fois">
-          <fa-icon [icon]="['fab', 'linkedin']" class="mr-2 text-blue-500"></fa-icon>
-          <span>&#64;mathieu-fois</span>
-        </a>
-        <a href="https://github.com/ToxykAuBleu">
-          <fa-icon [icon]="['fab', 'github']" class="mr-2"></fa-icon>
-          <span>&#64;ToxykAuBleu</span>
-        </a>
-        <a href="">
-          <fa-icon [icon]="['fab', 'discord']" class="mr-2 text-indigo-600"></fa-icon>
-          <span>&#64;toxykaubleu</span>
-        </a>
-        <a href="https://steamcommunity.com/id/ToxykAuBleu">
-          <fa-icon [icon]="['fab', 'steam']" class="mr-2"></fa-icon>
-          <span>&#64;ToxykAuBleu</span>
-        </a>
-      </ul>
+      <!-- Social links -->
+      <div class="min-[480px]:w-1/2 grow flex flex-col items-center gap-4">
+        <p class="font-bold text-2xl! mt-2.5">Mes réseaux</p>
+        <ul class="flex flex-col">
+          <a class="flex" href="https://linkedin.com/in/mathieu-fois">
+            <fa-icon [icon]="['fab', 'linkedin']" class="w-8 text-blue-500"></fa-icon>
+            <span>&#64;mathieu-fois</span>
+          </a>
+          <a class="flex" href="https://github.com/ToxykAuBleu">
+            <fa-icon [icon]="['fab', 'github']" class="w-8"></fa-icon>
+            <span>&#64;ToxykAuBleu</span>
+          </a>
+          <a class="flex" href="">
+            <fa-icon [icon]="['fab', 'discord']" class="w-8 text-indigo-600"></fa-icon>
+            <span>&#64;toxykaubleu</span>
+          </a>
+          <a class="flex" href="https://steamcommunity.com/id/ToxykAuBleu">
+            <fa-icon [icon]="['fab', 'steam']" class="w-8"></fa-icon>
+            <span>&#64;ToxykAuBleu</span>
+          </a>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="flex flex-col items-center">
