@@ -12,6 +12,7 @@ import {
   faCircleQuestion,
   faClock,
   faClose,
+  faCode,
   faDownload,
   faEarListen,
   faEllipsis,
@@ -22,6 +23,7 @@ import {
   faGlobe,
   faHandshakeAngle,
   faHouseUser,
+  faLeaf,
   faList,
   faMapLocationDot,
   faObjectGroup,
@@ -71,5 +73,7 @@ export class AppComponent {
     library.addIcons(faLinkedin);
     library.addIcons(faDiscord);
     library.addIcons(faSteam);
+    library.addIcons(faLeaf);
+    library.addIcons(faCode);
   }
 }
