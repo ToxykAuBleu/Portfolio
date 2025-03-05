@@ -28,6 +28,8 @@ import {
   faMapLocationDot,
   faObjectGroup,
   faPeopleGroup,
+  faQuoteLeft,
+  faQuoteRight,
   faToolbox,
   faUpRightFromSquare,
   faUserClock,
@@ -75,5 +77,7 @@ export class AppComponent {
     library.addIcons(faSteam);
     library.addIcons(faLeaf);
     library.addIcons(faCode);
+    library.addIcons(faQuoteLeft);
+    library.addIcons(faQuoteRight);
   }
 }
