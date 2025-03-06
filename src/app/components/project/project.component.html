@@ -3,7 +3,7 @@
 >
   <app-image-loader
     *ngIf="project.PreviewImage"
-    [image]="project.PreviewImage"
+    [image]="'/' + project.PreviewImage"
     imageClass="rounded-t-lg"
     loaderHeight="18rem"
     alt=""

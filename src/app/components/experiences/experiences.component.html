@@ -76,7 +76,7 @@
 <ng-template #experiencePreview let-experience>
   <div class="flex w-full items-center justify-center">
     <app-image-loader
-      [image]="experience.PreviewImage"
+      [image]="'/' + experience.PreviewImage"
       [alt]="experience.Title"
       imageClass="scale-75 rounded-lg border-12 border-gray-300/20 object-cover"
       loaderClass="scale-75"
