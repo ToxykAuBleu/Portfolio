@@ -15,6 +15,17 @@
     </ng-container>
     <ng-container *ngIf="opened">
       <button class="button" (click)="closeProject()">Fermer</button>
+      <div
+        class="inset-y-0 left-7 flex flex-col justify-center text-center select-none max-lg:hidden lg:fixed xl:left-15"
+      >
+        <fa-icon
+          icon="xmark-circle"
+          size="3x"
+          class="cursor-pointer text-white hover:text-sky-400"
+          (click)="closeProject()"
+        ></fa-icon>
+        <h4>Fermer</h4>
+      </div>
     </ng-container>
   </div>
 </div>
@@ -35,7 +46,7 @@
         class="text-gray-700 dark:text-gray-400"
         matTooltip="Date de début du projet"
         matTooltipPosition="above"
-        >{{ project.StartingDate | date : "dd/MM/yyyy" }}</span
+        >{{ project.StartingDate | date: "dd/MM/yyyy" }}</span
       >
       <span
         *ngIf="project.EndingDate"
@@ -43,7 +54,7 @@
         matTooltip="Date de fin du projet"
         matTooltipPosition="above"
       >
-        - {{ project.EndingDate | date : "dd/MM/yyyy" }}</span
+        - {{ project.EndingDate | date: "dd/MM/yyyy" }}</span
       >
     </div>
   </div>
@@ -51,14 +62,14 @@
   <div class="flex flex-row gap-4">
     <fa-icon
       icon="toolbox"
-      class="text-black dark:text-white self-center"
+      class="self-center text-black dark:text-white"
       matTooltip="Outils/technologies utilisés"
       matTooltipPosition="left"
     ></fa-icon>
     <div
       [ngClass]="{
-        'flex flex-row flex-wrap w-full gap-4': true,
-        'justify-evenly': overflowCount > 0 ? true : false
+        'flex w-full flex-row flex-wrap gap-4': true,
+        'justify-evenly': overflowCount > 0 ? true : false,
       }"
       #techContainer
     >
@@ -71,7 +82,7 @@
 
         <ng-template #others>
           <div
-            class="flex text-black dark:text-white items-center justify-center"
+            class="flex items-center justify-center text-black dark:text-white"
             [matTooltip]="
               overflowCount +
               (overflowCount > 1
@@ -92,7 +103,7 @@
 
   <!-- Description du projet -->
   <p
-    class="mb-3 font-normal text-justify text-gray-700! dark:text-gray-400!"
+    class="mb-3 text-justify font-normal text-gray-700! dark:text-gray-400!"
     [innerHTML]="!opened ? shortDescription : project.Description"
   ></p>
 </ng-template>

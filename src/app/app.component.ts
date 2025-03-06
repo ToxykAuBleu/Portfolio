@@ -10,6 +10,7 @@ import {
   faArrowPointer,
   faChevronUp,
   faCircleQuestion,
+  faCircleXmark,
   faClock,
   faClose,
   faDownload,
@@ -68,5 +69,6 @@ export class AppComponent {
     library.addIcons(faVial);
     library.addIcons(faFolderOpen);
     library.addIcons(faCircleQuestion);
+    library.addIcons(faCircleXmark);
   }
 }
