@@ -9,6 +9,7 @@ import {
 import {
   faArrowPointer,
   faChevronUp,
+  faCircleInfo,
   faCircleQuestion,
   faCircleXmark,
   faClock,
@@ -16,6 +17,7 @@ import {
   faDownload,
   faEarListen,
   faEllipsis,
+  faFileCode,
   faFilterCircleXmark,
   faFlagCheckered,
   faFolderOpen,
@@ -70,5 +72,7 @@ export class AppComponent {
     library.addIcons(faFolderOpen);
     library.addIcons(faCircleQuestion);
     library.addIcons(faCircleXmark);
+    library.addIcons(faCircleInfo);
+    library.addIcons(faFileCode);
   }
 }

@@ -9,24 +9,60 @@
     alt=""
   ></app-image-loader>
   <div class="p-5">
+    <!-- Project detail -->
     <ng-container [ngTemplateOutlet]="content"></ng-container>
-    <ng-container *ngIf="!opened">
-      <button class="button" (click)="openProject()">Plus de détails</button>
-    </ng-container>
-    <ng-container *ngIf="opened">
-      <button class="button" (click)="closeProject()">Fermer</button>
-      <div
-        class="inset-y-0 left-7 flex flex-col justify-center text-center select-none max-lg:hidden lg:fixed xl:left-15"
-      >
-        <fa-icon
-          icon="xmark-circle"
-          size="3x"
-          class="cursor-pointer text-white hover:text-sky-400"
-          (click)="closeProject()"
-        ></fa-icon>
-        <h4>Fermer</h4>
+    <!-- Buttons -->
+    <div class="@container flex flex-row justify-between">
+      <!-- Left buttons -->
+      <div class="flex flex-row">
+        <ng-container *ngIf="!opened">
+          <button class="button" (click)="openProject()">
+            <fa-icon icon="circle-info" class="mr-2"></fa-icon>
+            <span>Plus de détails</span>
+          </button>
+        </ng-container>
+        <ng-container *ngIf="opened">
+          <button class="button" (click)="closeProject()">Fermer</button>
+          <div
+            class="inset-y-0 left-7 flex flex-col justify-center text-center select-none max-lg:hidden lg:fixed xl:left-15"
+          >
+            <fa-icon
+              icon="xmark-circle"
+              size="3x"
+              class="cursor-pointer text-white hover:text-sky-400"
+              (click)="closeProject()"
+            ></fa-icon>
+            <h4>Fermer</h4>
+          </div>
+        </ng-container>
       </div>
-    </ng-container>
+      <!-- Right buttons -->
+      <div class="flex flex-row gap-2">
+        <a
+          *ngIf="project.DemoUrl"
+          [href]="project.DemoUrl"
+          target="_blank"
+          matTooltip="Voir la démo du projet."
+          ><button class="button">
+            <fa-icon
+              icon="up-right-from-square"
+              class="@min-[420px]:mr-2"
+            ></fa-icon>
+            <span class="hidden @min-[420px]:inline">Démo</span>
+          </button></a
+        >
+        <a
+          *ngIf="project.SourceCodeUrl"
+          [href]="project.SourceCodeUrl"
+          target="_blank"
+          matTooltip="Voir le code source du projet."
+          ><button class="button">
+            <fa-icon icon="file-code" class="@min-[420px]:mr-2"></fa-icon>
+            <span class="hidden @min-[420px]:inline">Code source</span>
+          </button></a
+        >
+      </div>
+    </div>
   </div>
 </div>
 

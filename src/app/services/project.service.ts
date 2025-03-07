@@ -20,6 +20,8 @@ export class ProjectService {
           .setName(project.name)
           .setTitle(project.title ? project.title : project.name)
           .setPreviewImage(project.previewImage)
+          .setDemoUrl(project.demoUrl)
+          .setSourceCodeUrl(project.sourceCodeUrl)
           .setDescription(project.description)
           .setStartDate(new Date(project.startingDate))
           .setEndDate(
