@@ -1,50 +1,52 @@
-<div class="flex flex-col">
+<div class="flex flex-col gap-12">
   <!-- Hero Section -->
-  <div class="h-screen header-gap">
-    <div
-      class="h-full flex flex-col md:flex-row justify-center items-center gap-6 md:gap-24"
-    >
-      <img src="profile-picture.png" class="rounded-full" />
-      <div class="flex flex-col justify-center items-center">
-        <h1>&#64;ToxykAuBleu</h1>
-        <h4>alias Mathieu FOISSAC</h4>
-        <h3>Full-stack developer !</h3>
-      </div>
+  <div
+    class="header-gap flex h-full min-h-screen flex-col items-center justify-center gap-6 md:flex-row md:gap-24"
+  >
+    <app-image-loader
+      image="/profile-picture.png"
+      loaderClass="flex rounded-full!"
+      imageClass="rounded-full"
+    ></app-image-loader>
+    <div class="flex flex-col items-center justify-center">
+      <h1>&#64;ToxykAuBleu</h1>
+      <h4>alias Mathieu FOISSAC</h4>
+      <h3>Full-stack developer !</h3>
     </div>
   </div>
 
   <!-- Soft-skills -->
-  <div class="h-screen">
-    <div class="h-full flex flex-col justify-center items-center gap-6">
-      <h1 class="text-3xl">Mes qualités</h1>
-      <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div
-          class="flex flex-col items-center justify-center p-4 border-4 border-indigo-400 rounded-lg bg-indigo-800/60 transition md:hover:scale-115 hover:bg-indigo-600/60"
-          *ngFor="let item of aboutItems"
-        >
-          <div class="flex flex-row gap-6">
-            <fa-icon
-              [icon]="item.icon"
-              class="flex text-white"
-              size="2x"
-            ></fa-icon>
-            <h3 class="flex">{{ item.title }}</h3>
-          </div>
-          <p class="text-center">
-            {{ item.content }}
-          </p>
+  <div
+    class="flex h-full min-h-screen flex-col items-center justify-center gap-6"
+  >
+    <h1 class="text-3xl">Mes qualités</h1>
+    <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <div
+        class="flex flex-col items-center justify-center rounded-lg border-4 border-indigo-400 bg-indigo-800/60 p-4 transition hover:bg-indigo-600/60 md:hover:scale-115"
+        *ngFor="let item of aboutItems"
+      >
+        <div class="flex flex-row gap-6">
+          <fa-icon
+            [icon]="item.icon"
+            class="flex text-white"
+            size="2x"
+          ></fa-icon>
+          <h3 class="flex">{{ item.title }}</h3>
         </div>
+        <p class="text-center">
+          {{ item.content }}
+        </p>
       </div>
     </div>
   </div>
 
   <!-- Computer skills -->
   <div class="h-screen bg-white/10">
-    <div class="h-full flex flex-col justify-center items-center gap-6">
+    <div class="flex h-full flex-col items-center justify-center gap-6">
       <h1 class="text-3xl">Mes compétences</h1>
       <!-- List of skills -->
-      <div class="flex flex-row h-3/5 overflow-hidden w-full">
-        <div class="flex flex-wrap relative w-3/5 overflow-hidden">
+      <div class="flex h-3/5 w-full flex-row overflow-hidden">
+        <div class="relative flex w-3/5 flex-wrap overflow-hidden">
           <div class="flex flex-row flex-wrap gap-6">
             <div *ngFor="let tech of technologies" class="scrolling-first">
               <app-icon-tech [tech]="tech" size="xl"></app-icon-tech>
@@ -60,58 +62,34 @@
     </div>
   </div>
 
-  <!-- FIXME: revoir l'affichage des projets
-  Project Section
-  <div class="h-screen">
-    <div class="h-full flex flex-col justify-center items-center gap-6">
-      <h2>Projets</h2>
-      <div class="flex flex-row w-full">
-        Visualisation de quelques projets
-        <div class="grid grid-cols-2 w-1/2">
-          <app-project [project]="getProject('Pixees')!" class="absolute scale-75 rotate-x-50 -rotate-z-45"></app-project>
-          <div class="flex-none"></div>
-          <app-project
-            [project]="getProject('Pixees')!"
-            class="relative top-5 scale-90 -rotate-z-37"
-          ></app-project>
-          <app-project
-            [project]="getProject('Pixees')!"
-            class="relative bottom-7 right-7 scale-90 -rotate-z-37"
-          ></app-project>
-        </div>
-        Description
-        <div class="flex w-1/2">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget
-            nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Nullam eget nunc nec nunc ultricies ultricies. Nullam
-            eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec nunc
-            ultricies ultricies. Nullam eget nunc nec nunc ultricies ultricies.
-            Nullam eget nunc nec nunc ultricies ultricies. Nullam eget nunc nec
-            nunc ultricies ultricies. Nullam eget nunc nec nunc ultricies
-            ultricies. Null
+  <!--  Project Section -->
+  <div
+    class="flex h-full min-h-screen flex-col items-center justify-center gap-6"
+  >
+    <h1 class="underline">Mes récents projets</h1>
+    <div class="flex w-full flex-col items-center gap-8 lg:flex-row lg:gap-4">
+      <div class="order-first flex lg:w-1/3">
+        <div class="flex flex-col gap-4">
+          <p class="mx-4 text-justify text-2xl!">
+            Sur mon portfolio, tu trouveras une liste détaillée de tous les
+            projets sur lesquels j'ai travaillé.
           </p>
+          <a routerLink="/projects" class="flex flex-row justify-center">
+            <button class="button text-xl!">
+              <fa-icon icon="folder-open" class="mr-2"></fa-icon>
+              Parcourir tous les projets
+            </button>
+          </a>
         </div>
       </div>
+      <app-project
+        [project]="getProject('Algoforge')!"
+        class="lg:w-1/3"
+      ></app-project>
+      <app-project
+        [project]="getProject('Pixees')!"
+        class="lg:w-1/3"
+      ></app-project>
     </div>
   </div>
-   -->
 </div>

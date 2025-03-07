@@ -1,39 +1,47 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from '@components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { Component, ViewEncapsulation } from "@angular/core";
+import { RouterOutlet } from "@angular/router";
+import { HeaderComponent } from "@components/header/header.component";
+import { FooterComponent } from "./components/footer/footer.component";
 import {
   FaIconLibrary,
   FontAwesomeModule,
-} from '@fortawesome/angular-fontawesome';
+} from "@fortawesome/angular-fontawesome";
 import {
+  faArrowPointer,
+  faChevronUp,
+  faCircleQuestion,
   faClock,
   faClose,
+  faDownload,
   faEarListen,
   faEllipsis,
   faFilterCircleXmark,
   faFlagCheckered,
+  faFolderOpen,
   faGears,
   faGlobe,
   faHandshakeAngle,
+  faHouseUser,
   faList,
   faMapLocationDot,
+  faObjectGroup,
   faPeopleGroup,
   faToolbox,
   faUpRightFromSquare,
   faUserClock,
-} from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+  faVial,
+} from "@fortawesome/free-solid-svg-icons";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   imports: [RouterOutlet, HeaderComponent, FontAwesomeModule, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.scss",
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'Portfolio';
+  title = "Portfolio";
 
   constructor(library: FaIconLibrary) {
     library.addIcons(faClose);
@@ -52,5 +60,13 @@ export class AppComponent {
     library.addIcons(faPeopleGroup);
     library.addIcons(faEarListen);
     library.addIcons(faHandshakeAngle);
+    library.addIcons(faChevronUp);
+    library.addIcons(faObjectGroup);
+    library.addIcons(faArrowPointer);
+    library.addIcons(faDownload);
+    library.addIcons(faHouseUser);
+    library.addIcons(faVial);
+    library.addIcons(faFolderOpen);
+    library.addIcons(faCircleQuestion);
   }
 }

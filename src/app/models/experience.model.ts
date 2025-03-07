@@ -3,7 +3,7 @@ export class CustomDate {
   public Format: string;
   constructor(date: Date, format?: string) {
     this.Value = date;
-    this.Format = format || 'dd/MM/yyyy';
+    this.Format = format || "dd/MM/yyyy";
   }
 }
 
@@ -46,21 +46,21 @@ export class Experience {
   private isCourse: boolean;
 
   constructor(experience?: Experience) {
-    this.name = experience?.name || '';
-    this.title = experience?.title || '';
-    this.location = experience?.location || 'En ligne';
-    this.description = experience?.description || '';
+    this.name = experience?.name || "";
+    this.title = experience?.title || "";
+    this.location = experience?.location || "En ligne";
+    this.description = experience?.description || "";
     this.previewImage = experience?.previewImage;
     this.startingDate = experience?.startingDate
       ? new CustomDate(
           experience.startingDate.Value,
-          experience.startingDate.Format
+          experience.startingDate.Format,
         )
       : undefined;
     this.endingDate = experience?.endingDate
       ? new CustomDate(
           experience.endingDate.Value,
-          experience.endingDate.Format
+          experience.endingDate.Format,
         )
       : undefined;
     this.isCurrent = experience?.isCurrent || false;
