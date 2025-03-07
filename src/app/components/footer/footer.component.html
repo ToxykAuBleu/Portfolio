@@ -1,33 +1,37 @@
-<!-- FIXME: responsive -->
 <!-- TODO: aligner les icones avec une grid, voir projects -->
-<footer class="rounded-t-3xl flex flex-col mt-16 bg-slate-900/50 px-8 pb-4 pt-8 gap-4 text-white">
-  <div class="flex flex-col md:flex-row gap-4">
-    <!-- Portfolio description -->
-    <div class="md:w-10/15 shrink flex flex-col">
-      <div class="flex flex-row gap-4 items-center">
+<footer
+  class="mt-16 flex flex-col gap-8 rounded-t-3xl bg-slate-900/50 px-8 pt-8 pb-4 text-white"
+>
+  <div class="flex flex-col gap-8 md:flex-row lg:gap-16">
+    <div class="flex flex-auto flex-col">
+      <!-- Portfolio description -->
+      <div class="flex flex-row items-center gap-4">
         <app-image-loader
           image="profile-picture.png"
           imageClass="rounded-full hover:animate-spin w-12"
           loaderClass="flex rounded-full!"
         ></app-image-loader>
-        <p
-          class="text-2xl! font-bold transition-opacity"
-        >
-          &#64;ToxykAuBleu
-        </p>
+        <p class="text-2xl! font-bold transition-opacity">&#64;ToxykAuBleu</p>
       </div>
       <p class="text-justify max-lg:hyphens-auto" lang="fr">
-        <span class="mr-4"><fa-icon icon="quote-left" class="text-gray-300" size="xl"></fa-icon></span>
-        Dans mon portfolio, tu en apprendras davantage sur ma personne, les projets sur lesquels
-        je ou j'ai participé, mes expériences personnelles et professionnelles. N'hésite pas à regarder
-        mes autres réseaux, que ce soit pour me contacter ou pour tout simplement observer 😉
-        <span class="ml-4"><fa-icon icon="quote-right" class="text-gray-300" size="xl"></fa-icon></span>
+        <span class="mr-4"
+          ><fa-icon icon="quote-left" class="text-gray-300" size="xl"></fa-icon
+        ></span>
+        Dans mon portfolio, tu en apprendras davantage sur ma personne, les
+        projets sur lesquels je ou j'ai participé, mes expériences personnelles
+        et professionnelles. N'hésite pas à regarder mes autres réseaux, que ce
+        soit pour me contacter ou pour tout simplement observer 😉
+        <span class="ml-4"
+          ><fa-icon icon="quote-right" class="text-gray-300" size="xl"></fa-icon
+        ></span>
       </p>
     </div>
-    <div class="flex md:w-5/15 grow flex-col min-[480px]:flex-row">
+    <div
+      class="flex flex-none flex-col justify-around gap-8 min-[480px]:flex-row"
+    >
       <!-- Shortcuts to pages -->
-      <div class="min-[480px]:w-1/2 grow flex flex-col items-center gap-4">
-        <p class="font-bold text-2xl! mt-2.5">Liens utiles</p>
+      <div class="flex flex-col items-center gap-4">
+        <p class="mt-2.5 text-2xl! font-bold underline">Liens utiles</p>
         <ul class="flex flex-col">
           <a routerLink="/">
             <fa-icon icon="home-user" class="mr-2"></fa-icon>
@@ -48,11 +52,14 @@
         </ul>
       </div>
       <!-- Social links -->
-      <div class="min-[480px]:w-1/2 grow flex flex-col items-center gap-4">
-        <p class="font-bold text-2xl! mt-2.5">Mes réseaux</p>
+      <div class="flex flex-col items-center gap-4">
+        <p class="mt-2.5 text-2xl! font-bold underline">Mes réseaux</p>
         <ul class="flex flex-col">
           <a class="flex" href="https://linkedin.com/in/mathieu-fois">
-            <fa-icon [icon]="['fab', 'linkedin']" class="w-8 text-blue-500"></fa-icon>
+            <fa-icon
+              [icon]="['fab', 'linkedin']"
+              class="w-8 text-blue-500"
+            ></fa-icon>
             <span>&#64;mathieu-fois</span>
           </a>
           <a class="flex" href="https://github.com/ToxykAuBleu">
@@ -60,7 +67,10 @@
             <span>&#64;ToxykAuBleu</span>
           </a>
           <a class="flex" href="">
-            <fa-icon [icon]="['fab', 'discord']" class="w-8 text-indigo-600"></fa-icon>
+            <fa-icon
+              [icon]="['fab', 'discord']"
+              class="w-8 text-indigo-600"
+            ></fa-icon>
             <span>&#64;toxykaubleu</span>
           </a>
           <a class="flex" href="https://steamcommunity.com/id/ToxykAuBleu">
@@ -71,10 +81,12 @@
       </div>
     </div>
   </div>
-  <div class="flex flex-col max-md:gap-4 md:flex-row items-center md:justify-around">
+  <div
+    class="flex flex-col items-center max-md:gap-4 md:flex-row md:justify-around"
+  >
     <div class="text-center">
       <p class="max-md:mb-2">
-        <span class="text-red-600 mr-2">❤</span>
+        <span class="mr-2 text-red-600">❤</span>
         Site entièrement réalisé avec par moi.
       </p>
       <p>
@@ -84,7 +96,7 @@
     </div>
     <p class="text-center">
       <a href="https://github.com/ToxykAuBleu/Portfolio">
-        <fa-icon icon="code" class="mr-2"></fa-icon>
+        <fa-icon icon="file-code" class="mr-2"></fa-icon>
         Code source (v1)
       </a>
     </p>

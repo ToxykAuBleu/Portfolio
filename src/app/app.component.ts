@@ -12,10 +12,10 @@ import {
   faCircleQuestion,
   faClock,
   faClose,
-  faCode,
   faDownload,
   faEarListen,
   faEllipsis,
+  faFileCode,
   faFilterCircleXmark,
   faFlagCheckered,
   faFolderOpen,
@@ -35,7 +35,12 @@ import {
   faUserClock,
   faVial,
 } from "@fortawesome/free-solid-svg-icons";
-import { faDiscord, faGithub, faLinkedin, faSteam } from "@fortawesome/free-brands-svg-icons";
+import {
+  faDiscord,
+  faGithub,
+  faLinkedin,
+  faSteam,
+} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: "app-root",
@@ -76,7 +81,7 @@ export class AppComponent {
     library.addIcons(faDiscord);
     library.addIcons(faSteam);
     library.addIcons(faLeaf);
-    library.addIcons(faCode);
+    library.addIcons(faFileCode);
     library.addIcons(faQuoteLeft);
     library.addIcons(faQuoteRight);
   }
