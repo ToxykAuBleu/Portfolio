@@ -1,6 +1,6 @@
 {
   "name": "Bun",
   "iconPath": "icons/bun.svg",
-  "description": "Description de Bun",
+  "description": "Bun est un runtime JavaScript rapide et moderne, conçu pour améliorer les performances des applications web et des outils de développement.",
   "url": "https://bun.sh"
 }

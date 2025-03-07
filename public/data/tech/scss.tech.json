@@ -1,6 +1,6 @@
 {
   "name": "SCSS",
   "iconPath": "icons/scss.svg",
-  "description": "Description de SCSS",
+  "description": "Un préprocesseur CSS qui permet d'utiliser des variables, des imbrications et d'autres fonctionnalités avancées pour écrire du CSS plus maintenable.",
   "url": "https://sass-lang.com"
 }

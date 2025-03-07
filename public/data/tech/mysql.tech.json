@@ -1,6 +1,6 @@
 {
   "name": "MySQL",
   "iconPath": "icons/mysql.svg",
-  "description": "Description de MySQL",
+  "description": "MySQL est un système de gestion de base de données relationnelle open-source, très utilisé pour les applications web.",
   "url": "https://www.mysql.com"
 }

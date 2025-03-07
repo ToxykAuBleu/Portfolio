@@ -1,7 +1,7 @@
 {
   "name": "Kubernetes",
   "iconPath": "icons/kubernetes.svg",
-  "description": "Description de Kubernetes",
+  "description": "Kubernetes est une plateforme open-source pour automatiser le déploiement, la mise à l'échelle et la gestion des applications conteneurisées.",
   "url": "https://kubernetes.io",
   "isTool": true
 }

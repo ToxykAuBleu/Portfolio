@@ -1,7 +1,7 @@
 {
   "name": "Discord",
   "iconPath": "icons/discord.svg",
-  "description": "Description de Discord",
+  "description": "Discord est une plateforme de communication populaire utilisée pour le chat vocal, vidéo et texte, principalement par les communautés de jeux vidéo.",
   "url": "https://discord.com",
   "isTool": true
 }

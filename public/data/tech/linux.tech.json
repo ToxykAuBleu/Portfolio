@@ -1,7 +1,7 @@
 {
   "name": "Linux",
   "iconPath": "icons/linux.svg",
-  "description": "Description de Linux",
+  "description": "Linux est un système d'exploitation open-source, connu pour sa stabilité, sa sécurité et sa flexibilité.",
   "url": "https://www.kernel.org",
   "isTool": true
 }

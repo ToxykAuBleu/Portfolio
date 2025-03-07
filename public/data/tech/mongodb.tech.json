@@ -1,6 +1,6 @@
 {
   "name": "MongoDB",
   "iconPath": "icons/mongodb.svg",
-  "description": "Description de MongoDB",
+  "description": "MongoDB est une base de données NoSQL orientée documents, conçue pour stocker de grandes quantités de données non structurées.",
   "url": "https://www.mongodb.com"
 }

@@ -1,7 +1,7 @@
 {
   "name": "Visual Studio",
   "iconPath": "icons/visualstudio.svg",
-  "description": "Description de Visual Studio",
+  "description": "Un environnement de développement intégré (IDE) complet de Microsoft pour le développement d'applications web, mobiles, de bureau et de jeux.",
   "url": "https://visualstudio.microsoft.com",
   "isTool": true
 }

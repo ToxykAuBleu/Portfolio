@@ -1,6 +1,6 @@
 {
   "name": "Angular",
   "iconPath": "icons/angular.svg",
-  "description": "Description de Angular",
+  "description": "Angular est un framework de développement web open-source, maintenu par Google, utilisé pour créer des applications web dynamiques et interactives.",
   "url": "https://angular.dev"
 }
