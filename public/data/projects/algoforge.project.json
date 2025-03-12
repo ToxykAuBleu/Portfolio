@@ -2,6 +2,8 @@
   "name": "Algoforge",
   "title": "AlgoForge",
   "previewImage": "",
+  "demoUrl": "https://algoforge.fr",
+  "sourceCodeUrl": "https://github.com/Bing-Chill-inc/Algoforge-main",
   "startingDate": "2023/03/01",
   "technologies": [
     "Bun",

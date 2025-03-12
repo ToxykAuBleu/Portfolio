@@ -18,6 +18,14 @@ export class Project {
    */
   private previewImage?: string;
   /**
+   * Lien démo du projet.
+   */
+  private demoUrl?: string;
+  /**
+   * Lien code source du projet.
+   */
+  private sourceCodeUrl?: string;
+  /**
    * Date de début du projet.
    */
   private startingDate: Date;
@@ -35,6 +43,8 @@ export class Project {
     this.title = project?.title || "";
     this.description = project?.description || "";
     this.previewImage = project?.previewImage;
+    this.demoUrl = project?.demoUrl;
+    this.sourceCodeUrl = project?.sourceCodeUrl;
     this.startingDate = project?.startingDate || new Date();
     this.endingDate = project?.endingDate;
     this.technologies = project?.technologies || [];
@@ -69,6 +79,22 @@ export class Project {
   }
   setPreviewImage(previewImage: string): Project {
     this.previewImage = previewImage;
+    return this;
+  }
+
+  get DemoUrl(): string | undefined {
+    return this.demoUrl;
+  }
+  setDemoUrl(demoUrl: string): Project {
+    this.demoUrl = demoUrl;
+    return this;
+  }
+
+  get SourceCodeUrl(): string | undefined {
+    return this.sourceCodeUrl;
+  }
+  setSourceCodeUrl(sourceCodeUrl: string): Project {
+    this.sourceCodeUrl = sourceCodeUrl;
     return this;
   }
 

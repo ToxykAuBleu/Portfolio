@@ -9,7 +9,9 @@ import {
 import {
   faArrowPointer,
   faChevronUp,
+  faCircleInfo,
   faCircleQuestion,
+  faCircleXmark,
   faClock,
   faClose,
   faDownload,
@@ -81,8 +83,10 @@ export class AppComponent {
     library.addIcons(faDiscord);
     library.addIcons(faSteam);
     library.addIcons(faLeaf);
-    library.addIcons(faFileCode);
     library.addIcons(faQuoteLeft);
     library.addIcons(faQuoteRight);
+    library.addIcons(faCircleXmark);
+    library.addIcons(faCircleInfo);
+    library.addIcons(faFileCode);
   }
 }

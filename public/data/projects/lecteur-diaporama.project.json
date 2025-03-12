@@ -2,6 +2,7 @@
   "name": "LecteurDiaporama",
   "title": "Lecteur de diaporama",
   "previewImage": "",
+  "sourceCodeUrl": "https://github.com/ToxykAuBleu/LecteurDiaporama",
   "startingDate": "2023/04/03",
   "endingDate": "2023/06/13",
   "technologies": ["C++", "Qt", "Git", "GitHub"],

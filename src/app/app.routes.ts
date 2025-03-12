@@ -1,9 +1,11 @@
-import { Routes } from "@angular/router";
-import { HomeComponent } from "./components/home/home.component";
-import { ProjectsComponent } from "./components/projects/projects.component";
-import { AboutComponent } from "./components/about/about.component";
-import { ExperiencesComponent } from "./components/experiences/experiences.component";
-import { NotFoundComponent } from "./components/not-found/not-found.component";
+import { Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { ProjectsComponent } from './components/projects/projects.component';
+import { AboutComponent } from './components/about/about.component';
+import { ExperiencesComponent } from './components/experiences/experiences.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProjectComponent } from '@components/project/project.component';
+import { ProjectResolver } from '@components/project/project.resolver';
 
 export const routes: Routes = [
   {
@@ -15,7 +17,14 @@ export const routes: Routes = [
     component: ProjectsComponent,
   },
   {
-    path: "experiences",
+    path: 'projects/:name',
+    component: ProjectComponent,
+    resolve: {
+      project: ProjectResolver,
+    }
+  },
+  {
+    path: 'experiences',
     component: ExperiencesComponent,
   },
   {
