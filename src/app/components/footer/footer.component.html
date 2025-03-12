@@ -3,11 +3,11 @@
   class="mt-16 flex flex-col gap-8 rounded-t-3xl bg-slate-900/50 px-8 pt-8 pb-4 text-white"
 >
   <div class="flex flex-col gap-8 md:flex-row lg:gap-16">
-    <div class="flex flex-auto flex-col">
+    <div class="flex flex-auto flex-col gap-4">
       <!-- Portfolio description -->
       <div class="flex flex-row items-center gap-4">
         <app-image-loader
-          image="profile-picture.png"
+          image="/profile-picture.png"
           imageClass="rounded-full hover:animate-spin w-12"
           loaderClass="flex rounded-full!"
         ></app-image-loader>
@@ -33,19 +33,19 @@
       <div class="flex flex-col items-center gap-4">
         <p class="mt-2.5 text-2xl! font-bold underline">Liens utiles</p>
         <ul class="flex flex-col">
-          <a routerLink="/">
+          <a routerLink="/" class="flex hover:text-blue-600">
             <fa-icon icon="home-user" class="mr-2"></fa-icon>
             <span>Accueil</span>
           </a>
-          <a routerLink="/projects">
+          <a routerLink="/projects" class="flex hover:text-blue-600">
             <fa-icon icon="folder-open" class="mr-2"></fa-icon>
             <span>Projects</span>
           </a>
-          <a routerLink="/experiences">
+          <a routerLink="/experiences" class="flex hover:text-blue-600">
             <fa-icon icon="vial" class="mr-2"></fa-icon>
             <span>Expériences</span>
           </a>
-          <a routerLink="/about">
+          <a routerLink="/about" class="flex hover:text-blue-600">
             <fa-icon icon="question-circle" class="mr-2"></fa-icon>
             <span>A propos</span>
           </a>
@@ -55,26 +55,38 @@
       <div class="flex flex-col items-center gap-4">
         <p class="mt-2.5 text-2xl! font-bold underline">Mes réseaux</p>
         <ul class="flex flex-col">
-          <a class="flex" href="https://linkedin.com/in/mathieu-fois">
+          <a
+            class="flex hover:text-blue-600"
+            href="https://linkedin.com/in/mathieu-fois"
+          >
             <fa-icon
               [icon]="['fab', 'linkedin']"
-              class="w-8 text-blue-500"
+              class="w-8 text-blue-500!"
             ></fa-icon>
             <span>&#64;mathieu-fois</span>
           </a>
-          <a class="flex" href="https://github.com/ToxykAuBleu">
-            <fa-icon [icon]="['fab', 'github']" class="w-8"></fa-icon>
+          <a
+            class="flex hover:text-blue-600"
+            href="https://github.com/ToxykAuBleu"
+          >
+            <fa-icon
+              [icon]="['fab', 'github']"
+              class="w-8 text-white"
+            ></fa-icon>
             <span>&#64;ToxykAuBleu</span>
           </a>
-          <a class="flex" href="">
+          <a class="flex hover:text-blue-600" href="">
             <fa-icon
               [icon]="['fab', 'discord']"
-              class="w-8 text-indigo-600"
+              class="w-8 text-indigo-600!"
             ></fa-icon>
             <span>&#64;toxykaubleu</span>
           </a>
-          <a class="flex" href="https://steamcommunity.com/id/ToxykAuBleu">
-            <fa-icon [icon]="['fab', 'steam']" class="w-8"></fa-icon>
+          <a
+            class="flex hover:text-blue-600"
+            href="https://steamcommunity.com/id/ToxykAuBleu"
+          >
+            <fa-icon [icon]="['fab', 'steam']" class="w-8 text-white"></fa-icon>
             <span>&#64;ToxykAuBleu</span>
           </a>
         </ul>
