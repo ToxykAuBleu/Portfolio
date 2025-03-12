@@ -1,15 +1,104 @@
-<footer class="mt-16 bg-slate-900/50 px-4 py-3 text-white">
-  <div class="flex flex-col items-center">
-    <p>
-      Site entièrement réalisé avec <span class="text-red-600">❤</span> par
-      <a href="https://github.com/ToxykAuBleu">&#64;ToxykAuBleu</a>.
-    </p>
-    <div class="flex flex-row gap-2">
-      <fa-icon [icon]="['fab', 'github']"></fa-icon>
-      <p>
-        <a href="https://github.com/ToxykAuBleu/Portfolio">Code source</a> |
-        Version 1.0.0
+<!-- TODO: aligner les icones avec une grid, voir projects -->
+<footer
+  class="mt-16 flex flex-col gap-8 rounded-t-3xl bg-slate-900/50 px-8 pt-8 pb-4 text-white"
+>
+  <div class="flex flex-col gap-8 md:flex-row lg:gap-16">
+    <div class="flex flex-auto flex-col">
+      <!-- Portfolio description -->
+      <div class="flex flex-row items-center gap-4">
+        <app-image-loader
+          image="profile-picture.png"
+          imageClass="rounded-full hover:animate-spin w-12"
+          loaderClass="flex rounded-full!"
+        ></app-image-loader>
+        <p class="text-2xl! font-bold transition-opacity">&#64;ToxykAuBleu</p>
+      </div>
+      <p class="text-justify max-lg:hyphens-auto" lang="fr">
+        <span class="mr-4"
+          ><fa-icon icon="quote-left" class="text-gray-300" size="xl"></fa-icon
+        ></span>
+        Dans mon portfolio, tu en apprendras davantage sur ma personne, les
+        projets sur lesquels je ou j'ai participé, mes expériences personnelles
+        et professionnelles. N'hésite pas à regarder mes autres réseaux, que ce
+        soit pour me contacter ou pour tout simplement observer 😉
+        <span class="ml-4"
+          ><fa-icon icon="quote-right" class="text-gray-300" size="xl"></fa-icon
+        ></span>
       </p>
     </div>
+    <div
+      class="flex flex-none flex-col justify-around gap-8 min-[480px]:flex-row"
+    >
+      <!-- Shortcuts to pages -->
+      <div class="flex flex-col items-center gap-4">
+        <p class="mt-2.5 text-2xl! font-bold underline">Liens utiles</p>
+        <ul class="flex flex-col">
+          <a routerLink="/">
+            <fa-icon icon="home-user" class="mr-2"></fa-icon>
+            <span>Accueil</span>
+          </a>
+          <a routerLink="/projects">
+            <fa-icon icon="folder-open" class="mr-2"></fa-icon>
+            <span>Projects</span>
+          </a>
+          <a routerLink="/experiences">
+            <fa-icon icon="vial" class="mr-2"></fa-icon>
+            <span>Expériences</span>
+          </a>
+          <a routerLink="/about">
+            <fa-icon icon="question-circle" class="mr-2"></fa-icon>
+            <span>A propos</span>
+          </a>
+        </ul>
+      </div>
+      <!-- Social links -->
+      <div class="flex flex-col items-center gap-4">
+        <p class="mt-2.5 text-2xl! font-bold underline">Mes réseaux</p>
+        <ul class="flex flex-col">
+          <a class="flex" href="https://linkedin.com/in/mathieu-fois">
+            <fa-icon
+              [icon]="['fab', 'linkedin']"
+              class="w-8 text-blue-500"
+            ></fa-icon>
+            <span>&#64;mathieu-fois</span>
+          </a>
+          <a class="flex" href="https://github.com/ToxykAuBleu">
+            <fa-icon [icon]="['fab', 'github']" class="w-8"></fa-icon>
+            <span>&#64;ToxykAuBleu</span>
+          </a>
+          <a class="flex" href="">
+            <fa-icon
+              [icon]="['fab', 'discord']"
+              class="w-8 text-indigo-600"
+            ></fa-icon>
+            <span>&#64;toxykaubleu</span>
+          </a>
+          <a class="flex" href="https://steamcommunity.com/id/ToxykAuBleu">
+            <fa-icon [icon]="['fab', 'steam']" class="w-8"></fa-icon>
+            <span>&#64;ToxykAuBleu</span>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div
+    class="flex flex-col items-center max-md:gap-4 md:flex-row md:justify-around"
+  >
+    <div class="text-center">
+      <p class="max-md:mb-2">
+        <span class="mr-2 text-red-600">❤</span>
+        Site entièrement réalisé avec par moi.
+      </p>
+      <p>
+        <fa-icon icon="leaf" class="mr-2 text-green-500"></fa-icon>
+        Hébergé sur un serveur fonctionnant avec de l'énergie verte.
+      </p>
+    </div>
+    <p class="text-center">
+      <a href="https://github.com/ToxykAuBleu/Portfolio">
+        <fa-icon icon="file-code" class="mr-2"></fa-icon>
+        Code source (v1)
+      </a>
+    </p>
   </div>
 </footer>

@@ -15,6 +15,7 @@ import {
   faDownload,
   faEarListen,
   faEllipsis,
+  faFileCode,
   faFilterCircleXmark,
   faFlagCheckered,
   faFolderOpen,
@@ -22,16 +23,24 @@ import {
   faGlobe,
   faHandshakeAngle,
   faHouseUser,
+  faLeaf,
   faList,
   faMapLocationDot,
   faObjectGroup,
   faPeopleGroup,
+  faQuoteLeft,
+  faQuoteRight,
   faToolbox,
   faUpRightFromSquare,
   faUserClock,
   faVial,
 } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faDiscord,
+  faGithub,
+  faLinkedin,
+  faSteam,
+} from "@fortawesome/free-brands-svg-icons";
 
 @Component({
   selector: "app-root",
@@ -68,5 +77,12 @@ export class AppComponent {
     library.addIcons(faVial);
     library.addIcons(faFolderOpen);
     library.addIcons(faCircleQuestion);
+    library.addIcons(faLinkedin);
+    library.addIcons(faDiscord);
+    library.addIcons(faSteam);
+    library.addIcons(faLeaf);
+    library.addIcons(faFileCode);
+    library.addIcons(faQuoteLeft);
+    library.addIcons(faQuoteRight);
   }
 }
