@@ -102,9 +102,17 @@
     </div>
 
     <!-- Title -->
+    <span
+      *ngIf="experience.IsCurrent"
+      [ngClass]="{
+        'pill-current absolute -top-3': true,
+        '-right-7': position === 'center',
+        '-right-10': position === 'right',
+        '-left-10': position === 'left',
+      }"
+    ></span>
     <div class="flex flex-row">
       <h4>
-        <span *ngIf="experience.IsCurrent" class="pill-current"></span>
         {{ experience.Title }}
       </h4>
     </div>
