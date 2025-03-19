@@ -30,32 +30,32 @@ export class HomeComponent {
     {
       title: "Autonomie",
       icon: "user-clock",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
+      content: `Capacité à travailler de manière indépendante et à gérer mon temps efficacement.`,
     },
     {
       title: "Logique",
       icon: "gears",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
+      content: `Aptitude à résoudre des problèmes complexes grâce à une pensée analytique.`,
+    },
+    {
+      title: "Adaptabilité",
+      icon: "globe",
+      content: `Capacité à s'adapter et à travailler dans des environnements diversifiés.`,
     },
     {
       title: "Travail d'équipe",
       icon: "people-group",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
+      content: `Compétence à collaborer efficacement avec les autres pour atteindre des objectifs communs.`,
     },
     {
       title: "L'écoute",
       icon: "ear-listen",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
+      content: `Habilité à comprendre et à prendre en compte les points de vue des autres.`,
     },
     {
       title: "L'entraide",
       icon: "handshake-angle",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
-    },
-    {
-      title: "Lorem ipsum",
-      icon: "globe",
-      content: `lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.`,
+      content: `Disposition à soutenir et à aider les collègues dans leurs tâches.`,
     },
   ];
 

@@ -6,11 +6,11 @@
   "previewImage": "images/safran-tarnos-entrance.jpg",
   "startingDate": {
     "Value": "2024-09-01",
-    "Format": "dd LLLL yyyy"
+    "Format": "LLLL yyyy"
   },
   "endingDate": {
     "Value": "2025-09-1",
-    "Format": "dd LLLL yyyy"
+    "Format": "LLLL yyyy"
   },
   "isCurrent": false,
   "isCourse": false

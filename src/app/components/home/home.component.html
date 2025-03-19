@@ -15,11 +15,27 @@
     </div>
   </div>
 
-  <!-- Soft-skills -->
+  <!-- About me -->
   <div
     class="flex h-full min-h-screen flex-col items-center justify-center gap-6"
   >
-    <h1 class="text-3xl">Mes qualités</h1>
+    <h1 class="underline">A propos de moi</h1>
+    <p class="text-center text-2xl!">
+      <span class="font-bold">Je suis un développeur Full-stack</span>,
+      passionné par la création de solutions web modernes et performantes.
+      <span class="italic">Curieux de nature</span>, je m’épanouis en explorant
+      de nouvelles technologies pour offrir des
+      <span class="underline">expériences utilisateur optimales</span>.
+    </p>
+    <a
+      routerLink="/about"
+      class="flex flex-row justify-center transition-all hover:scale-115"
+    >
+      <button class="button text-xl!">
+        <fa-icon icon="question-circle" class="mr-2"></fa-icon>
+        En apprendre plus
+      </button>
+    </a>
     <div class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
       <div
         class="flex flex-col items-center justify-center rounded-lg border-4 border-indigo-400 bg-indigo-800/60 p-4 transition hover:bg-indigo-600/60 md:hover:scale-115"
@@ -39,7 +55,6 @@
       </div>
     </div>
   </div>
-
   <!--  Project Section -->
   <div
     class="flex h-full min-h-screen flex-col items-center justify-center gap-6"
@@ -47,7 +62,7 @@
     <h1 class="underline">Mes récents projets</h1>
     <div class="flex w-full flex-col items-center gap-8 lg:gap-16">
       <div class="flex flex-col gap-4">
-        <p class="mx-4 text-justify text-2xl!">
+        <p class="mx-4 text-center text-2xl!">
           Sur mon portfolio, tu trouveras une liste détaillée de tous les
           projets sur lesquels j'ai travaillé.
         </p>
