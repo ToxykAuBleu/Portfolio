@@ -7,6 +7,7 @@ import {
   FontAwesomeModule,
 } from "@fortawesome/angular-fontawesome";
 import {
+  faAnglesDown,
   faArrowPointer,
   faChevronUp,
   faCircleInfo,
@@ -88,5 +89,6 @@ export class AppComponent {
     library.addIcons(faCircleXmark);
     library.addIcons(faCircleInfo);
     library.addIcons(faFileCode);
+    library.addIcons(faAnglesDown);
   }
 }

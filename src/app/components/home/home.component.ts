@@ -1,5 +1,11 @@
 import { CommonModule } from "@angular/common";
-import { Component } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ProjectComponent } from "@components/project/project.component";
 import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
@@ -26,6 +32,9 @@ interface AboutItem {
   styleUrl: "./home.component.scss",
 })
 export class HomeComponent {
+  @ViewChild("hero") heroContainer!: ElementRef;
+  scrollIndicatorDisabled = false;
+  hasScrollEnough = false;
   aboutItems: AboutItem[] = [
     {
       title: "Autonomie",
@@ -63,5 +72,20 @@ export class HomeComponent {
 
   getProject(name: string): Project | undefined {
     return this.projectService.getProject(name);
+  }
+
+  @HostListener("window:resize")
+  disableIndicatorOnResize() {
+    this.heroContainer.nativeElement.offsetHeight > 620
+      ? (this.scrollIndicatorDisabled = false)
+      : (this.scrollIndicatorDisabled = true);
+  }
+
+  @HostListener("window:scroll")
+  disableIndicatorOnScroll() {
+    if (!this.scrollIndicatorDisabled)
+      window.pageYOffset > 350
+        ? (this.hasScrollEnough = true)
+        : (this.hasScrollEnough = false);
   }
 }
