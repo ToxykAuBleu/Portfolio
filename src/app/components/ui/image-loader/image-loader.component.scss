@@ -1,5 +1,9 @@
 @use "tailwindcss";
 
+.xl {
+  @apply h-16 w-16;
+}
+
 .lg {
   @apply h-12 w-12;
 }

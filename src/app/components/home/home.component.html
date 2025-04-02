@@ -106,4 +106,14 @@
       </div>
     </div>
   </div>
+  <!--  Tech Section -->
+  <div class="flex flex-col items-center justify-center gap-6">
+    <h1 class="underline">Mes technologies mises en avant</h1>
+
+    <div class="grid grid-cols-4 gap-x-14 gap-y-8 md:grid-cols-6">
+      <ng-container *ngFor="let tech of recentTechs">
+        <app-icon-tech [tech]="getTech(tech)!" size="xl"></app-icon-tech>
+      </ng-container>
+    </div>
+  </div>
 </div>

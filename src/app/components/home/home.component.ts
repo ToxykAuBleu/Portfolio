@@ -8,10 +8,13 @@ import {
 } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ProjectComponent } from "@components/project/project.component";
+import { IconTechComponent } from "@components/ui/icon-tech/icon-tech.component";
 import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { Project } from "@models/project.model";
+import { Technology } from "@models/technology.model";
 import { ProjectService } from "@services/project.service";
+import { TechnologyService } from "@services/technology.service";
 
 interface AboutItem {
   title: string;
@@ -27,6 +30,7 @@ interface AboutItem {
     RouterModule,
     ProjectComponent,
     ImageLoaderComponent,
+    IconTechComponent,
   ],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",
@@ -35,7 +39,7 @@ export class HomeComponent {
   @ViewChild("hero") heroContainer!: ElementRef;
   scrollIndicatorDisabled = false;
   hasScrollEnough = false;
-  aboutItems: AboutItem[] = [
+  readonly aboutItems: AboutItem[] = [
     {
       title: "Autonomie",
       icon: "user-clock",
@@ -68,10 +72,32 @@ export class HomeComponent {
     },
   ];
 
-  constructor(private projectService: ProjectService) {}
+  readonly recentTechs: string[] = [
+    "Bun",
+    "Angular",
+    "NestJS",
+    "Node.js",
+    "Express",
+    "Tailwind CSS",
+    "TypeScript",
+    "Docker",
+    "MySQL",
+    "Linux",
+    "Git",
+    "GitHub",
+  ];
+
+  constructor(
+    private projectService: ProjectService,
+    private techService: TechnologyService,
+  ) {}
 
   getProject(name: string): Project | undefined {
     return this.projectService.getProject(name);
+  }
+
+  getTech(name: string): Technology | undefined {
+    return this.techService.getTechnology(name);
   }
 
   @HostListener("window:resize")
