@@ -71,7 +71,6 @@ export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    window.scrollTo(0, 0);
     this.checkOverflow();
   }
 
