@@ -8,7 +8,10 @@ import {
 } from "@fortawesome/angular-fontawesome";
 import {
   faAnglesDown,
+  faArrowDown19,
   faArrowPointer,
+  faArrowUp19,
+  faChevronDown,
   faChevronUp,
   faCircleInfo,
   faCircleQuestion,
@@ -73,6 +76,7 @@ export class AppComponent {
     library.addIcons(faEarListen);
     library.addIcons(faHandshakeAngle);
     library.addIcons(faChevronUp);
+    library.addIcons(faChevronDown);
     library.addIcons(faObjectGroup);
     library.addIcons(faArrowPointer);
     library.addIcons(faDownload);
@@ -90,5 +94,7 @@ export class AppComponent {
     library.addIcons(faCircleInfo);
     library.addIcons(faFileCode);
     library.addIcons(faAnglesDown);
+    library.addIcons(faArrowUp19);
+    library.addIcons(faArrowDown19);
   }
 }

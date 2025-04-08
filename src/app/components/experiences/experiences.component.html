@@ -7,12 +7,25 @@
     ordre chronologique, de la plus récente à la plus ancienne.
   </p>
   <div>
-    <h3>Liste des expériences</h3>
+    <h3>
+      <span (click)="toggleSortExperiences()" class="hover:cursor-pointer"
+        [matTooltip]="'Cliquer pour trier ' + (sortOrder ? 'de la plus ancienne à la plus récente' : 'de la plus récente à la plus ancienne')"
+        matTooltipPosition="above"
+      >
+        <fa-icon [icon]="sortOrder ? 'arrow-up-1-9' : 'arrow-down-1-9'" class="mr-2"></fa-icon>
+      </span>
+      Liste des expériences
+    </h3>
     <div class="relative grid grid-cols-1 md:grid-cols-2 md:gap-8">
-      <!-- Arrow -->
-      <div class="dynamic-arrow absolute z-50 flex">
-        <fa-icon icon="chevron-up" class="text-gray-300" size="3x"></fa-icon>
-      </div>
+      <!-- Top -->
+      <ng-container *ngIf="sortOrder"
+        [ngTemplateOutlet]="arrow"
+        [ngTemplateOutletContext]="{position: 'starting'}">
+      </ng-container>
+      <ng-container *ngIf="!sortOrder"
+        [ngTemplateOutlet]="point"
+        [ngTemplateOutletContext]="{position: 'starting'}"
+      ></ng-container>
 
       <!-- Line -->
       <div class="dynamic-line absolute w-2 rounded-full bg-gray-300"></div>
@@ -64,10 +77,15 @@
         </ng-container>
       </ng-container>
 
-      <!-- Starting point -->
-      <div class="dynamic-starting-point absolute flex">
-        <div class="h-6 w-6 rounded-full bg-gray-300"></div>
-      </div>
+      <!-- Bottom -->
+      <ng-container *ngIf="sortOrder"
+        [ngTemplateOutlet]="point"
+        [ngTemplateOutletContext]="{position: 'ending'}"
+      ></ng-container>
+      <ng-container *ngIf="!sortOrder"
+        [ngTemplateOutlet]="arrow"
+        [ngTemplateOutletContext]="{position: 'ending'}">
+      </ng-container>
     </div>
   </div>
 </div>
@@ -83,6 +101,32 @@
       loaderHeight="10rem"
       loaderWidth="10rem"
     ></app-image-loader>
+  </div>
+</ng-template>
+
+<!-- Starting/ending point -->
+<ng-template #point let-position="position">
+  <div
+    [ngClass]="{
+      'dynamic-starting-point absolute flex': true,
+      'bottom-0': position === 'ending',
+      'top-0': position === 'starting',
+    }"
+  >
+    <div class="h-6 w-6 rounded-full bg-gray-300"></div>
+  </div>
+</ng-template>
+
+<!-- Starting/ending arrow -->
+<ng-template #arrow let-position="position">
+  <div
+    [ngClass]="{
+      'dynamic-arrow absolute z-50 flex': true,
+      '-bottom-3': position === 'ending',
+      '-top-3': position === 'starting',
+    }"
+  >
+    <fa-icon [icon]="position === 'starting' ? 'chevron-up' : 'chevron-down'" class="text-gray-300" size="3x"></fa-icon>
   </div>
 </ng-template>
 
