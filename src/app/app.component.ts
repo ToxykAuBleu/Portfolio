@@ -11,6 +11,7 @@ import {
   faArrowDown19,
   faArrowPointer,
   faArrowUp19,
+  faAt,
   faChevronDown,
   faChevronUp,
   faCircleInfo,
@@ -21,6 +22,7 @@ import {
   faDownload,
   faEarListen,
   faEllipsis,
+  faEnvelope,
   faFileCode,
   faFilterCircleXmark,
   faFlagCheckered,
@@ -96,5 +98,7 @@ export class AppComponent {
     library.addIcons(faAnglesDown);
     library.addIcons(faArrowUp19);
     library.addIcons(faArrowDown19);
+    library.addIcons(faAt);
+    library.addIcons(faEnvelope);
   }
 }
