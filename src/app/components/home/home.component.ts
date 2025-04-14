@@ -6,6 +6,7 @@ import {
   OnInit,
   ViewChild,
 } from "@angular/core";
+import { MatTooltipModule } from "@angular/material/tooltip";
 import { RouterModule } from "@angular/router";
 import { ProjectComponent } from "@components/project/project.component";
 import { IconTechComponent } from "@components/ui/icon-tech/icon-tech.component";
@@ -31,6 +32,7 @@ interface AboutItem {
     ProjectComponent,
     ImageLoaderComponent,
     IconTechComponent,
+    MatTooltipModule,
   ],
   templateUrl: "./home.component.html",
   styleUrl: "./home.component.scss",

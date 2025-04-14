@@ -15,15 +15,8 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   templateUrl: "./header.component.html",
   styleUrl: "./header.component.scss",
 })
-export class HeaderComponent implements OnInit {
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {
-    // Scrolls to the top when navigating to a new page.
-    this.router.events.subscribe((event) => {
-      if (event.type === EventType.NavigationStart) {
-        window.scrollTo(0, 0);
-      }
-    });
+export class HeaderComponent {
+  scrollToFooter() {
+    window.scrollTo(0, document.body.scrollHeight);
   }
 }
