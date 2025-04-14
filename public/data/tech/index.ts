@@ -35,6 +35,7 @@ import TypeScript from "./typescript.tech.json";
 import Unity from "./unity.tech.json";
 import VisualStudio from "./visualstudio.tech.json";
 import VisualStudioCode from "./vscode.tech.json";
+import Skript from "./skript.tech.json";
 
 let techs: Technology[] = [
   Angular,
@@ -67,6 +68,7 @@ let techs: Technology[] = [
   Python,
   Qt,
   SCSS,
+  Skript,
   TailWindCSS,
   TypeScript,
   Unity,
