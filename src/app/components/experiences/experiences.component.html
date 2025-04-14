@@ -4,27 +4,43 @@
     Vous retrouverez sur cette page une liste d'expériences personnelles et
     professionnelles que j'ai pu acquérir au fil des années. Cela peut être des
     formations, des stages et des emplois. Les expériences sont classées par
-    ordre chronologique, de la plus récente à la plus ancienne.
+    ordre chronologique, de la plus récente à la plus ancienne. Vous pouvez
+    changer l'ordre en cliquant sur l'icone
+    <fa-icon [icon]="sortOrder ? 'arrow-up-1-9' : 'arrow-down-1-9'"></fa-icon>
+    dans le titre d'en dessous.
   </p>
   <div>
     <h3>
-      <span (click)="toggleSortExperiences()" class="hover:cursor-pointer"
-        [matTooltip]="'Cliquer pour trier ' + (sortOrder ? 'de la plus ancienne à la plus récente' : 'de la plus récente à la plus ancienne')"
+      <span
+        (click)="toggleSortExperiences()"
+        class="hover:cursor-pointer"
+        [matTooltip]="
+          'Cliquer pour trier ' +
+          (sortOrder
+            ? 'de la plus ancienne à la plus récente'
+            : 'de la plus récente à la plus ancienne')
+        "
         matTooltipPosition="above"
       >
-        <fa-icon [icon]="sortOrder ? 'arrow-up-1-9' : 'arrow-down-1-9'" class="mr-2"></fa-icon>
+        <fa-icon
+          [icon]="sortOrder ? 'arrow-up-1-9' : 'arrow-down-1-9'"
+          class="mr-2"
+        ></fa-icon>
       </span>
       Liste des expériences
     </h3>
     <div class="relative grid grid-cols-1 md:grid-cols-2 md:gap-8">
       <!-- Top -->
-      <ng-container *ngIf="sortOrder"
+      <ng-container
+        *ngIf="sortOrder"
         [ngTemplateOutlet]="arrow"
-        [ngTemplateOutletContext]="{position: 'starting'}">
+        [ngTemplateOutletContext]="{ position: 'starting' }"
+      >
       </ng-container>
-      <ng-container *ngIf="!sortOrder"
+      <ng-container
+        *ngIf="!sortOrder"
         [ngTemplateOutlet]="point"
-        [ngTemplateOutletContext]="{position: 'starting'}"
+        [ngTemplateOutletContext]="{ position: 'starting' }"
       ></ng-container>
 
       <!-- Line -->
@@ -78,13 +94,16 @@
       </ng-container>
 
       <!-- Bottom -->
-      <ng-container *ngIf="sortOrder"
+      <ng-container
+        *ngIf="sortOrder"
         [ngTemplateOutlet]="point"
-        [ngTemplateOutletContext]="{position: 'ending'}"
+        [ngTemplateOutletContext]="{ position: 'ending' }"
       ></ng-container>
-      <ng-container *ngIf="!sortOrder"
+      <ng-container
+        *ngIf="!sortOrder"
         [ngTemplateOutlet]="arrow"
-        [ngTemplateOutletContext]="{position: 'ending'}">
+        [ngTemplateOutletContext]="{ position: 'ending' }"
+      >
       </ng-container>
     </div>
   </div>
@@ -126,7 +145,11 @@
       '-top-3': position === 'starting',
     }"
   >
-    <fa-icon [icon]="position === 'starting' ? 'chevron-up' : 'chevron-down'" class="text-gray-300" size="3x"></fa-icon>
+    <fa-icon
+      [icon]="position === 'starting' ? 'chevron-up' : 'chevron-down'"
+      class="text-gray-300"
+      size="3x"
+    ></fa-icon>
   </div>
 </ng-template>
 
