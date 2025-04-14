@@ -28,7 +28,7 @@ export const routes: Routes = [
     component: ExperiencesComponent,
   },
   {
-    path: "about",
+    path: "about-me",
     component: AboutComponent,
   },
   {

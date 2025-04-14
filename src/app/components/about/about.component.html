@@ -1,1 +1,69 @@
-<p>about works!</p>
+<h1>Mon histoire</h1>
+<div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-8">
+    <p class="text-justify">
+      <app-image-loader
+        image="images/minecraft-with-my-bro.jpg"
+        imageClass="float-right w-[10rem] sm:w-[15rem] md:w-[20rem] ml-8 m-4 rotate-10 rounded-xl"
+        alt="Sreenshot de Minecraft 1.2.5, avec mon pote en train de pêcher"
+      ></app-image-loader>
+      Mon expérience a débuté à l'âge de 10 ans, sur Minecraft (version 1.2.5).
+      Cela faisait déjà 1 an que je jouais quotidiennement avec mon meilleur
+      ami. Un jour, en explorant le mode multijoueur, une idée a germé dans mon
+      esprit : et si je créais mon propre serveur ? Cette idée s'est enracinée
+      et n'a plus cessé de me hanter.<br /><br />
+      Une fois au collège, avec des amis tout aussi passionnés, nous avons
+      décidé de créer notre propre serveur. Au début, je me contentais de
+      quelques ajustements basiques en manipulant des fichiers texte pour
+      personnaliser un peu le serveur. C'était loin d'être parfait, mais c'était
+      un début - et surtout, j'apprenais.<br /><br />
+      Puis un jour, j'ai découvert quelque chose qui a révolutionné mon
+      expérience : le monde de la programmation informatique. J'ai alors exploré
+      <a
+        href="https://plus.wikimonde.com/wiki/Skript"
+        target="_blank"
+        class="text-blue-400 underline underline-offset-4 after:content-['_↗']"
+        >Skript</a
+      >
+      <i>(un langage basé sur Java qui se rédige en langage naturel)</i>. Cela
+      m'a permis de concevoir mes premiers mini-jeux, parfois complexes, et
+      surtout, de donner vie à mes idées. Ce que je pensais réservé aux
+      développeurs confirmés, je le réalisais à ma manière.
+    </p>
+    <p class="text-justify">
+      <app-image-loader
+        image="images/ldf-preview.jpg"
+        imageClass="float-left w-[10rem] sm:w-[15rem] md:w-[20rem] mr-8 m-4 -rotate-10 rounded-xl"
+        alt="Lycée Louis de Foix"
+      ></app-image-loader>
+      Au fil du temps, ma conviction s'est renforcée : mon orientation
+      professionnelle était claire. Dès mon entrée en première
+      <i>(série générale)</i>, j'ai opté naturellement pour l'option NSI
+      <i>(Numérique et Sciences de l'Informatique)</i>. Cette discipline a
+      marqué un tournant dans mon parcours en me permettant d'acquérir les bases
+      essentielles du métier de développeur, et d'approfondir des notions que
+      j'avais déjà explorées de manière autodidacte par curiosité et passion.<br /><br />
+      C'est également à ce moment-là que j'ai commencé à pratiquer des langages
+      de programmation concrets : Python pour la logique et les algorithmes, le
+      trio HTML, CSS et JavaScript pour le développement web, et SQL pour la
+      gestion de bases de données. Chaque nouveau langage était pour moi une
+      pièce supplémentaire du puzzle du développement, venant enrichir ma
+      compréhension de ce domaine.
+    </p>
+  </div>
+
+  <div>
+    <h1>Et puis la suite, vous la connaissez (ou pas encore)</h1>
+    <p class="text-justify">
+      <a
+        routerLink="/experiences"
+        class="flex flex-row justify-center transition-all hover:scale-115"
+      >
+        <button class="button text-xl!">
+          <fa-icon icon="vial" class="mr-2"></fa-icon>
+          Mes expériences
+        </button>
+      </a>
+    </p>
+  </div>
+</div>

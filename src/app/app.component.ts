@@ -38,6 +38,7 @@ import {
   faPeopleGroup,
   faQuoteLeft,
   faQuoteRight,
+  faSeedling,
   faToolbox,
   faUpRightFromSquare,
   faUserClock,
@@ -96,6 +97,7 @@ export class AppComponent {
     library.addIcons(faCircleInfo);
     library.addIcons(faFileCode);
     library.addIcons(faAnglesDown);
+    library.addIcons(faSeedling);
     library.addIcons(faArrowUp19);
     library.addIcons(faArrowDown19);
     library.addIcons(faAt);
