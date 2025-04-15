@@ -1,59 +1,66 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.5.
+Bienvenue sur mon portfolio !
+Il contient une page d'accueil qui me présente rapidement, une page 'Projets', une page 'Expériences' et une page expliquant mon histoire.
+Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de page.
 
-## Development server
+## Fonctionnalités modulables facilement
 
-To start a local development server, run:
+- Template pour créer un projet et l'afficher sur la page des projets.
+- Template pour référencer des technologies et des outils.
+- Template pour créer une expérience et l'afficher sur la page des expériences.
 
-```bash
-ng serve
+## Tecnologies utilisées
+
+- Angular & Material : v19.2.5
+- TailWindCSS : v4.1.3
+- FontAwesome : v6.7.2
+
+# Installation
+
+Pour installer ce portfolio, vous devez avoir d'installer sur votre machine :
+
+- [Node](https://nodejs.org/en/download) (version utilisé : v22.14.0)
+- [Bun](https://bun.sh) (version utilisé : v1.2.9)
+- [git](https://git-scm.com/) (optionnel, seulement utiliser pour le téléchargement et le développement)
+
+1. Clonez ce dépôt avec la commande :
+
+```sh
+git clone https://github.com/ToxykAuBleu/Portfolio.git
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. Déplacez-vous dans le dossier fraichement créé :
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+cd Portfolio
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+3. Installez les dépendences :
 
-```bash
-ng generate --help
+```sh
+bun install
 ```
 
-## Building
+# Déploiement
 
-To build the project run:
+Pour héberger le portfolio sur la machine, il suffit d'exécuter la commande suivante :
 
-```bash
-ng build
+```sh
+bun run deploy
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Le portfolio va être build, puis un serveur Bun va être lancé. Par défaut, il est démarré à l'adresse `localhost:4200`, mais elle peut être changée en créant un fichier `.env` comme celui-ci :
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+```env
+HOST=localhost
+PORT=4200
 ```
 
-## Running end-to-end tests
+# Développement
 
-For end-to-end (e2e) testing, run:
+Après avoir installé l'application, vous pouvez exécuter la commande suivante :
 
-```bash
-ng e2e
+```sh
+bun run start
 ```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
