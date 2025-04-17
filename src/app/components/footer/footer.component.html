@@ -1,6 +1,6 @@
 <!-- TODO: aligner les icones avec une grid, voir projects -->
 <footer
-  class="mt-16 flex flex-col gap-8 rounded-t-3xl bg-slate-900/50 px-8 pt-8 pb-4 text-white"
+  class="mt-16 flex flex-col gap-8 rounded-t-3xl bg-slate-900/50 px-8 pt-8 pb-8 text-white min-sm:pb-4"
 >
   <div class="flex flex-col gap-8 md:flex-row lg:gap-16">
     <div class="flex flex-auto flex-col gap-4">
@@ -27,7 +27,7 @@
       </p>
     </div>
     <div
-      class="flex flex-none flex-col justify-around gap-8 min-[480px]:flex-row"
+      class="flex flex-none flex-col justify-around gap-8 min-[550px]:flex-row"
     >
       <!-- Shortcuts to pages -->
       <div class="flex flex-col items-center gap-4">
@@ -73,7 +73,7 @@
         <p class="mt-2.5 text-2xl! font-bold underline">Mes réseaux</p>
         <ul class="flex flex-col">
           <a
-            class="flex transition-all hover:text-blue-600"
+            class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
             href="https://linkedin.com/in/mathieu-fois"
           >
             <fa-icon
@@ -83,7 +83,7 @@
             <span>&#64;mathieu-fois</span>
           </a>
           <a
-            class="flex transition-all hover:text-blue-600"
+            class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
             href="https://github.com/ToxykAuBleu"
           >
             <fa-icon
@@ -92,7 +92,10 @@
             ></fa-icon>
             <span>&#64;ToxykAuBleu</span>
           </a>
-          <a class="flex transition-all hover:text-blue-600" href="">
+          <a
+            class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
+            href=""
+          >
             <fa-icon
               [icon]="['fab', 'discord']"
               class="w-8 text-indigo-600!"
@@ -100,14 +103,14 @@
             <span>&#64;toxykaubleu</span>
           </a>
           <a
-            class="flex transition-all hover:text-blue-600"
+            class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
             href="https://steamcommunity.com/id/ToxykAuBleu"
           >
             <fa-icon [icon]="['fab', 'steam']" class="w-8 text-white"></fa-icon>
             <span>&#64;ToxykAuBleu</span>
           </a>
           <a
-            class="flex transition-all hover:text-blue-600"
+            class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
             href="mailto:contact@toxykaubleu.fr"
           >
             <fa-icon icon="at" class="w-8 text-white"></fa-icon>
