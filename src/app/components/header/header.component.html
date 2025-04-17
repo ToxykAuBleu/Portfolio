@@ -21,28 +21,44 @@
     class="relative z-101 flex w-full items-center gap-4 max-[460px]:justify-start min-[460px]:justify-center md:justify-end md:gap-8 lg:gap-12"
   >
     <div class="flex space-x-6 sm:space-x-12 md:space-x-8 lg:space-x-12">
-      <a routerLink="/" class="item-navbar">
+      <a
+        routerLink="/"
+        class="item-navbar"
+        [ngClass]="{ current: currentRoute === '/' }"
+      >
         <fa-icon
           icon="home-user"
           class="md:hidden min-2xl:mr-2 min-2xl:inline"
         ></fa-icon>
         <span class="hidden md:inline">Accueil</span>
       </a>
-      <a routerLink="/projects" class="item-navbar">
+      <a
+        routerLink="/projects"
+        class="item-navbar"
+        [ngClass]="{ current: currentRoute.startsWith('/projects') }"
+      >
         <fa-icon
           icon="folder-open"
           class="md:hidden min-2xl:mr-2 min-2xl:inline"
         ></fa-icon>
         <span class="hidden md:inline">Projects</span>
       </a>
-      <a routerLink="/experiences" class="item-navbar">
+      <a
+        routerLink="/experiences"
+        class="item-navbar"
+        [ngClass]="{ current: currentRoute === '/experiences' }"
+      >
         <fa-icon
           icon="vial"
           class="md:hidden min-2xl:mr-2 min-2xl:inline"
         ></fa-icon>
         <span class="hidden md:inline">Expériences</span>
       </a>
-      <a routerLink="/about-me" class="item-navbar">
+      <a
+        routerLink="/about-me"
+        class="item-navbar"
+        [ngClass]="{ current: currentRoute === '/about-me' }"
+      >
         <fa-icon
           icon="seedling"
           class="md:hidden min-2xl:mr-2 min-2xl:inline"

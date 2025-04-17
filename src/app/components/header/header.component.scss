@@ -1,7 +1,11 @@
 @use "tailwindcss";
 
 .item-navbar {
-  @apply transition-all hover:border-b-4 hover:font-bold;
+  @apply transition-all hover:border-b-4! hover:font-bold;
+
+  &.current {
+    @apply border-b-2 text-blue-400;
+  }
 }
 
 .custom-color {

@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
-import { Component, OnInit } from "@angular/core";
-import { EventType, Router, RouterModule } from "@angular/router";
+import { Component } from "@angular/core";
+import { NavigationEnd, Router, RouterModule } from "@angular/router";
 import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
@@ -16,6 +16,16 @@ import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
   styleUrl: "./header.component.scss",
 })
 export class HeaderComponent {
+  currentRoute: string = "";
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentRoute = event.url;
+      }
+    });
+  }
+
   scrollToFooter() {
     window.scrollTo(0, document.body.scrollHeight);
   }
