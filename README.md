@@ -18,11 +18,11 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 
 # Installation
 
-Pour installer ce portfolio, vous devez avoir d'installer sur votre machine :
+Pour installer ce portfolio, vous devez d'abord avoir sur votre machine :
 
-- [Node](https://nodejs.org/en/download) (version utilisé : v22.14.0)
-- [Bun](https://bun.sh) (version utilisé : v1.2.9)
-- [git](https://git-scm.com/) (optionnel, seulement utiliser pour le téléchargement et le développement)
+- [Node](https://nodejs.org/en/download) (version utilisée : v22.14.0)
+- [Bun](https://bun.sh) (version utilisée : v1.2.9)
+- [git](https://git-scm.com/) (optionnel, seulement utilisé pour le téléchargement et le développement)
 
 1. Clonez ce dépôt avec la commande :
 
@@ -30,13 +30,13 @@ Pour installer ce portfolio, vous devez avoir d'installer sur votre machine :
 git clone https://github.com/ToxykAuBleu/Portfolio.git
 ```
 
-2. Déplacez-vous dans le dossier fraichement créé :
+2. Déplacez-vous dans le dossier fraîchement créé :
 
 ```sh
 cd Portfolio
 ```
 
-3. Installez les dépendences :
+3. Installez les dépendances :
 
 ```sh
 bun install
