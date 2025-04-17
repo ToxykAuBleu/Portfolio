@@ -1,6 +1,6 @@
 {
   "name": "Arch Linux",
-  "iconPath": "icons/arch.svg",
+  "iconPath": "assets/icons/arch.svg",
   "description": "Arch Linux est une distribution Linux légère et flexible, connue pour sa simplicité et son approche DIY (Do It Yourself).",
   "url": "https://archlinux.org",
   "isTool": true

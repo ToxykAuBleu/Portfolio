@@ -1,6 +1,6 @@
 {
   "name": "GitHub",
-  "iconPath": "icons/github.svg",
+  "iconPath": "assets/icons/github.svg",
   "description": "GitHub est une plateforme de développement collaboratif qui permet de gérer et de partager des projets de code source.",
   "url": "https://github.com",
   "isTool": true

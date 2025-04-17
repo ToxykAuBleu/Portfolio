@@ -1,6 +1,6 @@
 {
   "name": "NestJS",
-  "iconPath": "icons/nestjs.svg",
+  "iconPath": "assets/icons/nestjs.svg",
   "description": "NestJS est un framework Node.js progressif pour la construction d'applications côté serveur efficaces et évolutives.",
   "url": "https://nestjs.com"
 }

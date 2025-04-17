@@ -1,6 +1,6 @@
 {
   "name": "Laravel",
-  "iconPath": "icons/laravel.svg",
+  "iconPath": "assets/icons/laravel.svg",
   "description": "Laravel est un framework PHP open-source conçu pour le développement d'applications web robustes et élégantes.",
   "url": "https://laravel.com"
 }

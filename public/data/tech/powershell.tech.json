@@ -1,6 +1,6 @@
 {
   "name": "PowerShell",
-  "iconPath": "icons/powershell.svg",
+  "iconPath": "assets/icons/powershell.svg",
   "description": "Un framework de configuration et d'automatisation des tâches de Microsoft, composé d'un shell en ligne de commande et d'un langage de script.",
   "url": "https://docs.microsoft.com/en-us/powershell/"
 }

@@ -1,6 +1,6 @@
 {
   "name": "Git",
-  "iconPath": "icons/git.svg",
+  "iconPath": "assets/icons/git.svg",
   "description": "Git est un système de contrôle de version distribué, utilisé pour suivre les modifications du code source et faciliter le travail collaboratif.",
   "url": "https://git-scm.com",
   "isTool": true

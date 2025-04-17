@@ -1,6 +1,6 @@
 {
   "name": "Bootstrap",
-  "iconPath": "icons/bootstrap.svg",
+  "iconPath": "assets/icons/bootstrap.svg",
   "description": "Bootstrap est un framework CSS populaire qui facilite la création de sites web réactifs et modernes avec des composants préconçus.",
   "url": "https://getbootstrap.com"
 }

@@ -1,6 +1,6 @@
 {
   "name": "C#",
-  "iconPath": "icons/cs.svg",
+  "iconPath": "assets/icons/cs.svg",
   "description": "C# est un langage de programmation moderne et orienté objet développé par Microsoft, principalement utilisé pour le développement d'applications Windows et web.",
   "url": "https://docs.microsoft.com/en-us/dotnet/csharp/"
 }

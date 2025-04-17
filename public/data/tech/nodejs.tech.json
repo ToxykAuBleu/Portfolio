@@ -1,6 +1,6 @@
 {
   "name": "Node.js",
-  "iconPath": "icons/nodejs.svg",
+  "iconPath": "assets/icons/nodejs.svg",
   "description": "Node.js est un environnement d'exécution JavaScript côté serveur, permettant de créer des applications réseau rapides et évolutives.",
   "url": "https://nodejs.org"
 }

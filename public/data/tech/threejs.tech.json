@@ -1,6 +1,6 @@
 {
   "name": "Three.js",
-  "iconPath": "icons/threejs.svg",
+  "iconPath": "assets/icons/threejs.svg",
   "description": "Une bibliothèque JavaScript qui permet de créer des graphiques 3D dans le navigateur, en utilisant WebGL.",
   "url": "https://threejs.org"
 }

@@ -1,6 +1,6 @@
 {
   "name": "Docker",
-  "iconPath": "icons/docker.svg",
+  "iconPath": "assets/icons/docker.svg",
   "description": "Docker est une plateforme permettant de développer, expédier et exécuter des applications dans des conteneurs, facilitant ainsi la portabilité et la gestion des applications.",
   "url": "https://www.docker.com",
   "isTool": true

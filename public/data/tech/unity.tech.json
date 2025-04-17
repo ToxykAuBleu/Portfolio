@@ -1,6 +1,6 @@
 {
   "name": "Unity",
-  "iconPath": "icons/unity.svg",
+  "iconPath": "assets/icons/unity.svg",
   "description": "Une plateforme de développement de jeux 2D et 3D en temps réel.",
   "url": "https://unity.com",
   "isTool": true

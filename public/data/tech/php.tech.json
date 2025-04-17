@@ -1,6 +1,6 @@
 {
   "name": "PHP",
-  "iconPath": "icons/php.svg",
+  "iconPath": "assets/icons/php.svg",
   "description": "PHP est un langage de script côté serveur largement utilisé pour le développement web, permettant de créer des pages web dynamiques.",
   "url": "https://www.php.net"
 }

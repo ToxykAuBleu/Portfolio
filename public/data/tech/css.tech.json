@@ -1,6 +1,6 @@
 {
   "name": "CSS",
-  "iconPath": "icons/css.svg",
+  "iconPath": "assets/icons/css.svg",
   "description": "CSS est un langage utilisé pour décrire la présentation des pages web, incluant les couleurs, la mise en page et les polices.",
   "url": "https://developer.mozilla.org/en-US/docs/Web/CSS"
 }

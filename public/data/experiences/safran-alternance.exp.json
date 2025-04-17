@@ -3,7 +3,7 @@
   "title": "Alternance « développeur informatique »",
   "description": "• Réalisation d’un outil de création de contrats commerciaux à l’usage des différentes filiales mondiales de l’entreprise : recherche et analyse des besoins, ergonomie, développement, tests, débogage.<br/>• Support au déploiement du portail des outils commerciaux.",
   "location": "Safran Helicopters Engine, Tarnos (40)",
-  "previewImage": "images/safran-tarnos-entrance.jpg",
+  "previewImage": "assets/images/safran-tarnos-entrance.jpg",
   "startingDate": {
     "Value": "2024-09-01",
     "Format": "LLLL yyyy"

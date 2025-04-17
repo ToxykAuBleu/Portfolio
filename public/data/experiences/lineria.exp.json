@@ -3,7 +3,7 @@
   "title": "Responsable infrastructure informatique",
   "description": "Association loi 1901 à but non lucratif « Linéria » (W652005292).<br>• Missions : surveillance, maintenance, développement de fonctionnalités sur les serveurs de jeu et sur le réseau social Discord (Bot).",
   "location": "https://lineriamc.fr",
-  "previewImage": "images/lineria-preview-lobby.jpg",
+  "previewImage": "assets/images/lineria-preview-lobby.jpg",
   "startingDate": {
     "Value": "2021-03-01",
     "Format": "LLLL yyyy"

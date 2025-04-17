@@ -1,6 +1,6 @@
 {
   "name": "Visual Studio Code",
-  "iconPath": "icons/vscode.svg",
+  "iconPath": "assets/icons/vscode.svg",
   "description": "Un éditeur de code source léger mais puissant, développé par Microsoft, avec support pour le débogage, le contrôle de version intégré et des extensions.",
   "url": "https://code.visualstudio.com",
   "isTool": true

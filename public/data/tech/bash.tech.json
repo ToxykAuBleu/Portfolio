@@ -1,6 +1,6 @@
 {
   "name": "Bash",
-  "iconPath": "icons/bash.svg",
+  "iconPath": "assets/icons/bash.svg",
   "description": "Bash est un shell Unix et un langage de commande utilisé pour automatiser les tâches et interagir avec le système d'exploitation.",
   "url": "https://www.gnu.org/software/bash/"
 }

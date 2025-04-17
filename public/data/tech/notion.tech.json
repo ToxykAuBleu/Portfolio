@@ -1,6 +1,6 @@
 {
   "name": "Notion",
-  "iconPath": "icons/notion.svg",
+  "iconPath": "assets/icons/notion.svg",
   "description": "Notion est un outil de productivité tout-en-un qui permet de prendre des notes, de gérer des projets et de collaborer avec d'autres utilisateurs.",
   "url": "https://www.notion.so",
   "isTool": true

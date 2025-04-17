@@ -1,6 +1,6 @@
 {
   "name": "Java",
-  "iconPath": "icons/java.svg",
+  "iconPath": "assets/icons/java.svg",
   "description": "Java est un langage de programmation polyvalent et portable, largement utilisé pour le développement d'applications d'entreprise, mobiles et web.",
   "url": "https://www.java.com"
 }

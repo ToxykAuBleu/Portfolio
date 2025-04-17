@@ -1,6 +1,6 @@
 {
   "name": "Qt",
-  "iconPath": "icons/qt.svg",
+  "iconPath": "assets/icons/qt.svg",
   "description": "Un framework pour le développement d'interfaces utilisateur et d'applications multiplateformes.",
   "url": "https://www.qt.io",
   "isTool": true

@@ -3,7 +3,7 @@
   "title": "Certification Cambridge",
   "description": "• Certification en Anglais obtenue niveau B2.",
   "location": "Lycée Louis de Foix, Bayonne (64)",
-  "previewImage": "images/cambridge-preview.jpg",
+  "previewImage": "assets/images/cambridge-preview.jpg",
   "startingDate": null,
   "endingDate": {
     "Value": "2021-05-31",

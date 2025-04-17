@@ -1,6 +1,6 @@
 {
   "name": "TypeScript",
-  "iconPath": "icons/typescript.svg",
+  "iconPath": "assets/icons/typescript.svg",
   "description": "Un langage de programmation open-source développé par Microsoft, qui est une surcouche de JavaScript, ajoutant des types statiques.",
   "url": "https://www.typescriptlang.org"
 }
