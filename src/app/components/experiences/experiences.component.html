@@ -155,7 +155,9 @@
 
 <!-- Experience card -->
 <ng-template #experienceTemplate let-experience let-position="position">
-  <div class="relative mb-16 rounded-lg bg-black/20 p-4 shadow-lg md:my-16">
+  <div
+    class="relative mb-16 rounded-lg bg-white/70 p-4 shadow-sm md:my-16 dark:border-gray-700 dark:bg-gray-800/80"
+  >
     <!-- Center point -->
     <div
       [ngClass]="{
@@ -179,7 +181,7 @@
       }"
     ></span>
     <div class="flex flex-row">
-      <h4>
+      <h4 class="text-black! dark:text-white!">
         {{ experience.Title }}
       </h4>
     </div>
@@ -189,31 +191,36 @@
       <ng-container *ngIf="experience.isOnline()">
         <fa-icon
           icon="globe"
-          class="text-white"
+          class="text-black dark:text-white"
           matTooltip="Expérience en ligne"
           matTooltipPosition="left"
         ></fa-icon>
-        <span class="text-white">En ligne</span>
+        <span class="text-black dark:text-white">En ligne</span>
       </ng-container>
       <!-- Not online -->
       <ng-container *ngIf="!experience.isOnline()">
         <fa-icon
           icon="map-location-dot"
-          class="text-white"
+          class="text-black dark:text-white"
           matTooltip="Emplacement géographique où s'est réalisé l'expérience"
           matTooltipPosition="left"
         ></fa-icon>
-        <span class="text-white">{{ experience.location }}</span>
+        <span class="text-black dark:text-white">{{
+          experience.location
+        }}</span>
       </ng-container>
     </div>
     <!-- Dates -->
     <div class="flex flex-row gap-4">
       <!-- Ponctual experience -->
       <ng-container *ngIf="!experience.StartingDate">
-        <fa-icon icon="flag-checkered" class="text-white"></fa-icon>
+        <fa-icon
+          icon="flag-checkered"
+          class="text-black dark:text-white"
+        ></fa-icon>
         <div>
           <span
-            class="text-white"
+            class="text-black dark:text-white"
             matTooltip="Obtenu et/ou terminé le"
             matTooltipPosition="above"
             >{{
@@ -225,10 +232,10 @@
 
       <!-- Period experience -->
       <ng-container *ngIf="experience.StartingDate">
-        <fa-icon icon="clock" class="text-white"></fa-icon>
+        <fa-icon icon="clock" class="text-black dark:text-white"></fa-icon>
         <div>
           <span
-            class="text-white"
+            class="text-black dark:text-white"
             matTooltip="Date de début de l'expérience"
             matTooltipPosition="above"
             >{{
@@ -239,7 +246,7 @@
           >
           <span
             *ngIf="!experience.IsCurrent"
-            class="text-white"
+            class="text-black dark:text-white"
             matTooltip="Date de fin de l'expérience"
             matTooltipPosition="above"
           >
@@ -257,7 +264,10 @@
     </div>
 
     <!-- Description -->
-    <p [innerHTML]="experience.description"></p>
+    <p
+      class="text-black! dark:text-white!"
+      [innerHTML]="experience.description"
+    ></p>
 
     <!-- Actions -->
     <div *ngIf="experience.isOnline()">
