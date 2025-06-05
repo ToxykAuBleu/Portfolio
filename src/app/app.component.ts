@@ -50,6 +50,7 @@ import {
   faLinkedin,
   faSteam,
 } from "@fortawesome/free-brands-svg-icons";
+import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
 
 @Component({
   selector: "app-root",
@@ -102,5 +103,6 @@ export class AppComponent {
     library.addIcons(faArrowDown19);
     library.addIcons(faAt);
     library.addIcons(faEnvelope);
+    library.addIcons(faXmarkCircle);
   }
 }
