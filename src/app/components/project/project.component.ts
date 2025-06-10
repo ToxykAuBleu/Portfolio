@@ -8,15 +8,15 @@ import {
   OnDestroy,
   OnInit,
   ViewChild,
-} from '@angular/core';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { Project } from '@models/project.model';
-import { IconTechComponent } from '../ui/icon-tech/icon-tech.component';
-import { MatDividerModule } from '@angular/material/divider';
-import { Technology } from '@models/technology.model';
-import { debounceTime, fromEvent, Subscription } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+} from "@angular/core";
+import { MatTooltipModule } from "@angular/material/tooltip";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { Project } from "@models/project.model";
+import { IconTechComponent } from "../ui/icon-tech/icon-tech.component";
+import { MatDividerModule } from "@angular/material/divider";
+import { Technology } from "@models/technology.model";
+import { debounceTime, fromEvent, Subscription } from "rxjs";
+import { ActivatedRoute, Router } from "@angular/router";
 import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
 
 @Component({
@@ -47,12 +47,12 @@ export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
     // Fetching data from resolver.
-    const projectData = this.route.snapshot.data['project'];
+    const projectData = this.route.snapshot.data["project"];
     if (projectData) {
       this.opened = true;
       this.project = projectData;
@@ -109,10 +109,10 @@ export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   openProject() {
-    this.router.navigate(['projects', this.project.Name]);
+    this.router.navigate(["projects", this.project.Name]);
   }
 
   closeProject() {
-    this.router.navigateByUrl('projects');
+    this.router.navigateByUrl("projects");
   }
 }

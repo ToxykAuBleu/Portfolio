@@ -52,7 +52,7 @@ export class ExperiencesComponent implements OnInit {
     this.sortOrder = !this.sortOrder;
     this.sortExperiences(this.sortOrder);
   }
-  
+
   private sortExperiences(recentFirst: boolean) {
     if (recentFirst) {
       this.experiences.sort(
@@ -66,7 +66,6 @@ export class ExperiencesComponent implements OnInit {
           (a.StartingDate?.Value.getTime() || 0) -
           (b.StartingDate?.Value.getTime() || 0),
       );
-
     }
   }
 }

@@ -1,7 +1,6 @@
 {
-    "name": "Skript",
-    "iconPath": "assets/icons/skript.svg",
-    "description": "Skript est un plugin qui permet de personnaliser les mécaniques du jeu Minecraft avec de simples scripts écrits en anglais.",
-    "url": "https://docs.skriptlang.org/"
+  "name": "Skript",
+  "iconPath": "assets/icons/skript.svg",
+  "description": "Skript est un plugin qui permet de personnaliser les mécaniques du jeu Minecraft avec de simples scripts écrits en anglais.",
+  "url": "https://docs.skriptlang.org/"
 }
-  
