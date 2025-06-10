@@ -9,7 +9,7 @@ export const Projects: any[] = [
   Algoforge,
   Kener,
   Pixees,
-  Arch,
   VenteCD,
+  Arch,
   LecteurDiaporama,
 ];
