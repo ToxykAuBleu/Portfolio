@@ -1,10 +1,18 @@
 {
   "name": "Kener",
-  "title": "Kener.ing",
+  "title": "Kener",
   "previewImage": "assets/images/kener-preview.png",
   "startingDate": "2025/04/19",
   "demoUrl": "https://kener.ing",
   "sourceCodeUrl": "https://github.com/rajnandan1/kener/",
-  "technologies": ["Svelte", "Tailwind CSS", "Node.js", "JavaScript", "HTML", "Git", "GitHub"],
-  "description": "<i>En cours d'écriture</i>"
+  "technologies": [
+    "Svelte",
+    "Tailwind CSS",
+    "Node.js",
+    "JavaScript",
+    "HTML",
+    "Git",
+    "GitHub"
+  ],
+  "description": "<b>Kener</b> est une application open source qui centralise les états de fonctionnement d'autres services, comme des sites web, des bases de données, etc. Il permet également de gérer les événements prévus et imprévus pour un usage en interne et/ou externe. <br /> J'étais à la recherche d'une expérience similaire à <a href=\"https://github.com/louislam/uptime-kuma\" class=\"underline\">Uptime-kuma</a>, mais avec une meilleure gestion des événements. Lorsque j'ai trouvé <b>Kener</b>, je l'ai tout de suite adoré. Cependant, des fonctionnalités essentielles que je trouvais dans <a href=\"https://github.com/louislam/uptime-kuma\" class=\"underline\">Uptime-kuma</a> n'étaient pas présentes dans ce nouvel outil.<br /><br />Alors, c'est à ce moment-là que j'ai décidé d'y apporter ma pierre à l'édifice. À ce jour, j'ai réalisé 3 pull requests sur GitHub : <br /><ul class=\"list-disc ml-8\"><li><a href=\"https://github.com/rajnandan1/kener/pull/389\"><i>#389</i></a>: ajout de Gamedig comme type de moniteur.</li><li><a href=\"https://github.com/rajnandan1/kener/pull/407\"><i>#407</i></a>: quelques corrections d'avertissements lors de la compilation.</li><li><a href=\"https://github.com/rajnandan1/kener/pull/426\"><i>#426</i></a>: ajout de <i>'Maintenance'</i> comme nouvel état sur les impacts des moniteurs.</li><li><a href=\"https://github.com/rajnandan1/kener/pull/437\"><i>#437</i></a>: ajout des rappels de maintenance, que ce soit avant un certain temps, puis au début et à la fin.</li></ul>"
 }
