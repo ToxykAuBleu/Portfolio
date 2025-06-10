@@ -1,0 +1,10 @@
+{
+  "name": "Kener",
+  "title": "Kener.ing",
+  "previewImage": "assets/images/kener-preview.png",
+  "startingDate": "2025/04/19",
+  "demoUrl": "https://kener.ing",
+  "sourceCodeUrl": "https://github.com/rajnandan1/kener/",
+  "technologies": ["Svelte", "Tailwind CSS", "Node.js", "JavaScript", "HTML", "Git", "GitHub"],
+  "description": "<i>En cours d'écriture</i>"
+}
