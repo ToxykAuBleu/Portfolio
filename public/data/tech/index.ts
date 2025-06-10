@@ -36,6 +36,7 @@ import Unity from "./unity.tech.json";
 import VisualStudio from "./visualstudio.tech.json";
 import VisualStudioCode from "./vscode.tech.json";
 import Skript from "./skript.tech.json";
+import Svelte from "./svelte.tech.json";
 
 let techs: Technology[] = [
   Angular,
@@ -69,6 +70,7 @@ let techs: Technology[] = [
   Qt,
   SCSS,
   Skript,
+  Svelte,
   TailWindCSS,
   TypeScript,
   Unity,

@@ -138,8 +138,11 @@
   </div>
 
   <!-- Description du projet -->
-  <p
-    class="mb-3 text-justify font-normal text-black! dark:text-white!"
-    [innerHTML]="!opened ? shortDescription : project.Description"
-  ></p>
+  <p class="mb-3 text-justify font-normal **:text-black! **:dark:text-white!">
+    <span [innerHTML]="!opened ? shortDescription : project.Description"></span>
+  </p>
+
+  <div class="my-4" *ngIf="opened">
+    <mat-divider></mat-divider>
+  </div>
 </ng-template>

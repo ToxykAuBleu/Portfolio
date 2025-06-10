@@ -4,7 +4,8 @@
   "previewImage": "assets/images/algoforge-preview.png",
   "demoUrl": "https://algoforge.fr",
   "sourceCodeUrl": "https://github.com/Bing-Chill-inc/Algoforge-main",
-  "startingDate": "2023/03/01",
+  "startingDate": "2024/11/14",
+  "endingDate": "2025/03/27",
   "technologies": [
     "Bun",
     "Express",

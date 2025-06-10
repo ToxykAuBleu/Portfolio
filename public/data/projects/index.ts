@@ -3,11 +3,13 @@ import Algoforge from "./algoforge.project.json";
 import VenteCD from "./vente-cd.project.json";
 import LecteurDiaporama from "./lecteur-diaporama.project.json";
 import Arch from "./arch.project.json";
+import Kener from "./kener.project.json";
 
 export const Projects: any[] = [
   Algoforge,
+  Kener,
   Pixees,
-  Arch,
   VenteCD,
+  Arch,
   LecteurDiaporama,
 ];

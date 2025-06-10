@@ -1,0 +1,6 @@
+{
+  "name": "Svelte",
+  "iconPath": "assets/icons/svelte.svg",
+  "description": "Svelte est un framework qui utilise un compilateur pour vous permettre d’écrire des composants très léger pour une utilisation dans le navigateur, en utilisant des langages du web: HTML, JavaScript/TypeScript et CSS.",
+  "url": "https://svelte.dev/"
+}
