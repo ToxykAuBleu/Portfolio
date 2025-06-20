@@ -1,9 +1,11 @@
-import { CommonModule } from "@angular/common";
+import { CommonModule, isPlatformBrowser } from "@angular/common";
 import {
   Component,
   ElementRef,
   HostListener,
+  Inject,
   OnInit,
+  PLATFORM_ID,
   ViewChild,
 } from "@angular/core";
 import { MatTooltipModule } from "@angular/material/tooltip";
@@ -90,6 +92,7 @@ export class HomeComponent {
   ];
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private projectService: ProjectService,
     private techService: TechnologyService,
   ) {}
@@ -111,9 +114,11 @@ export class HomeComponent {
 
   @HostListener("window:scroll")
   disableIndicatorOnScroll() {
-    if (!this.scrollIndicatorDisabled)
-      window.pageYOffset > 350
-        ? (this.hasScrollEnough = true)
-        : (this.hasScrollEnough = false);
+    if (isPlatformBrowser(this.platformId)) {
+      if (!this.scrollIndicatorDisabled)
+        window.pageYOffset > 350
+          ? (this.hasScrollEnough = true)
+          : (this.hasScrollEnough = false);
+    }
   }
 }
