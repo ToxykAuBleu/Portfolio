@@ -42,7 +42,6 @@ export class ProjectsComponent implements OnInit {
     this.technologies = this.technologyService.getTechnologies();
     this.projects = this.projectService.getProjects();
     this.displayedProjects = this.projects;
-    console.log(this.projects);
   }
 
   toggleTech(technology: Technology): void {

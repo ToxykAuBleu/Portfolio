@@ -21,7 +21,7 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 Pour installer ce portfolio, vous devez d'abord avoir sur votre machine :
 
 - [Node](https://nodejs.org/en/download) (version utilisée : v22.14.0)
-- [Bun](https://bun.sh) (version utilisée : v1.2.15)
+- [Bun](https://bun.sh) (version utilisée : v1.2.17)
 - [git](https://git-scm.com/) (optionnel, seulement utilisé pour le téléchargement et le développement)
 
 1. Clonez ce dépôt avec la commande :

@@ -1,12 +1,14 @@
-import { CommonModule } from "@angular/common";
+import { CommonModule, isPlatformBrowser } from "@angular/common";
 import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
+  Inject,
   Input,
   OnDestroy,
   OnInit,
+  PLATFORM_ID,
   ViewChild,
 } from "@angular/core";
 import { MatTooltipModule } from "@angular/material/tooltip";
@@ -45,6 +47,7 @@ export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
     private router: Router,
     private route: ActivatedRoute,
     private cdr: ChangeDetectorRef,
@@ -61,17 +64,23 @@ export class ProjectComponent implements OnInit, OnDestroy, AfterViewInit {
     this.slicedTechs = this.project.Technologies;
 
     // Subscribe to window resize events to check if the technologies overflow the container.
-    this.resizeSubscription = fromEvent(window, "resize")
-      .pipe(debounceTime(50))
-      .subscribe(() => this.checkOverflow());
+    if (isPlatformBrowser(this.platformId)) {
+      this.resizeSubscription = fromEvent(window, "resize")
+        .pipe(debounceTime(50))
+        .subscribe(() => this.checkOverflow());
+    }
   }
 
   ngOnDestroy(): void {
-    this.resizeSubscription.unsubscribe();
+    if (isPlatformBrowser(this.platformId)) {
+      this.resizeSubscription.unsubscribe();
+    }
   }
 
   ngAfterViewInit() {
-    this.checkOverflow();
+    if (isPlatformBrowser(this.platformId)) {
+      this.checkOverflow();
+    }
   }
 
   /**

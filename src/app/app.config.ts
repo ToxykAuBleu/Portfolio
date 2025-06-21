@@ -10,6 +10,7 @@ registerLocaleData(localeFr);
 
 import { routes } from "./app.routes";
 import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +20,6 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ scrollPositionRestoration: "enabled" }),
     ),
     provideAnimationsAsync(),
-    { provide: LOCALE_ID, useValue: "fr-FR" },
+    { provide: LOCALE_ID, useValue: "fr-FR" }, provideClientHydration(withEventReplay()),
   ],
 };
