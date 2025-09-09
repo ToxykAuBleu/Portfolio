@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import {
   ActivatedRouteSnapshot,
   Resolve,
+  Router,
   RouterStateSnapshot,
 } from "@angular/router";
 import { Project } from "@models/project.model";
@@ -11,7 +12,10 @@ import { ProjectService } from "@services/project.service";
   providedIn: "root",
 })
 export class ProjectResolver implements Resolve<Project> {
-  constructor(private projectService: ProjectService) {}
+  constructor(
+    private projectService: ProjectService,
+    private router: Router,
+  ) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return new Promise<Project>((resolve, reject) => {
@@ -19,6 +23,7 @@ export class ProjectResolver implements Resolve<Project> {
       if (project) {
         resolve(project);
       } else {
+        this.router.navigate(["/not-found"]);
         reject("Project not found");
       }
     });
