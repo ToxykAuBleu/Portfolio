@@ -74,22 +74,20 @@
     class="flex h-full min-h-screen flex-col items-center justify-center gap-6"
   >
     <h1 class="underline">Mes récents projets</h1>
+    <p class="mx-4 text-center text-2xl!">
+      Sur mon portfolio, vous retrouverez une liste détaillée de tous les
+      projets sur lesquels j'ai travaillé.
+    </p>
+    <a
+      routerLink="/projects"
+      class="flex flex-row justify-center transition-all hover:scale-115"
+    >
+      <button class="button text-xl!">
+        <fa-icon icon="folder-open" class="mr-2"></fa-icon>
+        Parcourir tous les projets
+      </button>
+    </a>
     <div class="flex w-full flex-col items-center gap-8 lg:gap-16">
-      <div class="flex flex-col gap-4">
-        <p class="mx-4 text-center text-2xl!">
-          Sur mon portfolio, vous retrouverez une liste détaillée de tous les
-          projets sur lesquels j'ai travaillé.
-        </p>
-        <a
-          routerLink="/projects"
-          class="flex flex-row justify-center transition-all hover:scale-115"
-        >
-          <button class="button text-xl!">
-            <fa-icon icon="folder-open" class="mr-2"></fa-icon>
-            Parcourir tous les projets
-          </button>
-        </a>
-      </div>
       <div class="flex flex-col gap-8 md:flex-row">
         <app-project
           [project]="getProject('Algoforge')!"
