@@ -18,6 +18,7 @@ import {
   faCircleQuestion,
   faCircleXmark,
   faClock,
+  faClockRotateLeft,
   faClose,
   faDownload,
   faEarListen,
@@ -63,46 +64,49 @@ export class AppComponent {
   title = "Portfolio";
 
   constructor(library: FaIconLibrary) {
-    library.addIcons(faClose);
-    library.addIcons(faClock);
-    library.addIcons(faToolbox);
-    library.addIcons(faEllipsis);
-    library.addIcons(faList);
-    library.addIcons(faFilterCircleXmark);
-    library.addIcons(faGithub);
-    library.addIcons(faMapLocationDot);
-    library.addIcons(faGlobe);
-    library.addIcons(faFlagCheckered);
-    library.addIcons(faUpRightFromSquare);
-    library.addIcons(faUserClock);
-    library.addIcons(faGears);
-    library.addIcons(faPeopleGroup);
-    library.addIcons(faEarListen);
-    library.addIcons(faHandshakeAngle);
-    library.addIcons(faChevronUp);
-    library.addIcons(faChevronDown);
-    library.addIcons(faObjectGroup);
-    library.addIcons(faArrowPointer);
-    library.addIcons(faDownload);
-    library.addIcons(faHouseUser);
-    library.addIcons(faVial);
-    library.addIcons(faFolderOpen);
-    library.addIcons(faCircleQuestion);
-    library.addIcons(faLinkedin);
-    library.addIcons(faDiscord);
-    library.addIcons(faSteam);
-    library.addIcons(faLeaf);
-    library.addIcons(faQuoteLeft);
-    library.addIcons(faQuoteRight);
-    library.addIcons(faCircleXmark);
-    library.addIcons(faCircleInfo);
-    library.addIcons(faFileCode);
-    library.addIcons(faAnglesDown);
-    library.addIcons(faSeedling);
-    library.addIcons(faArrowUp19);
-    library.addIcons(faArrowDown19);
-    library.addIcons(faAt);
-    library.addIcons(faEnvelope);
-    library.addIcons(faXmarkCircle);
+    library.addIcons(
+      faClose,
+      faClock,
+      faToolbox,
+      faEllipsis,
+      faList,
+      faFilterCircleXmark,
+      faGithub,
+      faMapLocationDot,
+      faGlobe,
+      faFlagCheckered,
+      faUpRightFromSquare,
+      faUserClock,
+      faGears,
+      faPeopleGroup,
+      faEarListen,
+      faHandshakeAngle,
+      faChevronUp,
+      faChevronDown,
+      faObjectGroup,
+      faArrowPointer,
+      faDownload,
+      faHouseUser,
+      faVial,
+      faFolderOpen,
+      faCircleQuestion,
+      faLinkedin,
+      faDiscord,
+      faSteam,
+      faLeaf,
+      faQuoteLeft,
+      faQuoteRight,
+      faCircleXmark,
+      faCircleInfo,
+      faFileCode,
+      faAnglesDown,
+      faSeedling,
+      faArrowUp19,
+      faArrowDown19,
+      faAt,
+      faEnvelope,
+      faXmarkCircle,
+      faClockRotateLeft,
+    );
   }
 }

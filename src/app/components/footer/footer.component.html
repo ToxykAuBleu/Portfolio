@@ -114,10 +114,10 @@
           </a>
           <a
             class="flex transition-all hover:text-blue-600 max-[550px]:justify-center"
-            href="mailto:contact@toxykaubleu.fr"
+            [href]="'mailto:' + emailAddress"
           >
             <fa-icon icon="at" class="w-8 text-white"></fa-icon>
-            <span>contact&#64;toxykaubleu.fr</span>
+            <span>Par mail</span>
           </a>
         </div>
       </div>
@@ -136,11 +136,17 @@
         Hébergé sur un serveur fonctionnant avec de l'énergie verte.
       </p>
     </div>
-    <p class="text-center">
-      <a href="https://github.com/ToxykAuBleu/Portfolio">
-        <fa-icon icon="file-code" class="mr-2"></fa-icon>
-        Code source (v1.1.1)
-      </a>
-    </p>
+    <div class="text-center">
+      <p>
+        <a href="https://github.com/ToxykAuBleu/Portfolio">
+          <fa-icon icon="file-code" class="mr-2"></fa-icon>
+          Code source (v1.2.0)
+        </a>
+      </p>
+      <p class="text-sm!">
+        <fa-icon icon="clock-rotate-left" class="mr-2"></fa-icon>
+        <i>Mise à jour le 18 octobre 2025.</i>
+      </p>
+    </div>
   </div>
 </footer>

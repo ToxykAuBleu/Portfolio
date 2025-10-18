@@ -6,6 +6,8 @@ import NuitInfo23 from "./nuit-info-23.exp.json";
 import NuitInfo24 from "./nuit-info-24.exp.json";
 import SafranStage from "./safran-stage.exp.json";
 import SafranAlternance from "./safran-alternance.exp.json";
+import ButInfo from "./but-info.exp.json";
+import Isima from "./isima.exp.json";
 
 export const Experiences: any[] = [
   Lineria,
@@ -16,4 +18,6 @@ export const Experiences: any[] = [
   SafranStage,
   NuitInfo24,
   SafranAlternance,
+  ButInfo,
+  Isima,
 ];

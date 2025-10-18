@@ -12,8 +12,8 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 
 ## Tecnologies utilisées
 
-- Angular & Material : v19.2.8
-- TailWindCSS : v4.1.8
+- Angular & Material : v20.2.4
+- TailWindCSS : v4.1.13
 - FontAwesome : v6.7.2
 
 # Installation
@@ -21,7 +21,7 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 Pour installer ce portfolio, vous devez d'abord avoir sur votre machine :
 
 - [Node](https://nodejs.org/en/download) (version utilisée : v22.14.0)
-- [Bun](https://bun.sh) (version utilisée : v1.2.17)
+- [Bun](https://bun.sh) (version utilisée : v1.3.0)
 - [git](https://git-scm.com/) (optionnel, seulement utilisé pour le téléchargement et le développement)
 
 1. Clonez ce dépôt avec la commande :
