@@ -3,6 +3,7 @@
   "title": "Kener",
   "previewImage": "assets/images/kener-preview.png",
   "startingDate": "2025/04/19",
+  "endingDate": "2025/08/19",
   "demoUrl": "https://kener.ing",
   "sourceCodeUrl": "https://github.com/rajnandan1/kener/",
   "technologies": [

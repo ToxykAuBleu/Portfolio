@@ -1,0 +1,17 @@
+{
+  "name": "ISIMA",
+  "title": "Ecole d'Ingénieurs en Informatique - ISIMA",
+  "description": "• Parcours 1ère année : tronc commun en informatique, mathématiques et sciences de l’ingénieur",
+  "location": "Campus des Cézaux, Clermont-Ferrand (63)",
+  "previewImage": "assets/images/isima-preview.jpg",
+  "startingDate": {
+    "Value": "2025-09-01",
+    "Format": "LLLL yyyy"
+  },
+  "endingDate": {
+    "Value": "2028-09-02",
+    "Format": "LLLL yyyy"
+  },
+  "isCurrent": true,
+  "isCourse": true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "BUT",
+  "title": "BUT Informatique - Bachelor Universitaire Informatique",
+  "description": "• Parcours 2e et 3e année RACDV (A) : réalisation d’applications (conception, développement, validation)",
+  "location": "IUT de Bayonne et du Pays basque, Bayonne (64)",
+  "previewImage": "assets/images/but-preview.jpg",
+  "startingDate": {
+    "Value": "2022-09-02",
+    "Format": "LLLL yyyy"
+  },
+  "endingDate": {
+    "Value": "2025-09-02",
+    "Format": "LLLL yyyy"
+  },
+  "isCurrent": false,
+  "isCourse": true
+}

@@ -6,8 +6,8 @@ import Arch from "./arch.project.json";
 import Kener from "./kener.project.json";
 
 export const Projects: any[] = [
-  Algoforge,
   Kener,
+  Algoforge,
   Pixees,
   VenteCD,
   Arch,
