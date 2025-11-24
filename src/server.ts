@@ -4,6 +4,7 @@ import express from "express";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import bootstrap from "./main.server";
+import { environment } from "../environment";
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, "../browser");
@@ -13,16 +14,15 @@ const app = express();
 const commonEngine = new CommonEngine();
 
 /**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/**', (req, res) => {
- *   // Handle API request
- * });
- * ```
+ * Handling /assets/cv.pdf
  */
+app.get("/assets/cv.pdf", (req, res, next) => {
+  res.setHeader("Cache-Control", "no-store");
+  if (!environment.showCV) {
+    return res.redirect("/not-found");
+  }
+  next();
+});
 
 /**
  * Serve static files from /browser
@@ -58,8 +58,8 @@ app.get("**", (req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url)) {
-  const host = process.env["HOST"] || "localhost";
-  const port = Number(process.env["PORT"]) || 4000;
+  const host = environment.host || "localhost";
+  const port = environment.port || 4000;
   app.listen(port, host, () => {
     console.log(`🚀 Server running on http://${host}:${port}`);
   });

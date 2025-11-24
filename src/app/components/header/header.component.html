@@ -74,9 +74,11 @@
       </a>
     </div>
     <!-- Right buttons -->
-    <div class="max-md:absolute max-md:right-0 md:flex">
-      <ng-container [ngTemplateOutlet]="cv"></ng-container>
-    </div>
+    @if (showCVButton) {
+      <div class="max-md:absolute max-md:right-0 md:flex">
+        <ng-container [ngTemplateOutlet]="cv"></ng-container>
+      </div>
+    }
   </div>
 </header>
 
