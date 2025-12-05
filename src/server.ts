@@ -4,7 +4,6 @@ import express from "express";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import bootstrap from "./main.server";
-import { environment } from "../environment";
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, "../browser");
@@ -18,8 +17,8 @@ const commonEngine = new CommonEngine();
  */
 app.get("/assets/cv.pdf", (req, res, next) => {
   res.setHeader("Cache-Control", "no-store");
-  if (!environment.showCV) {
-    return res.redirect("/not-found");
+  if (process.env["SHOW_CV"] !== "true") {
+    return res.redirect("/forbidden");
   }
   next();
 });
@@ -58,8 +57,8 @@ app.get("**", (req, res, next) => {
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isMainModule(import.meta.url)) {
-  const host = environment.host || "localhost";
-  const port = environment.port || 4000;
+  const host = process.env["HOST"] || "localhost";
+  const port = Number(process.env["PORT"]) || 4000;
   app.listen(port, host, () => {
     console.log(`🚀 Server running on http://${host}:${port}`);
   });

@@ -41,6 +41,7 @@ import {
   faQuoteRight,
   faSeedling,
   faToolbox,
+  faTriangleExclamation,
   faUpRightFromSquare,
   faUserClock,
   faVial,
@@ -107,6 +108,7 @@ export class AppComponent {
       faEnvelope,
       faXmarkCircle,
       faClockRotateLeft,
+      faTriangleExclamation,
     );
   }
 }

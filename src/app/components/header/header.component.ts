@@ -3,7 +3,6 @@ import { Component } from "@angular/core";
 import { NavigationEnd, Router, RouterModule } from "@angular/router";
 import { ImageLoaderComponent } from "@components/ui/image-loader/image-loader.component";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
-import { environment } from "../../../../environment";
 
 @Component({
   selector: "app-header",
@@ -18,7 +17,6 @@ import { environment } from "../../../../environment";
 })
 export class HeaderComponent {
   currentRoute: string = "";
-  showCVButton: boolean = environment.showCV;
 
   constructor(private router: Router) {
     this.router.events.subscribe((event) => {
