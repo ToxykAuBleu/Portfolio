@@ -12,8 +12,8 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 
 ## Tecnologies utilisées
 
-- Angular & Material : v20.2.4
-- TailWindCSS : v4.1.13
+- Angular & Material : v20.3.15
+- TailWindCSS : v4.1.17
 - FontAwesome : v6.7.2
 
 # Installation
@@ -21,7 +21,7 @@ Mes contacts sont disponibles, à tout moment de la navigation, dans le pied de 
 Pour installer ce portfolio, vous devez d'abord avoir sur votre machine :
 
 - [Node](https://nodejs.org/en/download) (version utilisée : v22.14.0)
-- [Bun](https://bun.sh) (version utilisée : v1.3.0)
+- [Bun](https://bun.sh) (version utilisée : v1.3.3)
 - [git](https://git-scm.com/) (optionnel, seulement utilisé pour le téléchargement et le développement)
 
 1. Clonez ce dépôt avec la commande :
@@ -50,12 +50,7 @@ Pour héberger le portfolio sur la machine, il suffit d'exécuter la commande su
 bun run deploy
 ```
 
-Le portfolio va être build, puis un serveur Bun va être lancé. Par défaut, il est démarré à l'adresse `localhost:4200`, mais elle peut être changée en créant un fichier `.env` comme celui-ci :
-
-```env
-HOST=localhost
-PORT=4200
-```
+Le portfolio va être build, puis un serveur Bun va être lancé. Par défaut, il est démarré à l'adresse `localhost:4200`, mais elle peut être changée en créant un fichier `.env` (voir `template.env`).
 
 # Développement
 
