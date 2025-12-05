@@ -13,16 +13,15 @@ const app = express();
 const commonEngine = new CommonEngine();
 
 /**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/**', (req, res) => {
- *   // Handle API request
- * });
- * ```
+ * Handling /assets/cv.pdf
  */
+app.get("/assets/cv.pdf", (req, res, next) => {
+  res.setHeader("Cache-Control", "no-store");
+  if (process.env["SHOW_CV"] !== "true") {
+    return res.redirect("/forbidden");
+  }
+  next();
+});
 
 /**
  * Serve static files from /browser

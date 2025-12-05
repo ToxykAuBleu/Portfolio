@@ -6,6 +6,7 @@ import { ExperiencesComponent } from "./components/experiences/experiences.compo
 import { NotFoundComponent } from "./components/not-found/not-found.component";
 import { ProjectComponent } from "@components/project/project.component";
 import { ProjectResolver } from "@components/project/project.resolver";
+import { ForbiddenComponent } from "@components/forbidden/forbidden.component";
 
 export const routes: Routes = [
   {
@@ -30,6 +31,10 @@ export const routes: Routes = [
   {
     path: "about-me",
     component: AboutComponent,
+  },
+  {
+    path: "forbidden",
+    component: ForbiddenComponent,
   },
   {
     path: "**",
