@@ -1,16 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@use "tailwindcss";
-@use "@angular/material" as mat;
-
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 * {
   font-family: Manrope, "Helvetica Neue", sans-serif;
-}
-body {
-  @include mat.theme(
-    (
-      typography: Manrope,
-    )
-  );
 }
