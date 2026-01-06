@@ -9,7 +9,6 @@ import { registerLocaleData } from "@angular/common";
 registerLocaleData(localeFr);
 
 import { routes } from "./app.routes";
-import { provideAnimationsAsync } from "@angular/platform-browser/animations/async";
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -18,7 +17,6 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ scrollPositionRestoration: "enabled" }),
     ),
-    provideAnimationsAsync(),
     { provide: LOCALE_ID, useValue: "fr-FR" },
   ],
 };

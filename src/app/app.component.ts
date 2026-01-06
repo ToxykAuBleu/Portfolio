@@ -1,7 +1,5 @@
 import { Component, ViewEncapsulation } from "@angular/core";
 import { RouterOutlet } from "@angular/router";
-import { HeaderComponent } from "@components/header/header.component";
-import { FooterComponent } from "./components/footer/footer.component";
 import {
   FaIconLibrary,
   FontAwesomeModule,
@@ -56,7 +54,7 @@ import { faXmarkCircle } from "@fortawesome/free-regular-svg-icons";
 
 @Component({
   selector: "app-root",
-  imports: [RouterOutlet, HeaderComponent, FontAwesomeModule, FooterComponent],
+  imports: [RouterOutlet, FontAwesomeModule],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
   encapsulation: ViewEncapsulation.None,
