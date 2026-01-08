@@ -1,5 +1,5 @@
-FROM oven/bun:1.3.0-alpine
-LABEL org.opencontainers.image.version="1.2.0"
+FROM oven/bun:1.3.5-alpine
+LABEL org.opencontainers.image.version="2.0.0"
 LABEL org.opencontainers.image.title="Portfolio"
 LABEL org.opencontainers.image.source="https://github.com/ToxykAuBleu/Portfolio"
 
