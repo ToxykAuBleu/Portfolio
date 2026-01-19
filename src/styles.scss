@@ -1,6 +1,159 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
+/* Variables */
+:root {
+  --font: "Manrope";
+  --p: 1rem/1.5 var(--font);
+  --h1: 600 3rem/1.2 var(--font);
+  --h2: 600 2rem/1.2 var(--font);
+  --spacing-1: 0.25rem;
+  --spacing-2: calc(var(--spacing-1) * 2);
+  --spacing-3: calc(var(--spacing-1) * 4);
+  --spacing-4: calc(var(--spacing-1) * 8);
+  --spacing-5: calc(var(--spacing-1) * 16);
+  --spacing-6: calc(var(--spacing-1) * 32);
+  --spacing-7: calc(var(--spacing-1) * 64);
+  --spacing-8: calc(var(--spacing-1) * 92);
+
+  --color-text: white;
+  --color-success: hsl(160, 100%, 30%);
+  --color-danger: hsl(0, 100%, 30%);
+  --color-bg-body: hsl(237, 100%, 34%);
+}
+
+/* Global style */
 * {
-  font-family: Manrope, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--color-text);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--spacing-6) var(--spacing-8) 0;
+  background-color: var(--color-bg-body);
+  font-family: var(--font), "Helvetica Neue", sans-serif;
+}
+
+/*
+*
+* The MIT License
+* Copyright (c) 2024 nulld3x
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+* THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*
+*/
+body::before {
+  --size: 4rem;
+  --line: color-mix(in oklch, white, transparent 60%);
+  --mask-band: 50vw;
+  --mask-feather: 40vw;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background:
+    linear-gradient(
+        90deg,
+        var(--line) 0.0625rem,
+        transparent 0.0625rem var(--size)
+      )
+      50% 50% / var(--size) var(--size),
+    linear-gradient(var(--line) 0.0625rem, transparent 0.0625rem var(--size))
+      50% 50% / var(--size) var(--size);
+  mask: linear-gradient(
+    to right,
+    #fff 0,
+    #fff calc(50% - (var(--mask-band) / 2) - var(--mask-feather)),
+    #2222 calc(50% - (var(--mask-band) / 2)),
+    #2222 calc(50% + (var(--mask-band) / 2)),
+    #fff calc(50% + (var(--mask-band) / 2) + var(--mask-feather)),
+    #fff 100%
+  );
+  top: 0;
+  left: 0;
+  transform-style: flat;
+  pointer-events: none;
+  position: fixed;
+  z-index: -1;
+  animation: moveGrid 4s linear infinite;
+}
+@keyframes moveGrid {
+  0% {
+    background-position:
+      0 0,
+      0 0;
+  }
+  100% {
+    background-position:
+      0 0,
+      var(--size) var(--size);
+  }
+}
+
+h1 {
+  font: var(--font);
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utilities */
+.hidden {
+  display: none;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.flex {
+  display: flex;
+  > * {
+    flex: 1;
+  }
+
+  &.flex-center {
+    align-items: center;
+    justify-content: center;
+  }
+  &.flex-col {
+    flex-direction: column;
+  }
+  &.flex-row {
+    flex-direction: row;
+  }
+}
+.shrink {
+  flex-shrink: 1;
+}
+.grow {
+  flex-grow: 1;
+}
+
+.rounded-full,
+.pill {
+  border-radius: calc(infinity * 1px);
+}
+
+@for $i from 1 through 7 {
+  .gap-#{$i} {
+    gap: var(--spacing-#{$i});
+  }
+  .margin-#{$i} {
+    margin: var(--spacing-#{$i});
+  }
+  .padding-#{$i} {
+    padding: var(--spacing-#{$i});
+  }
 }

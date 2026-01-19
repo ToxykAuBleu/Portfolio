@@ -1,0 +1,27 @@
+#pdp {
+  max-height: 8rem;
+  max-width: 8rem;
+}
+
+#hero-title {
+  place-self: center;
+}
+
+.pill {
+  padding: calc(var(--spacing-1) * 0.5) var(--spacing-3);
+  color: var(--color-text);
+
+  &.open {
+    background-color: var(--color-success);
+    &::after {
+      content: "Disponible";
+    }
+  }
+
+  &.closed {
+    background-color: var(--color-danger);
+    &::after {
+      content: "Occupé";
+    }
+  }
+}
